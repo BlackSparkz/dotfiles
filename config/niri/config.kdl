@@ -119,7 +119,7 @@ layout {
 }
 
 spawn-sh-at-startup "waybar -c $HOME/.config/waybar/Niri/config.jsonc -s $HOME/.config/waybar/Niri/style.css"
-spawn-sh-at-startup "swaybg -i ~/Wallpapers/5825766.jpg -m fill"
+spawn-sh-at-startup "swaybg -i ~/Wallpapers/japan-artistic-5120x2880-25406.jpg -m fill"
 spawn-at-startup "kitty"
 spawn-at-startup "kdeconnect-indicator"
 spawn-at-startup "mako"

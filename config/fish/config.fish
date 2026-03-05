@@ -47,7 +47,7 @@ alias aptr='sudo apt remove'
 # ==============================
 # alias pacup='sudo timeshift --create --comments "Before update" --tags O && sudo pacman -Syu --noconfirm && yay -Syu'
 alias pacup='sudo timeshift --create --comments "Before update" --tags O && yay -Syu && yay -Yc'
-alias paci='yay -S'
+alias paci='yay -S --needed'
 alias pacr='yay -Rns'
 
 # ==============================
