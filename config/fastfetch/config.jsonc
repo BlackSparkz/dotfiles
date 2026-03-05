@@ -42,7 +42,11 @@
             "format": "├{$1} {#1}Software Flex{#} {$1}┤"
         },
 
-        "os",
+        {
+             "type": "OS",
+             "format": "By the way, I use Arch"
+        },
+
         "kernel",
         "wm",
         "shell",
@@ -51,7 +55,7 @@
         "uptime",
         {
             "type": "custom",
-            "format": "└{$1}────────────────{$1}┘"
+            "format": "└{$1}───────────────{$1}┘"
         },
     ]
 }
