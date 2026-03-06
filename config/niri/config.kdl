@@ -203,7 +203,8 @@ window-rule {
 binds {
     Mod+T { spawn "kitty"; }
     Mod+B { spawn "librewolf"; }
-    Mod+N { spawn "thunar"; }
+    Mod+M { spawn "Telegram"; }
+    Mod+N { spawn-sh "kitty -e yazi"; }
     Mod+P { spawn-sh "pkill wlogout || wlogout"; }
     Mod+Ctrl+R {spawn-sh "bash $HOME/.config/mango/partial_screenshot.sh";}
     Mod+Ctrl+S {spawn-sh "bash $HOME/.config/mango/full_screenshot.sh";}
@@ -267,8 +268,8 @@ binds {
 
     Mod+Down      { focus-workspace-down; }
     Mod+Up        { focus-workspace-up; }
-    Mod+U              { focus-workspace-down; }
-    Mod+I              { focus-workspace-up; }
+    Mod+I              { focus-workspace-down; }
+    Mod+U              { focus-workspace-up; }
     Mod+Ctrl+Page_Down { move-column-to-workspace-down; }
     Mod+Ctrl+Page_Up   { move-column-to-workspace-up; }
     Mod+Ctrl+U         { move-column-to-workspace-down; }
@@ -323,11 +324,11 @@ binds {
     Mod+Shift+R { switch-preset-window-height; }
     // Mod+Ctrl+R { reset-window-height; }
     Mod+F { maximize-column; }
-    Mod+Shift+F { fullscreen-window; }
+    Mod+Ctrl+F { fullscreen-window; }
 
-    Mod+M { maximize-window-to-edges; }
+    Mod+Ctrl+M { maximize-window-to-edges; }
 
-    Mod+Ctrl+F { expand-column-to-available-width; }
+    // Mod+Ctrl+F { expand-column-to-available-width; }
 
     Mod+C { center-column; }
 

@@ -1,3 +1,5 @@
+set -g fish_greeting ""
+
 # ==============================
 # Basic
 # ==============================
@@ -11,9 +13,8 @@ alias kreload='kitty @ load-config'
 # ==============================
 # ls
 # ==============================
-alias ls="eza --icons -l --group-directories-first"
-alias ll="eza -lh --icons"
-alias la="eza -lha --icons"
+alias ls="eza --icons=always -lah --group-directories-first"
+alias lt='eza -a --tree --level=1 --icons=always'
 alias top="btop"
 alias cat="bat"
 # alias cd="z"
@@ -27,6 +28,7 @@ alias b='cd ..'
 alias bb='cd ../..'
 alias h='cd ~'
 alias d='cd ~/Downloads'
+alias do='cd ~/Dotfiles'
 
 # ==============================
 # Fedora (dnf)
@@ -64,8 +66,9 @@ alias poweroff='systemctl poweroff'
 alias suspend='systemctl suspend'
 
 # ==============================
-# System info
+# System
 # ==============================
+alias grubup='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 alias ff='fastfetch'
 alias ports='ss -tulpn'
 alias ram='free -h'
@@ -85,14 +88,21 @@ alias batt='upower -i /org/freedesktop/UPower/devices/battery_BAT0'
 # ==============================
 alias myip='curl ifconfig.me'
 alias pingg='ping -c 5 archlinux.org'
+alias wifi='nmtui'
+
+# ==============================
+# Git
+# ==============================
+alias gs="git status"
+alias ga="git add ."
+alias gc="git commit -m"
+alias gp="git push"
 
 # ==============================
 # Process
 # ==============================
 alias top='btop'
 alias py='python3'
-
-set -g fish_greeting ""
 
 # zoxide init fish | source
 
