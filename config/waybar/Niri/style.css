@@ -8,7 +8,7 @@
 window#waybar {
     background-color: rgba(00, 00, 00, 0.4);
     color: white;
-    border-radius: 0px;
+    border-radius: 24px;
 }
 
 #custom-logo {

@@ -125,6 +125,8 @@ spawn-sh-at-startup "swaybg -i ~/Wallpapers/japan-artistic-5120x2880-25406.jpg -
 spawn-at-startup "kitty"
 spawn-at-startup "kdeconnect-indicator"
 spawn-at-startup "mako"
+spawn-sh-at-startup "wl-paste --type text --watch cliphist store"
+spawn-sh-at-startup "wl-paste --type image --watch cliphist store"
 
 hotkey-overlay {
       skip-at-startup
@@ -206,6 +208,7 @@ binds {
     Mod+M { spawn "Telegram"; }
     Mod+N { spawn-sh "kitty -e yazi"; }
     Mod+P { spawn-sh "pkill wlogout || wlogout"; }
+    Mod+Ctrl+C { spawn-sh "pkill rofi ||cliphist list | rofi -dmenu -display-columns 2 -theme ~/Dotfiles/config/rofi/clipboard.rasi | cliphist decode | wl-copy"; }
     Mod+Ctrl+R {spawn-sh "bash $HOME/.config/mango/partial_screenshot.sh";}
     Mod+Ctrl+S {spawn-sh "bash $HOME/.config/mango/full_screenshot.sh";}
     Mod+space {spawn-sh "pkill rofi || rofi -show drun";}
@@ -332,7 +335,7 @@ binds {
 
     Mod+C { center-column; }
 
-    Mod+Ctrl+C { center-visible-columns; }
+    // Mod+Ctrl+C { center-visible-columns; }
 
     Mod+Minus { set-column-width "-10%"; }
     Mod+Equal { set-column-width "+10%"; }

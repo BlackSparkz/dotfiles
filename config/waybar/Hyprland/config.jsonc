@@ -84,7 +84,7 @@
         "on-click-right": "kitty sh -c 'upower -i /org/freedesktop/UPower/devices/battery_BAT0; read'",
         "format-full": "{icon}   Battery full {capacity}%",
         "format-warning": "{icon}   Battery low {capacity}%",
-        "format-critical": "󰂃  Plug in {capacity}%",
+        "format-critical": "󰂃  Connect charger {capacity}%",
         "format-charging": "  Charging {capacity}%",
         "format-plugged": "  Plugged in {capacity}%",
         "format-alt": "{icon}   Health ({health}%)  Charge cycles ({cycles})",
