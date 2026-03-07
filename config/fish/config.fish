@@ -15,7 +15,6 @@ alias kreload='kitty @ load-config'
 # ==============================
 alias ls="eza --icons=always -lah --group-directories-first"
 alias lt='eza -a --tree --level=1 --icons=always'
-alias top="btop"
 alias cat="bat"
 # alias cd="z"
 alias tree='tree -C'
@@ -101,7 +100,7 @@ alias gp="git push"
 # ==============================
 # Process
 # ==============================
-alias top='btop'
+alias top='btop --tty'
 alias py='python3'
 
 # zoxide init fish | source

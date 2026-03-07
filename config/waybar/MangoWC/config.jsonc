@@ -26,6 +26,7 @@
                 "tooltip": true,
                 "tooltip-format": "App launcher",
                 "on-click": "pkill rofi || rofi -show drun",
+                "on-click-right": "kitty",
                 },
 
     "clock": {
@@ -98,6 +99,7 @@
         "format-wifi": "    {essid}",
         "tooltip-format-wifi": "You are connected to {essid} ({signalStrength}%)",
         "format-disconnected": "   No internet",
+        "on-click-right": "kitty -e nmtui"
     },
 
 

@@ -1,6 +1,7 @@
+font_family ProFont IIx Nerd Font Mono
 #font_family FiraCode Nerd Font
-font_family Google Sans Code NF
-font_size 14.0
+#font_family Google Sans Code NF
+font_size 12.0
 cursor_shape beam
 cursor_blink_interval -1
 cursor_trail 100
@@ -10,8 +11,6 @@ initial_window_height 26c
 hide_window_decorations yes
 background_opacity 0.40
 scrollback_lines 2000
-#repaint_delay 5
-#input_delay 1
 enable_audio_bell no
 map ctrl+c copy_to_clipboard
 map ctrl+v paste_from_clipboard
@@ -25,3 +24,10 @@ scrollbar never
 mouse_hide_wait 3.0
 allow_remote_control yes
 confirm_os_window_close 0
+notify_on_cmd_finish unfocused
+
+
+# BEGIN_KITTY_THEME
+# Homebrew
+include current-theme.conf
+# END_KITTY_THEME

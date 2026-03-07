@@ -1,6 +1,6 @@
 blur {
-    passes 4
-    offset 6
+    passes 2
+    offset 4
     noise 0.02
     saturation 1.5
 }
@@ -58,15 +58,12 @@ input {
         accel-profile "adaptive"
 	scroll-factor 4.0
         scroll-method "two-finger"
-        disabled-on-external-mouse
     }
 
     mouse {
-        // off
-        // natural-scroll
-        // accel-speed 0.2
-        // accel-profile "flat"
-        // scroll-method "no-scroll"
+        accel-speed 1.0
+        accel-profile "adaptive"
+	scroll-factor 3.0
     }
 
        focus-follows-mouse max-scroll-amount="10%"
@@ -121,7 +118,7 @@ layout {
 }
 
 spawn-sh-at-startup "waybar -c $HOME/.config/waybar/Niri/config.jsonc -s $HOME/.config/waybar/Niri/style.css"
-spawn-sh-at-startup "swaybg -i ~/Wallpapers/japan-artistic-5120x2880-25406.jpg -m fill"
+spawn-sh-at-startup "swaybg -i ~/Wallpapers/56943-3840x1947-desktop-hd-neon-wallpaper-image.jpg -m fill"
 spawn-at-startup "kitty"
 spawn-at-startup "kdeconnect-indicator"
 spawn-at-startup "mako"
@@ -207,6 +204,7 @@ binds {
     Mod+B { spawn "librewolf"; }
     Mod+M { spawn "Telegram"; }
     Mod+N { spawn-sh "kitty -e yazi"; }
+    Mod+X { spawn-sh "kitty -e cmus"; }
     Mod+P { spawn-sh "pkill wlogout || wlogout"; }
     Mod+Ctrl+C { spawn-sh "pkill rofi ||cliphist list | rofi -dmenu -display-columns 2 -theme ~/Dotfiles/config/rofi/clipboard.rasi | cliphist decode | wl-copy"; }
     Mod+Ctrl+R {spawn-sh "bash $HOME/.config/mango/partial_screenshot.sh";}
