@@ -13,7 +13,7 @@ alias kreload='kitty @ load-config'
 # ==============================
 # ls
 # ==============================
-alias ls="eza --icons=always -lah --group-directories-first"
+alias ls="eza --icons=always -lh --group-directories-first"
 alias lt='eza -a --tree --level=1 --icons=always'
 alias cat="bat"
 # alias cd="z"
@@ -88,6 +88,7 @@ alias batt='upower -i /org/freedesktop/UPower/devices/battery_BAT0'
 alias myip='curl ifconfig.me'
 alias pingg='ping -c 5 archlinux.org'
 alias wifi='nmtui'
+alias bt='bluetui'
 
 # ==============================
 # Git
