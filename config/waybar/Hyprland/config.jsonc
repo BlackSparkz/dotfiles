@@ -1,12 +1,12 @@
 {
-    "margin-top": 5,
-    "margin-left": 10,
-    "margin-right": 10,
+    //"margin-top": 5,
+    //"margin-left": 10,
+    //"margin-right": 10,
     "layer": "top",
     "position": "top",
     "spacing": 8,
     
-    "modules-left": [ "custom/logo","network#bandwidth" ],
+    "modules-left": [ "custom/logo","custom/mpris","network#bandwidth","bluetooth" ],
 
     "modules-center": [ "clock" ],
 
@@ -22,13 +22,24 @@
     ],
 
 "custom/logo": {
-        "format" : "󰣇   Arch Linux",
-                "tooltip": true,
-                "tooltip-format": "App launcher",
-                "on-click": "pkill rofi || rofi -show drun",
-                },
+    "format" : "󰣇   Arch Linux",
+    "tooltip": true,
+    "tooltip-format": "App launcher",
+    "on-click": "pkill rofi || rofi -show drun",
+    "on-click-right": "kitty",
+    },
 
-    "clock": {
+"custom/mpris": {
+    "exec": "~/Dotfiles/config/waybar/mpris.sh",
+    "interval": 2,
+    "return-type": "json",
+    "max-length": 15,
+    "min-length": 15,
+    "on-click": "playerctl play-pause",
+    "tooltip": false
+},
+
+"clock": {
     "interval": 1,
     "tooltip": true,
     "format": "It's {:%H:%M:%S}",
@@ -36,13 +47,13 @@
     "tooltip-format": "<tt><small>{calendar}</small></tt>",
     },
 
-   "cpu": {
+"cpu": {
     "interval": 1,
     "format": "   {}%",
     "format-alt": "   {avg_frequency} GHz",
     "on-click-right": "kitty -e btop",
     "tooltip": true
-  },
+    },
 
 "disk": {
     "interval": 30,
@@ -63,7 +74,7 @@
     "on-click-right": "kitty -e btop"
   },
 
-    "backlight": {
+"backlight": {
         "reverse-scrolling": true,
         "smooth-scrolling-threshold": 2.0,
         "on-scroll-up": "brightnessctl set 1%+",
@@ -72,14 +83,10 @@
         "tooltip-format": "Current brightness is {percent} percent",
         "format": "{icon}   {percent}%",
         "format-icons": ["󰃞", "󰃟", "󰃠"],
-    },
-
-
-    "battery": {
-        "states": {
-            "warning": 25,
-            "critical": 15
         },
+
+   "battery": { "states": {"warning": 25,"critical": 15 },
+        "interval": 1,
         "format": "{icon}   {capacity}%",
         "on-click-right": "kitty sh -c 'upower -i /org/freedesktop/UPower/devices/battery_BAT0; read'",
         "format-full": "{icon}   Battery full {capacity}%",
@@ -88,16 +95,15 @@
         "format-charging": "  Charging {capacity}%",
         "format-plugged": "  Plugged in {capacity}%",
         "format-alt": "{icon}   Health ({health}%)  Charge cycles ({cycles})",
-        "format-icons": {
-        "default": ["", "", "", "", ""],
-    },
-},
+        "format-icons": { "default": ["", "", "", "", ""]},
+      },
 
     "network#wifi": {
         "interval": 1,
         "format-wifi": "    {essid}",
         "tooltip-format-wifi": "You are connected to {essid} ({signalStrength}%)",
         "format-disconnected": "   No internet",
+        "on-click-right": "kitty -e nmtui"
     },
 
 
@@ -110,16 +116,23 @@
      },
 
 
+     "bluetooth": {
+        "interval": 1,
+	"format": "",
+	"format-connected": "  {device_alias}",
+	"format-connected-battery": "  {device_alias} {device_battery_percentage}%",
+        "on-click-right": "kitty -e bluetui"
+     },
+
+
     "pulseaudio": {
         "scroll-step": 1,
         "reverse-scrolling": true,
         "smooth-scrolling-threshold": 0.5,
         "format": "{icon} {volume}%",
-        "format-bluetooth": "{volume}% {icon}",
-        "format-muted": " ",
-        "format-icons": {
-            "default": [" ", "  ", "   "]
-        },
+        "format-bluetooth":" {icon} {volume}%",
+        "format-muted": "   Muted",
+        "format-icons": { "default": [" ", "  ", "   "]},
         "on-click-right": "pavucontrol"
     },
 
@@ -128,6 +141,7 @@
         "tooltip": false,
         "tooltip-format": "Power menu",
         "menu": "on-click",
+        "on-click-right": "wlogout",
         "menu-file": "~/.config/waybar/power_menu.xml",
         "menu-actions": {
             "shutdown": "systemctl poweroff",

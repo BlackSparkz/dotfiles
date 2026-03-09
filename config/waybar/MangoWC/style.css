@@ -1,4 +1,4 @@
-* {
+*{
     font-family: Google Sans Flex;
     font-size: 16px;
     padding-left: 2px;
@@ -37,10 +37,12 @@ menuitem {
 
 #pulseaudio:hover {
     background-color: #5962ff;
+    transition: all 0.2s ease-in-out;
 }
 
 #backlight:hover {
     background-color: #5962ff;
+    transition: all 0.2s ease-in-out;
 }
 
 tooltip {
@@ -53,8 +55,10 @@ tooltip label {
   padding: 2px 12px 2px 12px;
 }
 
+#custom-mpris,
 #clock {
 background-color: rgba(255, 255, 255, 0.1);
+transition: all 0.2s ease-in-out;
 color: white;
 border-radius: 24px;
 padding-top: 4px;
@@ -67,6 +71,7 @@ margin-bottom: 4px;
 
 #battery {
 background-color: rgba(255, 255, 255, 0.1);
+transition: all 0.2s ease-in-out;
 color: white;
 border-radius: 24px;
 padding-top: 4px;
@@ -78,6 +83,7 @@ margin-bottom: 4px;
 }
 
 #battery.charging, #battery.plugged {
+transition: all 0.2s ease-in-out;
 background-color: #00aa01;
 color: white;
 border-radius: 24px;
@@ -98,6 +104,7 @@ margin-bottom: 4px;
 
 
 #battery.critical:not(.charging) {
+transition: all 0.2s ease-in-out;
 background-color: #f2000e;
 color: white;
 border-radius: 24px;
@@ -115,6 +122,7 @@ animation-direction: alternate;
 }
 
 #battery.warning:not(.charging) {
+transition: all 0.2s ease-in-out;
 background-color: #f74f08;
 color: white;
 border-radius: 24px;
@@ -133,6 +141,7 @@ animation-direction: alternate;
 
 #battery.full {
 background-color: #5962ff;
+transition: all 0.2s ease-in-out;
 color: white;
 border-radius: 24px;
 padding-top: 4px;
@@ -145,6 +154,7 @@ margin-bottom: 4px;
 
 #bluetooth.on {
 background-color: rgba(255, 255, 255, 0.1);
+transition: all 0.2s ease-in-out;
 color: #00aa01;
 border-radius: 24px;
 padding-top: 4px;
@@ -158,6 +168,7 @@ margin-bottom: 4px;
 #bluetooth.off,
 #bluetooth.connected {
 background-color: rgba(255, 255, 255, 0.1);
+transition: all 0.2s ease-in-out;
 color: white;
 border-radius: 24px;
 padding-top: 4px;
@@ -170,6 +181,7 @@ margin-bottom: 4px;
 
 #cpu {
 background-color: rgba(255, 255, 255, 0.1);
+transition: all 0.2s ease-in-out;
 color: white;
 border-radius: 24px;
 padding-top: 4px;
@@ -182,6 +194,7 @@ margin-bottom: 4px;
 
 #memory {
 background-color: rgba(255, 255, 255, 0.1);
+transition: all 0.2s ease-in-out;
 color: white;
 border-radius: 24px;
 padding-top: 4px;
@@ -194,6 +207,7 @@ margin-bottom: 4px;
 
 #disk {
 background-color: rgba(255, 255, 255, 0.1);
+transition: all 0.2s ease-in-out;
 color: white;
 border-radius: 24px;
 padding-top: 4px;
@@ -206,6 +220,7 @@ margin-bottom: 4px;
 
 #backlight {
 background-color: rgba(255, 255, 255, 0.1);
+transition: all 0.2s ease-in-out;
 color: white;
 border-radius: 24px;
 padding-top: 4px;
@@ -218,6 +233,7 @@ margin-bottom: 4px;
 
 #network {
 background-color: rgba(255, 255, 255, 0.1);
+transition: all 0.2s ease-in-out;
 color: white;
 border-radius: 24px;
 padding-top: 4px;
@@ -230,6 +246,7 @@ margin-bottom: 4px;
 
 #network.disconnected {
 background-color: rgba(255, 255, 255, 0.1);
+transition: all 0.2s ease-in-out;
 color: white;
 border-radius: 24px;
 padding-top: 4px;
@@ -242,6 +259,7 @@ margin-bottom: 4px;
 
 #pulseaudio {
 background-color: rgba(255, 255, 255, 0.1);
+transition: all 0.2s ease-in-out;
 color: white;
 border-radius: 24px;
 padding-top: 4px;
@@ -254,6 +272,7 @@ margin-bottom: 4px;
 
 #pulseaudio.muted {
 background-color: #f2000e;
+transition: all 0.5s ease-in-out;
 color: white;
 border-radius: 24px;
 padding-top: 4px;
@@ -266,6 +285,7 @@ margin-bottom: 4px;
 
 #custom-power {
 background-color: rgba(255, 255, 255, 0.1);
+transition: all 0.2s ease-in-out;
 color: white;
 border-radius: 24px;
 padding-top: 4px;

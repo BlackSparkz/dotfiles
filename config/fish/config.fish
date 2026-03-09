@@ -47,9 +47,10 @@ alias aptr='sudo apt remove'
 # Arch based
 # ==============================
 # alias pacup='sudo timeshift --create --comments "Before update" --tags O && sudo pacman -Syu --noconfirm && yay -Syu'
-alias pacup='sudo timeshift --create --comments "Before update" --tags O && yay -Syu && yay -Yc'
-alias paci='yay -S --needed'
-alias pacr='yay -Rns'
+alias pacup='sudo timeshift --create --comments "Before update" --tags O && paru -Syu'
+alias paci='paru -S --needed'
+alias pacr='paru -Rns'
+alias pacc='paru -Rns $(paru -Qtdq)'
 
 # ==============================
 # System / Power
