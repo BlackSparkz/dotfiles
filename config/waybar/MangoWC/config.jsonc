@@ -23,7 +23,7 @@
 
 "custom/logo": {
     "format" : "󰣇   Arch Linux",
-    "tooltip": true,
+    "tooltip": false,
     "tooltip-format": "App launcher",
     "on-click": "pkill rofi || rofi -show drun",
     "on-click-right": "kitty",
@@ -34,7 +34,6 @@
     "interval": 2,
     "return-type": "json",
     "max-length": 15,
-    "min-length": 15,
     "on-click": "playerctl play-pause",
     "tooltip": false
 },

@@ -35,12 +35,8 @@ menuitem {
     padding: 6px 0px 6px 0px;
 }
 
+#backlight:hover,
 #pulseaudio:hover {
-    background-color: #5962ff;
-    transition: all 0.2s ease-in-out;
-}
-
-#backlight:hover {
     background-color: #5962ff;
     transition: all 0.2s ease-in-out;
 }
@@ -272,7 +268,7 @@ margin-bottom: 4px;
 
 #pulseaudio.muted {
 background-color: #f2000e;
-transition: all 0.5s ease-in-out;
+transition: all 0.2s ease-in-out;
 color: white;
 border-radius: 24px;
 padding-top: 4px;

@@ -7,7 +7,7 @@ layer-rule {
 }
 
 blur {
-    passes 2
+    passes 3
     offset 6
     noise 0.02
     saturation 1.5
@@ -86,11 +86,6 @@ layout {
 	off
         width 4
 
-        // Colors can be set in a variety of ways:
-        // - CSS named colors: "red"
-        // - RGB hex: "#rgb", "#rgba", "#rrggbb", "#rrggbbaa"
-        // - CSS-like notation: "rgb(255, 127, 0)", rgba(), hsl() and a few others.
-
         active-color "#7fc8ff"
         inactive-color "#505050"
 
@@ -121,8 +116,8 @@ layout {
     }
 }
 
-spawn-sh-at-startup "waybar -c $HOME/.config/waybar/Niri/config.jsonc -s $HOME/.config/waybar/Niri/style.css"
-spawn-sh-at-startup "swaybg -i ~/Wallpapers/56943-3840x1947-desktop-hd-neon-wallpaper-image.jpg -m fill"
+spawn-sh-at-startup "waybar -c $HOME/.config/waybar/MangoWC/config.jsonc -s $HOME/.config/waybar/MangoWC/style.css"
+spawn-sh-at-startup "swaybg -i ~/Wallpapers/japan-artistic-5120x2880-25406.jpg -m fill"
 spawn-at-startup "kitty"
 spawn-sh-at-startup "kitty -e btop"
 spawn-at-startup "kdeconnect-indicator"
