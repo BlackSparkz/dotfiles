@@ -2,16 +2,20 @@
     font-family: Google Sans Flex;
     font-size: 16px;
     padding: 0px 2px 0px 2px;
+    transition: all 0.2s ease-in-out;
 }
 
 window#waybar {
     background-color: rgba(00, 00, 00, 0.4);
+    transition: all 0.2s ease-in-out;
     color: white;
     border-radius: 0px;
 }
 
 #workspaces button {
-color: white;
+  border-radius: 24px;
+  transition: all 0.2s ease-in-out;
+  color: white;
 }
 
 #backlight:hover,
