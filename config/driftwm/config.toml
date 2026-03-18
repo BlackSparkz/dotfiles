@@ -10,24 +10,23 @@ autostart = [
 ]
 
 [input.keyboard]
-layout = "us"              # XKB layout (e.g., "us,ru" for multi-layout)
-repeat_rate = 60           # keys/sec
-repeat_delay = 300         # ms before repeat starts
+layout = "us"
+repeat_rate = 60
+repeat_delay = 300
 
 [input.scroll]
 speed = 1.5                 # viewport pan speed multiplier
 friction = 0.94             # momentum decay (0.90=snappy, 0.98=floaty)
 
 [input.trackpad]
-tap_to_click = true         # enable tap-to-click
-natural_scroll = true       # reverse scroll direction (content follows fingers)
-# tap_and_drag = true         # double-tap-hold to drag
-accel_speed = 1.0           # pointer acceleration (-1.0 to 1.0)
-click_method = "none"       # none = device default; clickfinger = finger count (1=left, 2=right, 3=middle); button_areas = position on trackpad
+tap_to_click = true
+natural_scroll = true
+accel_speed = 1.0
+click_method = "none"
 
 [cursor]
-theme = "Bibata-Modern-Ice"           # sets XCURSOR_THEME
-size = 24                   # sets XCURSOR_SIZE
+theme = "Bibata-Modern-Ice"
+size = 24
 
 [navigation]
 # animation_speed = 0.3       # camera lerp factor (higher = faster)
@@ -57,7 +56,7 @@ size = 24                   # sets XCURSOR_SIZE
 [decorations]
 # bg_color = "#303030"           # title bar background (default: dark gray)
 # fg_color = "#FFFFFF"           # close button × color (default: white)
-corner_radius = 24              # clip window corners to this radius (no effect if client rounds more)
+corner_radius = 32              # clip window corners to this radius (no effect if client rounds more)
 
 [effects]
 blur_radius = 4                # number of Kawase down+up passes (default: 2)
