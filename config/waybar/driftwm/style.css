@@ -1,0 +1,91 @@
+* {
+    font-family: Google Sans Flex;
+    font-size: 16px;
+    padding: 0px 2px 0px 2px;
+    transition: all 0.2s ease-in-out;
+}
+
+window#waybar {
+    background-color: rgba(00, 00, 00, 0.99);
+    transition: all 0.2s ease-in-out;
+    color: white;
+    border-radius: 0px;
+}
+
+#backlight:hover,
+#pulseaudio:hover {
+    background-color: #5962ff;
+    transition: all 0.2s ease-in-out;
+}
+
+tooltip {
+  border-radius: 24px;
+}
+
+tooltip label {
+  color: white;
+  padding: 2px 12px 2px 12px;
+}
+
+#workspaces,
+#battery.critical:not(.charging),
+#battery.warning:not(.charging),
+#battery.charging,
+#battery.plugged,
+#battery.full,
+#custom-logo,
+#custom-power,
+#custom-mpris,
+#pulseaudio.muted,
+#pulseaudio,
+#network,
+#backlight,
+#battery,
+#network.disconnected,
+#cpu,
+#memory,
+#disk,
+#clock {
+background-color: #303030;
+transition: all 0.2s ease-in-out;
+color: white;
+border-radius: 24px;
+padding: 4px 12px 3px 12px;
+margin: 4px 0px 4px 0px;
+}
+
+#workspaces {
+padding: 0px 4px 0px 4px;
+}
+
+#battery.charging, #battery.plugged {
+background-color: #00aa01;
+}
+
+@keyframes blink {
+    to {
+        background-color: rgba(255, 255, 255, 0.1);
+        color: white;
+    }
+}
+
+#battery.critical:not(.charging) {
+background-color: #f2000e;
+animation-name: blink;
+animation-duration: 1.0s;
+animation-timing-function: steps(20);
+animation-iteration-count: infinite;
+animation-direction: alternate;
+}
+
+#battery.warning:not(.charging) {
+background-color: #f74f08;
+}
+
+#battery.full {
+background-color: #5962ff;
+}
+
+#custom-power {
+padding: 1px 16px 0px 12px;
+}

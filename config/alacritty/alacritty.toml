@@ -1,14 +1,17 @@
+general.live_config_reload = true
 [window]
-padding = { x = 24, y = 21 }
+dimensions = { columns = 120, lines = 40 }
+padding = { x = 24, y = 24 }
 decorations = "none"
 dynamic_padding = true
 
 [font]
-size = 14.0
+size = 12.0
 
 [font.normal]
-family = "Google Sans Code NF"
-style = "Regular"
+#family = "Google Sans Code NF"
+family = "ProFont IIx Nerd Font Mono"
+#style = "Regular"
 
 [selection]
 save_to_clipboard = true

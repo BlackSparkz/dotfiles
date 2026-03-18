@@ -1,0 +1,43 @@
+autostart = [
+    "kdeconnect-indicator",
+     "waybar -c $HOME/.config/waybar/driftwm/config.jsonc -s $HOME/.config/waybar/driftwm/style.css &",
+     "wl-paste --type image --watch cliphist store",
+     "wl-paste --type text --watch cliphist store",
+     "mako",
+]
+
+[env]
+QT_QPA_PLATFORMTHEME = "qt6ct"
+
+[input.keyboard]
+layout = "us"
+
+[cursor]
+theme = "Bibata-Modern-Ice"
+
+[decorations]
+bg_color = "#FDF6E3"
+fg_color = "#5C6A72"
+
+[background]
+shader_path = "~/Wallpapers/pink_cloud.glsl"
+
+[output.outline]
+color="#FDF6E3"
+
+[keybindings]
+"mod+t" = "exec alacritty"
+"mod+n" = "exec alacritty -e yazi"
+"mod+x" = "exec alacritty -e cmus"
+"mod+b" = "exec librewolf"
+"mod+space" = "exec pkill rofi || rofi -show drun"
+# swayosd instead of default wpctl/brightnessctl
+"XF86AudioRaiseVolume" = "spawn swayosd-client --output-volume raise"
+"XF86AudioLowerVolume" = "spawn swayosd-client --output-volume lower"
+"XF86AudioMute" = "spawn swayosd-client --output-volume mute-toggle"
+"XF86MonBrightnessUp" = "spawn swayosd-client --brightness raise"
+"XF86MonBrightnessDown" = "spawn swayosd-client --brightness lower"
+
+[[outputs]]
+name = "eDP-1"
+
