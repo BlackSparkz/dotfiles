@@ -16,7 +16,7 @@ repeat_delay = 300
 
 [input.scroll]
 speed = 1.5                 # viewport pan speed multiplier
-friction = 0.94             # momentum decay (0.90=snappy, 0.98=floaty)
+friction = 0.90             # momentum decay (0.90=snappy, 0.98=floaty)
 
 [input.trackpad]
 tap_to_click = true
@@ -29,29 +29,30 @@ theme = "Bibata-Modern-Ice"
 size = 24
 
 [navigation]
-# animation_speed = 0.3       # camera lerp factor (higher = faster)
-# nudge_step = 20             # px per nudge-window action
-# pan_step = 100.0            # px per pan-viewport action
-# Anchors: canvas points discoverable by center-nearest (4-finger swipe / Mod+Arrow)
+animation_speed = 0.1       # camera lerp factor (higher = faster)
+nudge_step = 20             # px per nudge-window action
+pan_step = 140.0            # px per pan-viewport action
+#Anchors: canvas points discoverable by center-nearest (4-finger swipe / Mod+Arrow)
 # even when no window is there. Uses Y-up coordinate system.
 # anchors = [[0, 0]]
 # Example with 4 corners:
-# # anchors = [[0, 0], [-1750, 1750], [1750, 1750], [1750, -1750], [-1750, -1750]]
+# anchors = [[0, 0], [-1750, 1750], [1750, 1750], [1750, -1750], [-1750, -1750]]
 
 [navigation.edge_pan]
-# zone = 100.0                # activation zone width (px from viewport edge)
-# speed_min = 4.0             # px/frame at zone boundary
-# speed_max = 20.0            # px/frame at viewport edge
+zone = 100.0                # activation zone width (px from viewport edge)
+speed_min = 4.0             # px/frame at zone boundary
+speed_max = 20.0            # px/frame at viewport edge
 
 [zoom]
-# step = 1.1                  # multiplier per keypress (1.1 = 10% per press)
-# fit_padding = 100.0         # canvas px padding for zoom-to-fit
+step = 1.2                  # multiplier per keypress (1.1 = 10% per press)
+
+fit_padding = 100.0         # canvas px padding for zoom-to-fit
 
 [snap]
-# enabled = true               # magnetic edge snapping during window drag
-# gap = 12.0                   # gap between snapped windows (canvas px)
-# distance = 24.0              # activation threshold (screen px from edge)
-# break_force = 32.0           # screen px past snap to break free
+enabled = true               # magnetic edge snapping during window drag
+gap = 16.0                   # gap between snapped windows (canvas px)
+distance = 30.0              # activation threshold (screen px from edge)
+break_force = 40.0           # screen px past snap to break free
 
 [decorations]
 # bg_color = "#303030"           # title bar background (default: dark gray)
@@ -61,15 +62,6 @@ corner_radius = 32              # clip window corners to this radius (no effect 
 [effects]
 blur_radius = 4                # number of Kawase down+up passes (default: 2)
 blur_strength = 1.0           # per-pass texel spread (default: 1.1)
-
-[output]
-# Global output settings. Per-output scale/transform/mode/position
-# are configured in [[outputs]] sections below.
-
-[output.outline]
-# color = "#ffffff"           # outline color for other monitors' viewports
-# thickness = 1               # pixels (0 to disable)
-# opacity = 0.5               # 0.0–1.0
 
 [background]
 shader_path = "~/Wallpapers/pink_cloud.glsl"
@@ -206,6 +198,9 @@ shader_path = "~/Wallpapers/pink_cloud.glsl"
 # "alt+2-finger-pinch-in" = "fit-window"
 # "alt+2-finger-pinch-out" = "fit-window"
 # "alt+3-finger-pinch-in" = "toggle-fullscreen"
+
+
+
 # "alt+3-finger-pinch-out" = "toggle-fullscreen"
 
 [gestures.on-canvas]
