@@ -4,7 +4,7 @@ autostart = [
      "kdeconnect-indicator",
      "wl-paste --type image --watch cliphist store",
      "wl-paste --type text --watch cliphist store",
-     "swaync",
+     "mako",
      "alacritty",
 ]
 
@@ -124,7 +124,6 @@ shader_path = "~/Wallpapers/pink_cloud.glsl"
 # "mod+alt+right" = "send-to-output right"
 "mod+ctrl+l" = "spawn hyprlock"
 "mod+ctrl+e" = "quit"
-"mod+ctrl+n" = "exec swaync-client -t -sw"
 "XF86AudioRaiseVolume" = "spawn wpctl set-volume @DEFAULT_AUDIO_SINK@ -l 1.0 10%+"
 "XF86AudioLowerVolume" = "spawn wpctl set-volume @DEFAULT_AUDIO_SINK@ 10%-"
 "XF86AudioMute" = "spawn wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
