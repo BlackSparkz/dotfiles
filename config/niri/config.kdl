@@ -134,7 +134,7 @@ screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 animations {
 
     workspace-switch {
-        spring damping-ratio=1.0 stiffness=800 epsilon=0.0001
+        spring damping-ratio=0.6 stiffness=1000 epsilon=0.0001
     }
 
     window-open {
@@ -148,11 +148,11 @@ animations {
     }
 
     horizontal-view-movement {
-        spring damping-ratio=1.0 stiffness=800 epsilon=0.0001
+        spring damping-ratio=0.6 stiffness=800 epsilon=0.0001
     }
 
     window-movement {
-        spring damping-ratio=1.0 stiffness=800 epsilon=0.0001
+        spring damping-ratio=0.6 stiffness=800 epsilon=0.0001
     }
 
     window-resize {
@@ -173,11 +173,11 @@ animations {
     }
 
     overview-open-close {
-        spring damping-ratio=1.0 stiffness=800 epsilon=0.0001
+        spring damping-ratio=0.6 stiffness=800 epsilon=0.0001
     }
 
     recent-windows-close {
-        spring damping-ratio=1.0 stiffness=800 epsilon=0.001
+        spring damping-ratio=0.6 stiffness=800 epsilon=0.001
     }
 }
 

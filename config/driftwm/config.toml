@@ -11,7 +11,7 @@ autostart = [
 [input.keyboard]
 layout = "us"
 repeat_rate = 60
-repeat_delay = 300
+repeat_delay = 200
 
 [input.scroll]
 speed = 1.5                 # viewport pan speed multiplier

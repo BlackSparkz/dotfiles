@@ -3,7 +3,7 @@
     box-shadow: none;
     font-family: Google Sans Flex;
     font-size: 20px;
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 2);
+    transition: all 0.2s ease-in-out;
 }
 
 window {
@@ -12,44 +12,45 @@ window {
 
 button {
     color: #ffffff;
-    background-color: alpha(#ffffff, 0.20);
+    background-color: alpha(#ffffff, 0.10);
     border: none;
-    margin: 20px;
-    border-radius: 60px 60px 60px 60px ;
+    margin: 2px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 25%;
-    padding: 100px 0px 20px 0px
 }
 
 button:active, button:focus, button:hover {
-    background-color: alpha(#5962ff, 0.90);
+    background-color: alpha(#ffffff, 0.20);
     color: #ffffff;
-    border-radius: 100px 100px 100px 100px ;
-    box-shadow: 0 0 25px alpha(#5962ff, 0.6);
-    margin: 10px;
 }
 
 #lock {
+       border-radius: 0px 0px 100px 0px;
        background-image: image(url("/home/blackspark/Dotfiles/config/wlogout/icons/lock.png"));
 }
 
 #logout {
+         border-radius: 0px 100px 0px 0px ;
          background-image: image(url("/home/blackspark/Dotfiles/config/wlogout/icons/logout.png"));
 }
 
 #suspend {
+          border-radius: 0px 0px 0px 100px ;
           background-image: image(url("/home/blackspark/Dotfiles/config/wlogout/icons/sleep.png"));
 }
 
 #hibernate {
+            border-radius: 0px 0px 0px 0px;
             background-image: image(url("/home/blackspark/Dotfiles/config/wlogout/icons/hibernate.png"));
 }
 
 #shutdown {
+           border-radius: 100px 0px 0px 0px;
            background-image: image(url("/home/blackspark/Dotfiles/config/wlogout/icons/power.png"));
 }
 
 #reboot {
+         border-radius: 0px 0px 0px 0px;
          background-image: image(url("/home/blackspark/Dotfiles/config/wlogout/icons/restart.png"));
 }
