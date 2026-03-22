@@ -27,30 +27,30 @@ button:active, button:focus, button:hover {
 
 #lock {
        border-radius: 0px 0px 100px 0px;
-       background-image: image(url("/home/blackspark/Dotfiles/config/wlogout/icons/lock.png"));
+       background-image: image(url("/home/blackspark/.config/wlogout/icons/lock.png"));
 }
 
 #logout {
          border-radius: 0px 100px 0px 0px ;
-         background-image: image(url("/home/blackspark/Dotfiles/config/wlogout/icons/logout.png"));
+         background-image: image(url("/home/blackspark/.config/wlogout/icons/logout.png"));
 }
 
 #suspend {
           border-radius: 0px 0px 0px 100px ;
-          background-image: image(url("/home/blackspark/Dotfiles/config/wlogout/icons/sleep.png"));
+          background-image: image(url("/home/blackspark/.config/wlogout/icons/sleep.png"));
 }
 
 #hibernate {
             border-radius: 0px 0px 0px 0px;
-            background-image: image(url("/home/blackspark/Dotfiles/config/wlogout/icons/hibernate.png"));
+            background-image: image(url("/home/blackspark/.config/wlogout/icons/hibernate.png"));
 }
 
 #shutdown {
            border-radius: 100px 0px 0px 0px;
-           background-image: image(url("/home/blackspark/Dotfiles/config/wlogout/icons/power.png"));
+           background-image: image(url("/home/blackspark/.config/wlogout/icons/power.png"));
 }
 
 #reboot {
          border-radius: 0px 0px 0px 0px;
-         background-image: image(url("/home/blackspark/Dotfiles/config/wlogout/icons/restart.png"));
+         background-image: image(url("/home/blackspark/.config/wlogout/icons/restart.png"));
 }

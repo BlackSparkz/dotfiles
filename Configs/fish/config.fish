@@ -11,7 +11,6 @@ alias reload='source ~/.config/fish/config.fish ; kitty @ load-config'
 # ls
 # ==============================
 alias ls="eza --no-time --reverse --no-filesize --no-permissions --no-user --icons=always -hl --group-directories-first"
-alias lt='eza -a --tree --level=1 --icons=always'
 alias cat="bat"
 alias tree='tree -C'
 
@@ -21,6 +20,7 @@ alias tree='tree -C'
 alias b='cd ..'
 alias h='cd ~'
 alias d='cd ~/Downloads'
+alias dd='cd ~/Dotfiles'
 
 # ==============================
 # Fedora (dnf)
@@ -39,6 +39,7 @@ alias aptr='sudo apt remove'
 # ==============================
 # Arch based
 # ==============================
+# alias pacup='sudo timeshift --create --comments "Before update" --tags O && sudo pacman -Syu --noconfirm && yay -Syu'
 alias pacup='sudo timeshift --create --comments "Before update" --tags O && yay -Syu'
 alias paci='yay -S --needed'
 alias pacr='yay -Rns'

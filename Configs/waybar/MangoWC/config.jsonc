@@ -48,7 +48,7 @@
     },
 
 "custom/mpris": {
-    "exec": "~/Dotfiles/config/waybar/mpris.sh",
+    "exec": "~/.config/waybar/mpris.sh",
     "interval": 2,
     "return-type": "json",
     "max-length": 15,
