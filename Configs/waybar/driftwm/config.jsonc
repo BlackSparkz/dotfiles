@@ -7,7 +7,7 @@
     "spacing": 6,
     "reload_style_on_change": true,
     
-    "modules-left": [ "custom/logo","custom/mpris","custom/notification" ],
+    "modules-left": [ "custom/logo","custom/mpris" ],
 
     "modules-center": [ "clock" ],
 
@@ -19,40 +19,19 @@
         "network#wifi",
         "pulseaudio",
         "backlight",
-        "battery",
+        "battery"
     ],
-
-"custom/notification": {
-    "tooltip": true,
-    "format": "<span size='12pt'>{icon}</span>",
-    "format-icons": {
-      "notification": "󱅫",
-      "none": "󰂜",
-      "dnd-notification": "󰂠",
-      "dnd-none": "󰪓",
-      "inhibited-notification": "󰂛",
-      "inhibited-none": "󰪑",
-      "dnd-inhibited-notification": "󰂛",
-      "dnd-inhibited-none": "󰪑"
-    },
-    "return-type": "json",
-    "exec-if": "which swaync-client",
-    "exec": "swaync-client -swb",
-    "on-click": "swaync-client -t -sw",
-    "on-click-right": "swaync-client -d -sw",
-    "escape": true
-  },
 
 "custom/logo": {
     "format" : "󰣇   Arch Linux",
     "tooltip": false,
     "tooltip-format": "App launcher",
     "on-click": "pkill rofi || rofi -show drun",
-    "on-click-right": "alacritty",
+    "on-click-right": "alacritty"
     },
 
 "custom/mpris": {
-    "exec": "~/Dotfiles/config/waybar/mpris.sh",
+    "exec": "~/.config/waybar/mpris.sh",
     "interval": 2,
     "return-type": "json",
     "max-length": 15,
@@ -64,7 +43,7 @@
     "interval": 1,
     "tooltip": false,
     "format": "It’s {:%H:%M:%S on %A, %d %B %Y}",
-    "on-click-right": "alacritty -e bluetui",
+    "on-click-right": "alacritty -e bluetui"
     },
 
 "cpu": {
@@ -102,7 +81,7 @@
         "tooltip": true,
         "tooltip-format": "Current brightness is {percent} percent",
         "format": "{icon}   {percent}%",
-        "format-icons": ["󰃞", "󰃟", "󰃠"],
+        "format-icons": ["󰃞", "󰃟", "󰃠"]
         },
 
 "battery": { "states": {"warning": 25,"critical": 15 },
@@ -121,7 +100,7 @@
         "tooltip-format": "Battery level: {capacity}%\nPower usage: {power} watts\nDischarge in: {time}\nBattery health: {health}%\nCharge cycles: {cycles}",
         "tooltip-format-charging": "Charging at {capacity}%\nPower usage: {power} watts\nFull charge in: {time}\nBattery health: {health}%\nCharge cycles: {cycles}",
         "tooltip-format-critical": "Low battery: {capacity}%\nPower usage: {power} watts\nShutdown in: {time}\nConnect the charger immediately.",
-        "tooltip-format-warning": "Low battery: {capacity}%\nPower usage: {power} watts\nDischarge in: {time}\nConnect the charger soon.",
+        "tooltip-format-warning": "Low battery: {capacity}%\nPower usage: {power} watts\nDischarge in: {time}\nConnect the charger soon."
       },
 
     "network#wifi": {
@@ -160,6 +139,6 @@
             //"suspend": "systemctl suspend",
             //"logout": "loginctl terminate-user $USER",
         //},
-   },
+   }
 
 }
