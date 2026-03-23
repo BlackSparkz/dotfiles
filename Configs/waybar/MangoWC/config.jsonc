@@ -13,6 +13,7 @@
 
     "modules-right": [
         "custom/power",
+	"temperature",
         "cpu",
         "memory",
         "disk",
@@ -30,6 +31,16 @@
     "format": "{}",
     "on-click-right": "kitty sh -c 'upower -i /org/freedesktop/UPower/devices/battery_BAT0; read'"
 },*/
+
+ "temperature": {
+    "hwmon-path": "/sys/class/hwmon/hwmon4/temp1_input",
+    "critical-threshold": 70,
+    "warning-threshold": 50,
+    "format-critical": "  {temperatureC}°C",
+    "format-warning": "  {temperatureC}°C",
+    "format": "  {temperatureC}°C",
+    "on-click-right": "kitty sh -c 'sensors; read'"
+},
 
   "ext/workspaces": {
     "format": "{icon}",
