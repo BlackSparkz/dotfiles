@@ -53,7 +53,7 @@ cursor {
 input {
     keyboard {
 	    repeat-rate 60
-	    repeat-delay 300
+	    repeat-delay 200
     }
 
     touchpad {
