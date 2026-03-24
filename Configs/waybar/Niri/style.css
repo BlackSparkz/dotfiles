@@ -34,6 +34,9 @@ tooltip label {
 }
 
 #workspaces,
+#temperature,
+#temperature.warning,
+#temperature.critical,
 #battery.critical:not(.charging),
 #battery.warning:not(.charging),
 #battery.charging,
@@ -75,8 +78,9 @@ background-color: #00aa01;
     }
 }
 
+#temperature.critical,
 #battery.critical:not(.charging) {
-background-color: #f2000e;
+background-color: #FF1212;
 animation-name: blink;
 animation-duration: 1.0s;
 animation-timing-function: steps(20);
@@ -84,8 +88,9 @@ animation-iteration-count: infinite;
 animation-direction: alternate;
 }
 
-#battery.warning:not(.charging) {
-background-color: #f74f08;
+#battery.warning:not(.charging),
+#temperature.warning {
+background-color: #FF7300;
 }
 
 #battery.full {

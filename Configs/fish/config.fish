@@ -8,11 +8,7 @@ alias h='history'
 alias reload='source ~/.config/fish/config.fish ; kitty @ load-config'
 alias bip='pacman -Qqe > ~/Dotfiles/Configs/installed-pkg/pkglist.txt && notify-send "Backup" "Package list saved successfully" && echo "Saved path: ~/Dotfiles/Configs/installed-pkg/pkglist.txt"'
 alias rip='yay -S --needed --answerclean All --answerdiff None - < ~/Dotfiles/Configs/installed-pkg/pkglist.txt'
-# ==============================
-# ls
-# ==============================
 alias ls="eza --no-time --reverse --no-filesize --no-permissions --no-user --icons=always -hl --group-directories-first"
-alias cat="bat"
 alias tree='tree -C'
 
 # ==============================

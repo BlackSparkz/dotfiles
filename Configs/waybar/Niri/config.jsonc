@@ -13,6 +13,7 @@
 
     "modules-right": [
         "custom/power",
+	"temperature",
         "cpu",
         "memory",
         "disk",
@@ -30,6 +31,15 @@
     "on-click-right": "kitty",
     },
 
+"temperature": {
+    "hwmon-path": "/sys/class/hwmon/hwmon4/temp1_input",
+    "critical-threshold": 80,
+    "warning-threshold": 60,
+    "format": "  {temperatureC}°C",
+    "tooltip": true,
+    "tooltip-format": "CPU temperature: {temperatureC}°C",
+    "on-click-right": "kitty sh -c 'sensors; read'"
+    },
 
     "niri/workspaces": {
 	"format": "{icon}",
@@ -89,7 +99,7 @@
         "on-scroll-up": "brightnessctl set 1%+",
         "on-scroll-down": "brightnessctl set 1%-",
         "tooltip": true,
-        "tooltip-format": "Current brightness is {percent} percent",
+        "tooltip-format": "Current brightness: {percent}%",
         "format": "{icon}   {percent}%",
         "format-icons": ["󰃞", "󰃟", "󰃠"],
         "on-click-right": "bash $HOME/.config/SwayBg/random-wall.sh"
@@ -97,16 +107,16 @@
 
    "battery": { "states": {"warning": 25,"critical": 15 },
         "interval": 1,
-        "format": "{icon}   {capacity}%",
+        "format": "{icon}  {capacity}%",
 	"format-time": "{H} hours {M} minutes",
         "on-click-right": "kitty sh -c 'upower -i /org/freedesktop/UPower/devices/battery_BAT0; read'",
-        "format-full": "{icon}   Battery full {capacity}%",
-        "format-warning": "{icon}   Battery low {capacity}%",
+        "format-full": "󱈑  Battery full {capacity}%",
+        "format-warning": "{icon}  Battery low {capacity}%",
         "format-critical": "󰂃  Connect charger {capacity}%",
         "format-charging": "  Charging {capacity}%",
         "format-plugged": "  Plugged in {capacity}%",
-        "format-alt": "{icon}   Health ({health}%)  Charge cycles ({cycles})",
-        "format-icons": { "default": ["", "", "", "", ""]},
+        "format-alt": "{icon}  Health ({health}%)  Charge cycles ({cycles})",
+        "format-icons": { "default": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹" ] },
 	"tooltip": true,
         "tooltip-format": "Battery level: {capacity}%\nPower usage: {power} watts\nDischarge in: {time}\nBattery health: {health}%\nCharge cycles: {cycles}",
         "tooltip-format-charging": "Charging at {capacity}%\nPower usage: {power} watts\nFull charge in: {time}\nBattery health: {health}%\nCharge cycles: {cycles}",
