@@ -72,5 +72,5 @@ alias wifi='nmtui'
 alias bt='bluetui'
 alias gc='git clone'
 
-# zoxide init fish | source
+zoxide init fish | source
 # starship init fish | source
