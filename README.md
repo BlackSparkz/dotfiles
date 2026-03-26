@@ -37,12 +37,12 @@ List of all applications and tools that used in this setup.
 | **Category** | **Application** | **Description** |
 |:---:|:---|:---|
 | **Window Manager** | [MangoWM](https://github.com/mangowm/mango) | Practical and Powerful wayland compositor (dwm but wayland) |
-| [Niri](https://github.com/niri-wm/niri) | A scrollable-tiling Wayland compositor. |
-| [Hyprland](https://github.com/hyprwm/Hyprland) | Hyprland is an independent, highly customizable, dynamic tiling Wayland compositor |
-| [DriftWM](https://github.com/malbiruk/driftwm) | A trackpad-first infinite canvas Wayland compositor. |
+|  | [Niri](https://github.com/niri-wm/niri) | A scrollable-tiling Wayland compositor. |
+|  | [Hyprland](https://github.com/hyprwm/Hyprland) | Hyprland is an independent, highly customizable, dynamic tiling Wayland compositor |
+|  | [DriftWM](https://github.com/malbiruk/driftwm) | A trackpad-first infinite canvas Wayland compositor. |
 | **Status Bar** | [Waybar](https://github.com/Alexays/Waybar) | Highly customizable modular status bar. |
 | **Terminal** | [Kitty](https://github.com/kovidgoyal/kitty) | Kitty - The fast, feature-rich, cross-platform, GPU based terminal |
-| [Alacritty](https://github.com/alacritty/alacritty) | GPU-accelerated terminal emulator. |
+|  | [Alacritty](https://github.com/alacritty/alacritty) | GPU-accelerated terminal emulator. |
 | **Shell** | [Fish](https://fishshell.com/) | User-friendly command line shell. |
 | **Editor** | [Neovim](https://neovim.io/) | Powered by [NvChad](https://nvchad.com) v2.5. |
 | **Launcher** | [Rofi](https://github.com/davatorium/rofi) | Rofi: A window switcher, application launcher and dmenu replacement |
