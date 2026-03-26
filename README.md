@@ -62,7 +62,6 @@ List of all applications and tools used in this setup.
 | **Media Player** | [MPV](https://mpv.io/) | Video player with `modernz` script. |
 | **Git Client** | [Lazygit](https://github.com/jesseduffield/lazygit) | Simple terminal UI for git commands. |
 | **Multiplexer** | [Tmux](https://github.com/tmux/tmux) | Terminal multiplexer. |
-| **Screenshot** | [Swappy](https://github.com/jtheoof/swappy) | Wayland snapshot and editor tool. |
 | **Audio Visualizer** | [Cava](https://github.com/karlstav/cava) | Console-based audio visualizer. |
 
 ## Essential Keybindings
