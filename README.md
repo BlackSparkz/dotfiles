@@ -36,32 +36,30 @@ List of all applications and tools that used in this setup.
 
 | **Category** | **Application** | **Description** |
 |:---:|:---|:---|
-| **Window Manager** | [Niri](https://github.com/YaLTeR/niri) | Infinite scrolling tiling WM for Wayland. |
+| **Window Manager** | [MangoWM](https://github.com/mangowm/mango) | Practical and Powerful wayland compositor (dwm but wayland) |
+| [Niri](https://github.com/niri-wm/niri) | A scrollable-tiling Wayland compositor. |
+| [Hyprland](https://github.com/hyprwm/Hyprland) | Hyprland is an independent, highly customizable, dynamic tiling Wayland compositor |
+| [DriftWM](https://github.com/malbiruk/driftwm) | A trackpad-first infinite canvas Wayland compositor. |
 | **Status Bar** | [Waybar](https://github.com/Alexays/Waybar) | Highly customizable modular status bar. |
-| **Terminal** | [Alacritty](https://github.com/alacritty/alacritty) | GPU-accelerated terminal emulator. |
+| **Terminal** | [Kitty](https://github.com/kovidgoyal/kitty) | Kitty - The fast, feature-rich, cross-platform, GPU based terminal |
+| [Alacritty](https://github.com/alacritty/alacritty) | GPU-accelerated terminal emulator. |
 | **Shell** | [Fish](https://fishshell.com/) | User-friendly command line shell. |
-| **Prompt** | [Starship](https://starship.rs/) | Cross-shell customizable prompt. |
 | **Editor** | [Neovim](https://neovim.io/) | Powered by [NvChad](https://nvchad.com) v2.5. |
-| **Launcher** | [Fuzzel](https://codeberg.org/dnkl/fuzzel) | Wayland-native application launcher. |
-| **System Monitor** | [Btop](https://github.com/aristocratos/btop) | Resource monitor (Glassy Frost / Material You themes). |
+| **Launcher** | [Rofi](https://github.com/davatorium/rofi) | Rofi: A window switcher, application launcher and dmenu replacement |
+| **System Monitor** | [Btop](https://github.com/aristocratos/btop) | A monitor of resources. |
 | **File Manager** | [Yazi](https://github.com/sxyazi/yazi) |  Blazing fast terminal file manager (Rust). |
-|  | [Ranger](https://github.com/ranger/ranger) | VIM-inspired file manager. |
-|  | [Nautilus](https://apps.gnome.org/Nautilus/) | GUI file manager integration. |
 | **Notifications** | [Mako](https://github.com/emersion/mako) | Lightweight notification daemon. |
-| **Lock Screen** | [Swaylock](https://github.com/swaywm/swaylock) | Screen locker for Wayland. |
+| **Lock Screen** | [Hyprlock](https://github.com/hyprwm/hyprlock/) | Hyprland's GPU-accelerated screen locking utility |
 | **Logout Menu** | [Wlogout](https://github.com/ArtsyMacaw/wlogout) | Wayland based logout menu. |
 | **Media Player** | [MPV](https://mpv.io/) | Video player with `modernz` script. |
-| **Visualizer** | [Cava](https://github.com/karlstav/cava) | Console-based audio visualizer with shaders. |
-| **Screenshot** | [Swappy](https://github.com/jomo/swappy) | Wayland native snapshot editing tool. |
 | **Git Client** | [Lazygit](https://github.com/jesseduffield/lazygit) | Simple terminal UI for git commands. |
-| **Notes** | [Obsidian](https://obsidian.md/) | Knowledge base configuration. |
 | **Multiplexer** | [Tmux](https://github.com/tmux/tmux) | Terminal multiplexer. |
 
 ---
 
 ## Essential keybindings
 
-Essential keybindings work across all listed window managers. Explore the configuration file of window manager for the full list of keybindings.
+Essential keybindings work across all listed window managers.\nExplore the window manager’s configuration file for the complete list of keybindings.
 
 | **Key Combination** | **Action** |
 |:---|:---|
@@ -87,14 +85,14 @@ sudo pacman -S niri waybar alacritty fish starship neovim btop yazi ranger fuzze
 Clone this repository to your minimal dotfiles folder (or directly to `.config` if you prefer manual management, though using `stow` is recommended).
 
 ```bash
-git clone https://github.com/youngcoder45/new-niri-minimal.git
-cd new-niri-minimal
+git clone https://github.com/BlackSparkz/dotfiles.git
+cd dotfiles/Configs
 ```
 
 ### 3. Deploy Configs
 Copy the folders to your `~/.config/` directory.
 
 ```bash
-cp -r niri waybar alacritty fish btop fuzzel mako swaylock wlogout ~/.config/
+cp -r niri waybar alacritty fish btop rofi mako wlogout ~/.config/
 # Add others as needed
 ```
