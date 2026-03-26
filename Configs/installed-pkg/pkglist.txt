@@ -1,3 +1,4 @@
+7zip
 amd-ucode
 android-tools
 base
@@ -15,14 +16,17 @@ efibootmgr
 eza
 fastfetch
 fish
+fzf
 git
 github-cli
 gparted
 grim
 grub
+hyprland
 hyprlock
 kdeconnect
 kitty
+lazygit
 less
 libdisplay-info
 libdrm
@@ -55,8 +59,8 @@ stow
 sudo
 swaybg
 timeshift
+tmux
 tree
-unzip
 waybar
 wayland
 wayland-protocols
@@ -68,4 +72,5 @@ xdg-desktop-portal-wlr
 xorg-xwayland
 yay
 yazi
+zoxide
 zram-generator
