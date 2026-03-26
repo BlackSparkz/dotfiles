@@ -36,7 +36,7 @@
 
 ## Components
 
-> List of all applications and tools are used in this setup.
+> This setup uses the following applications and tools:
 
 | **Category** | **Application** | **Description** |
 |:---:|:---|:---|
