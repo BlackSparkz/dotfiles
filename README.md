@@ -12,7 +12,7 @@ If you are just browsing, here is what this setup looks like.
 |:---:|
 | ![Desktop](Screenshots/waybar.png) |
 
-| ** App launcher** |
+| **App launcher** |
 |:---:|
 | ![Rofi](Screenshots/rofi.png) |
 
