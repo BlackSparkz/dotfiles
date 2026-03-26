@@ -14,15 +14,15 @@ If you are just browsing, here is what this setup looks like.
 
 | **Rofi launcher** |
 |:---:|
-| ![Rafi](Screenshots/rofi) |
+| ![Rofi](Screenshots/rofi.png) |
 
-| **OBS Studio** |
+| **Clipboard** |
 |:---:|
-| ![OBS](Screenshots/OBS.png) |
+| ![clipboard](Screenshots/clipboard.png) |
 
-| **Terminal (Alacritty)** |
+| **Terminal** (Kitty & Alacritty) |
 |:---:|
-| ![Terminal](Screenshots/alacritty.png) |
+| ![Terminals](Screenshots/alacritty.png) |
 
 | **Audio Visualizer** |
 |:---:|
