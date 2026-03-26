@@ -49,7 +49,6 @@
 | **Terminal** | [Kitty](https://github.com/kovidgoyal/kitty) | Fast, feature-rich, GPU-based terminal emulator. |
 | | [Alacritty](https://github.com/alacritty/alacritty) | GPU-accelerated terminal emulator. |
 | **Shell** | [Fish](https://fishshell.com/) | User-friendly command line shell. |
-| **Prompt** | [Starship](https://starship.rs/) | Minimal, fast, customizable shell prompt. |
 | **Editor** | [Neovim](https://neovim.io/) | Powered by [NvChad](https://nvchad.com) v2.5. |
 | **Launcher** | [Rofi](https://github.com/davatorium/rofi) | Window switcher, application launcher, and dmenu replacement. |
 | **System Monitor** | [Btop](https://github.com/aristocratos/btop) | A monitor of resources. |
