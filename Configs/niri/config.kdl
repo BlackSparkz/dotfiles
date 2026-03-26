@@ -24,7 +24,7 @@ window-rule {
 
 layer-rule {
     match namespace="^waybar$"
-    match namespace="^notifications$"
+   // match namespace="^notifications$"
     match namespace="^logout_dialog$"
     background-effect {
         blur true
@@ -197,7 +197,7 @@ binds {
     Mod+W repeat=false { spawn-sh "bash $HOME/.config/SwayBg/random-wall.sh"; }
     Mod+B { spawn "librewolf"; }
     Mod+M { spawn "telegram"; }
-    Mod+L { spawn "localsend"; }
+    // Mod+L { spawn "localsend"; }
     Mod+N { spawn-sh "kitty -e yazi"; }
     Mod+X { spawn-sh "kitty -e cmus"; }
     Mod+P { spawn-sh "pkill wlogout || wlogout"; }

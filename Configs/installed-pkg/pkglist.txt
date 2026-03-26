@@ -51,6 +51,7 @@ otf-font-awesome
 pipewire-alsa
 pipewire-pulse
 pixman
+plymouth
 pulsemixer
 rofi
 seatd
