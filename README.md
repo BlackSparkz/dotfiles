@@ -1,15 +1,15 @@
 # My Arch dotfiles
 
-## Mango Wayland Compositor
+## MangoWM
 > [MangoWM](https://github.com/mangowm/mango) is as lightweight as dwl, and can be built completely within a few seconds. Despite this, Mango does not compromise on functionality.
 
-## Niri Wayland compositor
+## Niri
 > A highly configured, minimal, and aesthetic collection of dotfiles for the [Niri](https://github.com/YaLTeR/niri) scrollable tiling window manager.
 
-## Hyprland Wayland compositor
+## Hyprland
 > [Hyprland](https://github.com/hyprwm/Hyprland) is an independent, highly customizable, dynamic tiling Wayland compositor that doesn't sacrifice on its looks.
 
-## DriftWM Wayland compositor
+## DriftWM
 > [DriftWM](https://github.com/malbiruk/driftwm) is a trackpad-first infinite canvas Wayland compositor.
 
 ## Some screenshots
