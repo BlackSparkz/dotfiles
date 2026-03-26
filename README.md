@@ -12,7 +12,7 @@
 ## DriftWM
 > [DriftWM](https://github.com/malbiruk/driftwm) is a trackpad-first infinite canvas Wayland compositor.
 
-##Curious about what it looks like? Here's a glimpse.
+## Curious about what it looks like? Here's a glimpse.
 
 | **Desktop & Status Bar** |
 |:---:|
