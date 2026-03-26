@@ -65,7 +65,7 @@ List of all applications and tools that used in this setup.
 ## Essential keybindings
 
 Essential keybindings work across all listed wayland compositor.
-Explore the wayland compositor’s configuration file for the complete list of keybindings.
+Explore wayland compositor’s configuration file for the complete list of keybindings.
 
 | **Key Combination** | **Action** |
 |:---|:---|
