@@ -1,0 +1,143 @@
+* {
+    font-family: Google Sans Flex;
+    font-size: 16px;
+    padding: 0px 2px 0px 2px;
+    transition: all 0.2s ease-in-out;
+}
+
+window#waybar {
+    background-color: rgba(00, 00, 00, 0.99);
+    transition: all 0.2s ease-in-out;
+    color: white;
+    border-radius: 0px;
+}
+#workspaces:hover ,
+#custom-notification:hover ,
+#custom-logo:hover ,
+#custom-power:hover ,
+#custom-mpris:hover ,
+#network:hover ,
+#backlight:hover ,
+#battery:hover ,
+#network.disconnected:hover ,
+#cpu:hover ,
+#memory:hover ,
+#disk:hover ,
+#custom-lock:hover ,
+#custom-reboot:hover ,
+#custom-suspend:hover ,
+#custom-poweroff:hover ,
+#clock:hover , 
+#pulseaudio:hover {
+    background-color: #505050;
+    border-radius: 24px;
+    transition: all 0.2s ease-in-out;
+}
+
+tooltip {
+  border-radius: 32px;
+}
+
+tooltip label {
+  color: white;
+  padding: 12px 20px 12px 20px;
+}
+
+#workspaces,
+#battery.critical:not(.charging),
+#custom-notification,
+#battery.warning:not(.charging),
+#battery.charging,
+#battery.plugged,
+#battery.full,
+#custom-logo,
+#custom-power,
+#custom-mpris,
+#pulseaudio.muted,
+#pulseaudio,
+#network,
+#backlight,
+#battery,
+#network.disconnected,
+#cpu,
+#memory,
+#disk,
+#custom-lock,
+#custom-reboot,
+#custom-suspend,
+#custom-poweroff,
+#clock {
+background-color: #202020;
+transition: all 0.2s ease-in-out;
+color: white;
+border-radius: 24px;
+padding: 4px 12px 3px 12px;
+margin: 4px 3px 4px 3px;
+}
+
+#custom-lock {
+border-radius: 24px 0px 0px 24px;
+padding: 4px 12px 3px 12px;
+margin: 4px 0px 4px 0px;
+}
+
+#custom-reboot {
+border-radius: 0px;
+padding: 4px 10px 3px 10px;
+margin: 4px 0px 4px 0px;
+}
+
+#custom-suspend {
+border-radius: 0px;
+padding: 4px 10px 3px 10px;
+margin: 4px 0px 4px 0px;
+}
+
+#custom-poweroff {
+border-radius: 0px 24px 24px 0px;
+padding: 4px 14px 3px 8px;
+margin: 4px 0px 4px 0px;
+
+}
+
+#workspaces {
+padding: 0px 4px 0px 4px;
+}
+
+#battery.charging, #battery.plugged {
+background-color: #00aa01;
+}
+
+@keyframes blink {
+    to {
+        background-color: rgba(255, 255, 255, 0.1);
+        color: white;
+    }
+}
+
+#battery.critical:not(.charging) {
+background-color: #f2000e;
+animation-name: blink;
+animation-duration: 1.0s;
+animation-timing-function: steps(20);
+animation-iteration-count: infinite;
+animation-direction: alternate;
+}
+
+#battery.warning:not(.charging) {
+background-color: #f74f08;
+}
+
+#battery.full {
+background-color: #5962ff;
+}
+
+#custom-power {
+padding: 1px 16px 0px 12px;
+}
+
+#pulseaudio.muted {
+background-color: #f2000e;
+}
+
+#custom-notification {}

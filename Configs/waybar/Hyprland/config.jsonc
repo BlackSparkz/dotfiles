@@ -1,0 +1,190 @@
+{
+    //"margin-top": 5,
+    //"margin-left": 5,
+    //"margin-right": 5,
+    "layer": "top",
+    "position": "top",
+    //"spacing": 6,
+    "reload_style_on_change": true,
+    
+    "modules-left": [ "custom/logo","custom/mpris","custom/lock","custom/reboot","custom/suspend","custom/poweroff" ],
+
+    "modules-center": [ "clock" ],
+
+    "modules-right": [
+        //"custom/power",
+        "cpu",
+        "memory",
+        "disk",
+        "network",
+        "pulseaudio",
+        "backlight",
+        "battery"
+    ],
+
+"custom/logo": {
+    "format": "<span color='#1793ff'>󰣇  </span>Arch Linux",
+    "tooltip": false,
+    "tooltip-format": "App launcher",
+    "on-click": "pkill rofi || rofi -show drun",
+    "on-click-right": "alacritty"
+    },
+
+"custom/lock": {
+  "format": "<span color='#00FFFF'></span>",
+  "on-click": "hyprlock",
+  "tooltip": true,
+  "tooltip-format": "Lock"
+  },
+
+  "custom/suspend": {
+  "format": "<span color='#00FF00'>󰤄</span>",
+  "on-click": "systemctl suspend ; hyprlock",
+  "tooltip": true,
+  "tooltip-format": "Suspend"
+  },
+
+"custom/reboot": {
+    "format": "<span color='#FFD700'></span>",
+    "on-click": "systemctl reboot",
+    "tooltip": true,
+    "tooltip-format": "Reboot"
+  },
+
+"custom/poweroff": {
+    "format": "<span color='#FF4040'></span>",
+    "on-click": "systemctl poweroff",
+    "tooltip": true,
+    "tooltip-format": "Poweroff"
+  },
+
+"custom/mpris": {
+    "exec": "~/.config/waybar/mpris.sh",
+    "interval": 2,
+    "return-type": "json",
+    "max-length": 15,
+    "on-click": "playerctl play-pause",
+    "tooltip": false
+},
+
+"clock": {
+    "interval": 1,
+    "tooltip": false,
+    "format": "It’s {:%H:%M:%S on %A, %d %B %Y}",
+    "on-click-right": "alacritty -e bluetui"
+    },
+
+"cpu": {
+    "interval": 1,
+    "format": "<span color='#FF9F0A'>   </span>{}%",
+    "format-alt": "   {avg_frequency} GHz",
+    "on-click-right": "alacritty -e btop",
+    "tooltip": true
+    },
+
+"disk": {
+    "interval": 30,
+    "format": "<span color='#00FFFF'>󰋊   </span>{percentage_used}%",
+    "format-alt": "󰋊  {used} / {total}",
+    "path": "/",
+    "tooltip": true,
+    "tooltip-format": "{used} is used out of {total}\nCurrently free storage is {free} ({percentage_free}%)",
+    "on-click-right": "alacritty -e ncdu"
+  },
+
+"memory": {
+    "interval": 2,
+    "format": "<span color='#8A2BE2'>   </span>{percentage}%",
+    "format-alt": "    {used:0.1f}GiB / {total:0.1f}GiB",
+    "tooltip": true,
+    "tooltip-format": "{used} GiB RAM is used out of {total} GiB\n{swapUsed} GiB SWAP is used out of {swapTotal} GiB",
+    "on-click-right": "alacritty -e btop"
+  },
+
+"backlight": {
+        "reverse-scrolling": true,
+        "smooth-scrolling-threshold": 5.0,
+        "on-scroll-up": "brightnessctl set 1%+",
+        "on-scroll-down": "brightnessctl set 1%-",
+        "tooltip": true,
+        "tooltip-format": "Current brightness: {percent}%",
+        "format": "{icon}   {percent}%",
+        "format-icons": [
+              "<span color='#00ff00'>󰃞</span>",
+              "<span color='#ffff60'>󰃝</span>",
+              "<span color='#FF7300'>󰃟</span>",
+              "<span color='#FF0000'>󰃠</span>"
+              ]
+        },
+
+"battery": { "states": {"warning": 25,"critical": 15 },
+        "interval": 1,
+        "format": "{icon}   {capacity}%",
+	      "format-time": "{H} hours {M} minutes",
+        "on-click-right": "alacritty -e sh -c 'upower -i /org/freedesktop/UPower/devices/battery_BAT0; read'",
+        "format-full": "{icon}   Battery full {capacity}%",
+        "format-warning": "󰁺  Battery low {capacity}%",
+        "format-critical": "󰂃  Connect charger {capacity}%",
+        "format-charging": "  Charging {capacity}%",
+        "format-plugged": "  Plugged in {capacity}%",
+        "format-alt": "{icon}   Health ({health}%)  Charge cycles ({cycles})",
+        "format-icons": {
+          "default": [
+              "<span color='#FF0000'></span>",
+              "<span color='#FF7300'></span>",
+              "<span color='#ffff60'></span>",
+              "<span color='#00ff00'></span>"
+          ]
+        },
+	      "tooltip": true,
+        "tooltip-format": "Battery level: {capacity}%\nPower usage: {power} watts\nDischarge in: {time}\nBattery health: {health}%\nCharge cycles: {cycles}",
+        "tooltip-format-charging": "Charging at {capacity}%\nPower usage: {power} watts\nFull charge in: {time}\nBattery health: {health}%\nCharge cycles: {cycles}",
+        "tooltip-format-critical": "Low battery: {capacity}%\nPower usage: {power} watts\nShutdown in: {time}\nConnect the charger immediately.",
+        "tooltip-format-warning": "Low battery: {capacity}%\nPower usage: {power} watts\nDischarge in: {time}\nConnect the charger soon."
+      },
+
+    "network": {
+        "interval": 1,
+        "format-wifi": "<span color='#5962ff'>    </span>{essid}",
+        "format-alt": " {bandwidthUpBytes}   {bandwidthDownBytes}",
+        "tooltip-format-wifi": "You are connected to {essid} ({signalStrength}%)",
+        "format-disconnected": "<span color='#ff0000'>  </span> No internet",
+        "on-click-right": "alacritty -e nmtui"
+    },
+
+
+    "pulseaudio": {
+        "scroll-step": 1,
+        "reverse-scrolling": true,
+        "smooth-scrolling-threshold": 2.0,
+        "format": "{icon} {volume}%",
+        "format-bluetooth":" {icon} {volume}%",
+        "format-muted": "   Muted",
+        "format-icons": {
+        "default": [
+            "<span color='#00ff00'> </span>",
+            "<span color='#ffff66'> </span>",
+            "<span color='#FF7300'>   </span>"
+            ]
+          },
+	      "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "on-click-right": "alacritty -e pulsemixer"
+    },
+
+"custom/power": {
+    "format" : "",
+        "tooltip": true,
+        "tooltip-format": "Power menu",
+        //"menu": "on-click",
+	"on-click": "pkill wlogout || wlogout",
+        "on-click-right": "pkill wlogout || wlogout",
+        //"menu-file": "~/.config/waybar/power_menu.xml",
+        //"menu-actions": {
+            //"shutdown": "systemctl poweroff",
+            //"reboot": "systemctl reboot",
+            //"suspend": "systemctl suspend",
+            //"logout": "loginctl terminate-user $USER",
+        //},
+   }
+
+}
