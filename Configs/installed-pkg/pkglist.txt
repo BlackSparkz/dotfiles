@@ -46,6 +46,8 @@ ncdu
 neovim
 networkmanager
 niri-wip-git
+nodejs
+npm
 nwg-look
 otf-font-awesome
 pipewire-alsa
@@ -62,6 +64,7 @@ swaybg
 timeshift
 tmux
 tree
+unzip
 waybar
 wayland
 wayland-protocols
