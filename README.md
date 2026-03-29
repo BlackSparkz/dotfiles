@@ -49,7 +49,7 @@
 | **Terminal** | [Kitty](https://github.com/kovidgoyal/kitty) | Fast, feature-rich, GPU-based terminal emulator. |
 | | [Alacritty](https://github.com/alacritty/alacritty) | GPU-accelerated terminal emulator. |
 | **Shell** | [Fish](https://fishshell.com/) | User-friendly command line shell. |
-| **Editor** | [Neovim](https://neovim.io/) | Powered by [NvChad](https://nvchad.com) |
+| **Editor** | [Neovim](https://neovim.io/) | Neovim is a modern, fast and feature-rich editor that is fully compatible with Vim. Powered by [NvChad](https://nvchad.com) |
 | **Launcher** | [Rofi](https://github.com/davatorium/rofi) | Window switcher, application launcher, and dmenu replacement. |
 | **System Monitor** | [Btop](https://github.com/aristocratos/btop) | A monitor of resources. |
 | **File Manager** | [Yazi](https://github.com/sxyazi/yazi) | Blazing-fast terminal file manager written in Rust. |
