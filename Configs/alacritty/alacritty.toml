@@ -13,7 +13,7 @@ size = 12.0
 [font.normal]
 #family = "Google Sans Code NF"
 family = "ProFont IIx Nerd Font Mono"
-style = "Regular"
+# style = "Regular"
 
 [selection]
 save_to_clipboard = true
