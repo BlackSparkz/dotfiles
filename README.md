@@ -34,6 +34,11 @@
 |:---:|
 | ![Main](Screenshots/hyprlock.png) |
 
+| **Fastfetch** |
+|:---:|
+| ![fastfetch](Screenshots/fastfetch.png) |
+
+
 ## Components
 
 > This setup uses the following applications and tools:
