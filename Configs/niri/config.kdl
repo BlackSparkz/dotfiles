@@ -118,7 +118,7 @@ layout {
 }
 
 spawn-sh-at-startup "waybar -c $HOME/.config/waybar/Niri/config.jsonc -s $HOME/.config/waybar/Niri/style.css &"
-spawn-sh-at-startup "bash $HOME/.config/SwayBg/random-wall.sh"
+spawn-sh-at-startup "bash $HOME/.config/Scripts/random_wall_on_home.sh"
 spawn-at-startup "kitty"
 spawn-at-startup "kdeconnect-indicator"
 spawn-at-startup "mako"
@@ -149,7 +149,7 @@ window-rule {
 binds {
     Mod+T { spawn "kitty"; }
     Mod+R { spawn-sh "pkill waybar || waybar -c $HOME/.config/waybar/Niri/config.jsonc -s $HOME/.config/waybar/Niri/style.css &"; }
-    Mod+W repeat=false { spawn-sh "bash $HOME/.config/SwayBg/random-wall.sh"; }
+    Mod+W repeat=false { spawn-sh "bash $HOME/.config/Scripts/random_wall_on_home.sh"; }
     Mod+B { spawn "librewolf"; }
     Mod+M { spawn "telegram"; }
     // Mod+L { spawn "localsend"; }
@@ -157,11 +157,13 @@ binds {
     Mod+X { spawn-sh "kitty -e cmus"; }
     Mod+P { spawn-sh "pkill wlogout || wlogout"; }
     Mod+Ctrl+C { spawn-sh "pkill rofi ||cliphist list | rofi -dmenu -display-columns 2 -theme ~/.config/rofi/clipboard.rasi | cliphist decode | wl-copy"; }
-    Mod+Ctrl+R {spawn-sh "bash $HOME/.config/mango/partial_screenshot.sh";}
-    Mod+Ctrl+S {spawn-sh "bash $HOME/.config/mango/full_screenshot.sh";}
+    Mod+Ctrl+R {spawn-sh "bash $HOME/.config/Scripts/partial_screenshot.sh";}
+    Mod+Ctrl+S {spawn-sh "bash $HOME/.config/Scripts/full_screenshot.sh";}
     Mod+space {spawn-sh "pkill rofi || rofi -show drun";}
-    Mod+Ctrl+L { spawn-sh "bash ~/.config/hypr/randomwall.sh"; }
-    Mod+Ctrl+O { spawn-sh "systemctl poweroff"; }
+    Mod+Alt+L { spawn-sh "bash ~/.config/Scripts/random_wall_on_lockscr.sh"; }
+    Mod+Alt+O { spawn-sh "systemctl poweroff"; }
+    Mod+Alt+R { spawn-sh "systemctl reboot"; }
+    Mod+Alt+S { spawn-sh "systemctl suspend ; hyprlock"; }
     Mod+Ctrl+T { spawn "alacritty"; }
     Mod+Ctrl+delete { spawn-sh "cliphist wipe"; }
 

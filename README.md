@@ -110,7 +110,7 @@ yay -S waybar kitty fish neovim btop \
 ### 2. Clone Repository
 
 ```bash
-git clone https://github.com/BlackSparkz/dotfiles.git
+https://github.com/BlackSparkz/hobbyist-dotfiles.git
 cd dotfiles
 ```
 

@@ -13,14 +13,14 @@
 
     "modules-right": [
         "custom/power",
-	"temperature",
+	      "temperature",
         "cpu",
         "memory",
         "disk",
         "network#wifi",
         "pulseaudio",
         "backlight",
-        "battery",
+        "battery"
     ],
 
 "custom/logo": {
@@ -28,7 +28,7 @@
     "tooltip": false,
     "tooltip-format": "App launcher",
     "on-click": "pkill rofi || rofi -show drun",
-    "on-click-right": "kitty",
+    "on-click-right": "kitty"
     },
 
 "temperature": {
@@ -50,7 +50,7 @@
 },
 
 "custom/mpris": {
-    "exec": "~/.config/waybar/mpris.sh",
+    "exec": "~/.config/Scripts/mpris.sh",
     "interval": 2,
     "return-type": "json",
     "max-length": 15,
@@ -63,7 +63,7 @@
     "tooltip": false,
     "format": "It's {:%H:%M:%S}",
     "format-alt": "It’s {:%H:%M:%S on %A, %d %B %Y}",
-    "on-click-right": "kitty -e bluetui",
+    "on-click-right": "kitty -e bluetui"
     },
 
 "cpu": {
@@ -102,13 +102,13 @@
         "tooltip-format": "Current brightness: {percent}%",
         "format": "{icon}   {percent}%",
         "format-icons": ["󰃞", "󰃟", "󰃠"],
-        "on-click-right": "bash $HOME/.config/SwayBg/random-wall.sh"
+        "on-click-right": "bash $HOME/.config/Scripts/random_wall_on_home.sh"
         },
 
    "battery": { "states": {"warning": 25,"critical": 15 },
         "interval": 1,
         "format": "{icon}  {capacity}%",
-	"format-time": "{H} hours {M} minutes",
+	      "format-time": "{H} hours {M} minutes",
         "on-click-right": "kitty sh -c 'upower -i /org/freedesktop/UPower/devices/battery_BAT0; read'",
         "format-full": "{icon}  Battery full {capacity}%",
         "format-warning": "{icon}  Battery low {capacity}%",
@@ -117,17 +117,17 @@
         "format-plugged": "  Plugged in {capacity}%",
         "format-alt": "{icon}  Health ({health}%)  Charge cycles ({cycles})",
         "format-icons": { "default": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹" ] },
-	"tooltip": true,
+	      "tooltip": true,
         "tooltip-format": "Battery level: {capacity}%\nPower usage: {power} watts\nDischarge in: {time}\nBattery health: {health}%\nCharge cycles: {cycles}",
         "tooltip-format-charging": "Charging at {capacity}%\nPower usage: {power} watts\nFull charge in: {time}\nBattery health: {health}%\nCharge cycles: {cycles}",
         "tooltip-format-critical": "Low battery: {capacity}%\nPower usage: {power} watts\nShutdown in: {time}\nConnect the charger immediately.",
-        "tooltip-format-warning": "Low battery: {capacity}%\nPower usage: {power} watts\nDischarge in: {time}\nConnect the charger soon.",
+        "tooltip-format-warning": "Low battery: {capacity}%\nPower usage: {power} watts\nDischarge in: {time}\nConnect the charger soon."
       },
 
     "network#wifi": {
         "interval": 1,
         "format-wifi": "    {essid}",
-	"format-alt": " {bandwidthUpBytes}   {bandwidthDownBytes}",
+	      "format-alt": " {bandwidthUpBytes}   {bandwidthDownBytes}",
         "tooltip-format-wifi": "You are connected to {essid} ({signalStrength}%)",
         "format-disconnected": "   No internet",
         "on-click-right": "kitty -e nmtui"
@@ -142,17 +142,17 @@
         "format-bluetooth":" {icon} {volume}%",
         "format-muted": "   Muted",
         "format-icons": { "default": [" ", "  ", "   "]},
-	"on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+	      "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
         "on-click-right": "kitty -e pulsemixer"
     },
 
 "custom/power": {
-    "format" : "",
+        "format" : "",
         "tooltip": true,
         "tooltip-format": "Power menu",
         //"menu": "on-click",
-	"on-click": "pkill wlogout || wlogout",
-        "on-click-right": "pkill wlogout || wlogout",
+	      "on-click": "pkill wlogout || wlogout",
+        "on-click-right": "pkill wlogout || wlogout"
         //"menu-file": "~/.config/waybar/power_menu.xml",
         //"menu-actions": {
             //"shutdown": "systemctl poweroff",
@@ -160,6 +160,6 @@
             //"suspend": "systemctl suspend",
             //"logout": "loginctl terminate-user $USER",
         //},
-   },
+   }
 
 }
