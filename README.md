@@ -90,9 +90,21 @@ yay -S waybar kitty fish neovim btop \
   cava swaybg tmux lazygit fastfetch
 ```
 
-> **Note:** `hyprland`, `mangowm`, and `driftwm` may need to be installed via the AUR:
+> **Note:** `hyprland`, `niri`, `mangowm`, and `driftwm` may need to be installed via the AUR:
+> ```bash
+> yay -S mangowm-git
+> ```
+
+> ```bash
+> yay -S niri
+> ```
+
 > ```bash
 > yay -S hyprland
+> ```
+
+> ```bash
+> yay -S driftwm
 > ```
 
 ### 2. Clone Repository
