@@ -116,7 +116,6 @@ yay -S waybar kitty fish neovim btop \
 
 ```bash
 https://github.com/BlackSparkz/hobbyist-dotfiles.git
-cd dotfiles
 ```
 
 ### 3. Deploy Configs
@@ -124,7 +123,7 @@ cd dotfiles
 **Option A — Using `stow` (recommended):**
 ```bash
 sudo pacman -S stow
-cd dotfiles
+cd hobbyist-dotfiles
 stow -t ~/.config Configs
 ```
 
