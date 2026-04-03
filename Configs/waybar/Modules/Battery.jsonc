@@ -9,12 +9,18 @@
         "format-critical": "󰂃  Connect charger {capacity}%",
         "format-charging": "  Charging {capacity}%",
         "format-alt": "{icon}   Health ({health}%)  Charge cycles ({cycles})",
-        "format-icons": { "default": ["", "", "", "", ""] },
+        "format-icons": { "default": [ "󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹" ] },
         "tooltip": true,
         "tooltip-format": "Battery level: {capacity}%\nPower usage: {power} watts\nDischarge in: {time}\nBattery health: {health}%\nCharge cycles: {cycles}",
         "tooltip-format-charging": "Charging at {capacity}%\nPower usage: {power} watts\nFull charge in: {time}\nBattery health: {health}%\nCharge cycles: {cycles}",
         "tooltip-format-critical": "Battery low: {capacity}%\nPower usage: {power} watts\nShutdown in: {time}\nConnect the charger immediately.",
-        "tooltip-format-warning": "Battery low: {capacity}%\nPower usage: {power} watts\nDischarge in: {time}\nConnect the charger soon."
+        "tooltip-format-warning": "Battery low: {capacity}%\nPower usage: {power} watts\nDischarge in: {time}\nConnect the charger soon.",
+
+        "events": {
+          "on-discharging-warning": "notify-send 'Battery Low (25%)'",
+          "on-discharging-critical": "notify-send 'Battery Critical (15%)'",
+          "on-charging-100": "notify-send 'Battery Full' 'Please unplug your charger'"
+        }
       }
 
 }
