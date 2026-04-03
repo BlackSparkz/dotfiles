@@ -61,6 +61,7 @@ tooltip label {
 #pulseaudio.muted,
 #pulseaudio,
 #network,
+#network.disconnected,
 #backlight,
 #battery,
 #network.disconnected,
@@ -80,7 +81,9 @@ margin: 4px 0px 4px 0px;
 padding: 0px 4px 0px 4px;
 }
 
-#battery.charging, #battery.plugged /*#custom-battery.charging*/ {
+#battery.charging,
+#battery.plugged
+/*#custom-battery.charging*/ {
 background-color: /*#27D301*/#00aa01;
 }
 
@@ -103,6 +106,7 @@ animation-direction: alternate;
 }
 
 #battery.warning:not(.charging),
+#network.disconnected,
 #temperature.warning
 /*#custom-battery.warning*/ {
 background-color: #FF7300;
