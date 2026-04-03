@@ -4,11 +4,11 @@
         "format": "{icon}  {capacity}%",
         "format-time": "{H} hours {M} minutes",
         "on-click-right": "kitty sh -c 'upower -i /org/freedesktop/UPower/devices/battery_BAT0; read'",
-        "format-full": "{icon}   Battery full {capacity}%",
-        "format-warning": "{icon}   Battery low {capacity}%",
+        "format-full": "{icon}  Battery full {capacity}%",
+        "format-warning": "{icon}  Battery low {capacity}%",
         "format-critical": "󰂃  Connect charger {capacity}%",
         "format-charging": "  Charging {capacity}%",
-        "format-alt": "{icon}   Health ({health}%)  Charge cycles ({cycles})",
+        "format-alt": "{icon}  Health ({health}%)  Charge cycles ({cycles})",
         "format-icons": { "default": [ "󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹" ] },
         "tooltip": true,
         "tooltip-format": "Battery level: {capacity}%\nPower usage: {power} watts\nDischarge in: {time}\nBattery health: {health}%\nCharge cycles: {cycles}",
@@ -17,8 +17,8 @@
         "tooltip-format-warning": "Battery low: {capacity}%\nPower usage: {power} watts\nDischarge in: {time}\nConnect the charger soon.",
 
         "events": {
-          "on-discharging-warning": "notify-send 'Battery Low (25%)'",
-          "on-discharging-critical": "notify-send 'Battery Critical (15%)'",
+          "on-discharging-warning": "notify-send 'Battery Low (25%)' 'Connect the charger soon'",
+          "on-discharging-critical": "notify-send 'Battery Critical (15%)' 'Connect the charger immediately'",
           "on-charging-100": "notify-send 'Battery Full' 'Please unplug your charger'"
         }
       }
