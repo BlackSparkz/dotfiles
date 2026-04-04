@@ -4,38 +4,47 @@ autostart = [
      "kdeconnect-indicator",
      "wl-paste --type image --watch cliphist store",
      "wl-paste --type text --watch cliphist store",
+     "waybar -c $HOME/.config/waybar/driftwm/config.jsonc -s $HOME/.config/waybar/driftwm/style.css",
      "mako",
      "alacritty",
 ]
+
+focus_follows_mouse = true
 
 [input.keyboard]
 layout = "us"
 repeat_rate = 60
 repeat_delay = 300
 
-[input.scroll]
-speed = 1.5                 # viewport pan speed multiplier
-friction = 0.90             # momentum decay (0.90=snappy, 0.98=floaty)
-
 [input.trackpad]
-tap_to_click = true
-natural_scroll = true
-accel_speed = 1.0
-click_method = "none"
+tap_to_click = true         # enable tap-to-click
+natural_scroll = true       # reverse scroll direction (content follows fingers)
+tap_and_drag = true         # double-tap-hold to drag
+accel_speed = 1.0           # pointer acceleration (-1.0 to 1.0)
+accel_profile = "adaptive"  # "flat" or "adaptive"
+click_method = "none"       # none = device default; clickfinger = finger count (1=left, 2=right, 3=middle); button_areas = position on trackpad
+
+[input.mouse]
+accel_speed = 1.0           # pointer acceleration (-1.0 to 1.0)
+accel_profile = "adaptive"  # "flat" or "adaptive"
+natural_scroll = false      # reverse scroll direction
 
 [cursor]
 theme = "Bibata-Modern-Ice"
 size = 24
 
 [navigation]
-animation_speed = 0.1       # camera lerp factor (higher = faster)
-nudge_step = 40             # px per nudge-window action
-pan_step = 40.0            # px per pan-viewport action
-#Anchors: canvas points discoverable by center-nearest (4-finger swipe / Mod+Arrow)
+trackpad_speed = 1.4        # trackpad (scroll/gestures) pan multiplier
+mouse_speed = 1.4           # mouse (drag) pan multiplier (1.0 = direct)
+friction = 0.94             # momentum decay (0.90=snappy, 0.98=floaty)
+animation_speed = 0.3       # camera lerp factor (higher = faster)
+nudge_step = 40             # px per nudge-window action (mod-shift-arrow by default)
+pan_step = 40.0             # px per pan-viewport action (mod-ctrl-arrow by default)
+# Anchors: canvas points discoverable by center-nearest (4-finger swipe / Mod+Arrow)
 # even when no window is there. Uses Y-up coordinate system.
 # anchors = [[0, 0]]
 # Example with 4 corners:
-# anchors = [[0, 0], [-1750, 1750], [1750, 1750], [1750, -1750], [-1750, -1750]]
+# # anchors = [[0, 0], [-1750, 1750], [1750, 1750], [1750, -1750], [-1750, -1750]]
 
 [navigation.edge_pan]
 zone = 100.0                # activation zone width (px from viewport edge)
