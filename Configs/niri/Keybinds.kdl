@@ -16,7 +16,7 @@ binds {
     Mod+Alt+L { spawn-sh "bash ~/.config/Scripts/random_wall_on_lockscr.sh"; }
     Mod+Alt+O { spawn-sh "systemctl poweroff"; }
     Mod+Alt+R { spawn-sh "systemctl reboot"; }
-    Mod+Alt+S { spawn-sh "systemctl suspend ; hyprlock"; }
+    Mod+Alt+S { spawn-sh "systemctl suspend ; bash ~/.config/Scripts/random_wall_on_lockscr.sh"; }
     Mod+Ctrl+T { spawn "alacritty"; }
     Mod+Ctrl+delete { spawn-sh "cliphist wipe"; }
 
