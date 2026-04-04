@@ -8,7 +8,6 @@ bat
 bibata-cursor-theme-bin
 bluetui
 bluez-utils
-brave-bin
 brightnessctl
 btop
 btrfs-progs
@@ -69,6 +68,7 @@ timeshift
 tmux
 tree
 unzip
+vscodium-bin
 waybar
 wayland
 wayland-protocols
