@@ -3,6 +3,7 @@ binds {
     Mod+R { spawn-sh "pkill waybar || waybar -c $HOME/.config/waybar/Niri/config.jsonc -s $HOME/.config/waybar/style.css &"; }
     Mod+W repeat=false { spawn-sh "bash $HOME/.config/Scripts/random_wall_on_home.sh"; }
     Mod+B { spawn "librewolf"; }
+    Mod+Ctrl+B { spawn "brave"; }
     Mod+M { spawn "telegram"; }
     // Mod+L { spawn "localsend"; }
     Mod+N { spawn-sh "kitty -e yazi"; }
