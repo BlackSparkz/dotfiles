@@ -5,7 +5,8 @@
         "tooltip-format": "Power menu",
         //"menu": "on-click",
         "on-click-right": "pkill wlogout || wlogout",
-	      "on-click": "pkill wlogout || wlogout"
+	      "on-click": "pkill wlogout || wlogout",
+        "on-click-middle": "systemctl poweroff"
         //"menu-file": "~/.config/waybar/power_menu.xml",
         //"menu-actions": {
         //    "shutdown": "systemctl poweroff",

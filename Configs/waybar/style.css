@@ -2,7 +2,6 @@
     font-family: Google Sans Flex;
     font-size: 16px;
     padding: 0px 2px 0px 2px;
-
 }
 
 window#waybar {
@@ -106,7 +105,6 @@ animation-direction: alternate;
 }
 
 #battery.warning:not(.charging),
-#network.disconnected,
 #temperature.warning
 /*#custom-battery.warning*/ {
 background-color: #FF7300;
@@ -120,6 +118,7 @@ background-color: #5962ff;
 padding: 1px 16px 0px 12px;
 }
 
+#network.disconnected,
 #pulseaudio.muted {
 background-color: #f2000e;
 }

@@ -2,13 +2,14 @@
   "pulseaudio": {
         "scroll-step": 1,
         "reverse-scrolling": true,
-        "smooth-scrolling-threshold": 2.0,
+        "smooth-scrolling-threshold": 1.0,
         "format": "{icon} {volume}%",
         "format-bluetooth":" {icon} {volume}%",
         "format-muted": "   Muted",
         "format-icons": { "default": [" ", "  ", "   "]},
-	      "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
-	      "on-click-right": "kitty -e pulsemixer"
+	      "on-click": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 10%-",
+	      "on-click-middle": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+	      "on-click-right": "wpctl set-volume @DEFAULT_AUDIO_SINK@ -l 1.0 10%+",
+	      "on-double-click-middle": "kitty -e pulsemixer"
     }
-
 }
