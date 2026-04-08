@@ -19,7 +19,7 @@
         "events": {
           "on-discharging-warning": "notify-send 'Battery Low (25%)' 'Connect the charger soon'",
           "on-discharging-critical": "notify-send 'Battery Critical (15%)' 'Connect the charger immediately'",
-          "on-charging-100": "notify-send 'Battery Full' 'Please unplug your charger'"
+          "on-charging-100": "notify-send 'Battery Full' 'Please unplug the charger'"
         }
       }
 
