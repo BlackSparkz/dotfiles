@@ -52,7 +52,7 @@ icon-search {
 
 entry {
   placeholder:        "Search";
-  placeholder-color:  @bg2;
+  placeholder-color:  @fg1;
 }
 
 listview {

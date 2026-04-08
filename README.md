@@ -21,6 +21,7 @@
 | **App launcher** |
 |:---:|
 | ![Rofi](Screenshots/rofi.png) |
+| ![Rofi2](Screenshots/rofi2.png) |
 
 | **Clipboard history** |
 |:---:|

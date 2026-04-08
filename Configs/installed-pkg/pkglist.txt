@@ -64,6 +64,7 @@ slurp
 stow
 sudo
 swaybg
+swayidle
 timeshift
 tmux
 tree
