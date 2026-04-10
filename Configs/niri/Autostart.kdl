@@ -1,5 +1,5 @@
 spawn-sh-at-startup "waybar -c $HOME/.config/waybar/Niri/config.jsonc -s $HOME/.config/waybar/style.css &"
-spawn-sh-at-startup "bash $HOME/.config/Scripts/random_wall_on_home.sh"
+spawn-sh-at-startup "swaybg -i ~/Wallpapers/arch-nord-dark.png -m fill &" //"bash $HOME/.config/Scripts/random_wall_on_home.sh"
 spawn-at-startup "kitty"
 spawn-at-startup "kdeconnect-indicator"
 spawn-at-startup "mako"
