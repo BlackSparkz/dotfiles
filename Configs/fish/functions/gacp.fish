@@ -4,7 +4,7 @@ function gacp
         return
     end
 
-    cd ~/Dotfiles
+    cd ~/hobbyist-dotfiles/
     git add .
 
     if git commit -m (string join " " $argv)
