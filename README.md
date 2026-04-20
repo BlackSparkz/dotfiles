@@ -118,7 +118,7 @@ yay -S waybar kitty fish neovim btop \
 ### 2. Clone Repository
 
 ```bash
-https://github.com/BlackSparkz/hobbyist-dotfiles.git
+git clone https://github.com/BlackSparkz/hobbyist-dotfiles.git
 ```
 
 ### 3. Deploy Configs
