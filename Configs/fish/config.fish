@@ -6,8 +6,7 @@ set -g fish_greeting ""
 alias c='clear'
 alias n='nvim'
 alias reload='source ~/.config/fish/config.fish ; kitty @ load-config'
-alias bip='pacman -Qqe > ~/Dotfiles/Configs/installed-pkg/pkglist.txt && notify-send "Backup" "Package list saved successfully" && echo "Saved path: ~/Dotfiles/Configs/installed-pkg/pkglist.txt"'
-alias rip='yay -S --needed --answerclean All --answerdiff None - < Configs/installed-pkg/pkglist.txt'
+alias bip='pacman -Qqe > ~/hobbyist-dotfiles/Configs/installed-pkg/pkglist.txt && notify-send "Backup" "Package list saved successfully" && echo "Saved path: ~/hobbyist-dotfiles/Configs/installed-pkg/pkglist.txt"'
 alias ls="eza -1h -s modified -r --icons=always --group-directories-first"
 
 # ==============================
