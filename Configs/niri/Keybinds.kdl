@@ -6,7 +6,10 @@ binds {
     Mod+Ctrl+B { spawn "librewolf"; }
     Mod+M { spawn "telegram-desktop"; }
     Mod+Z { spawn "localsend"; }
+    Mod+A { spawn "alacritty"; }
     Mod+N { spawn-sh "kitty -e yazi"; }
+    Mod+E { spawn-sh "kitty -e bluetui"; }
+    Mod+Y { spawn-sh "kitty -e nmtui"; }
     Mod+X { spawn-sh "kitty -e cmus"; }
     Mod+P { spawn-sh "pkill wlogout || wlogout"; }
     Mod+C { spawn-sh "pkill rofi ||cliphist list | rofi -dmenu -display-columns 2 -theme ~/.config/rofi/clipboard.rasi | cliphist decode | wl-copy"; }
@@ -17,7 +20,6 @@ binds {
     Alt+O { spawn-sh "systemctl poweroff"; }
     Alt+R { spawn-sh "systemctl reboot"; }
     Alt+S { spawn-sh "systemctl suspend ; bash ~/.config/Scripts/random_wall_on_lockscr.sh"; }
-    Mod+Ctrl+T { spawn "alacritty"; }
     Mod+delete { spawn-sh "cliphist wipe"; }
 
     XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+ -l 1.2"; }
@@ -39,7 +41,6 @@ binds {
     Alt+M allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
     Alt+N allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "10%-"; }
 
-
     Mod+O repeat=false { toggle-overview; }
     Mod+Q repeat=true { close-window; }
 
@@ -47,8 +48,6 @@ binds {
     Mod+Right { focus-column-right; }
     Mod+Up    { focus-workspace-up; }
     Mod+Down  { focus-workspace-down; }
-    // Mod+Down  { focus-window-down; }
-    // Mod+Up    { focus-window-up; }
     Mod+H     { focus-column-left; }
     Mod+J     { focus-window-down; }
     Mod+K     { focus-window-up; }
