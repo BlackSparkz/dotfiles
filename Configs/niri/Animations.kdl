@@ -1,5 +1,7 @@
 animations {
 
+  slowdown 1.0
+
   workspace-switch {
     spring damping-ratio=0.6 stiffness=1000 epsilon=0.0001
   }
