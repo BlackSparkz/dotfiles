@@ -95,14 +95,14 @@ binds {
   Mod+Comma  { consume-window-into-column; }
   Mod+Period { expel-window-from-column; }
 
-  Mod+S { switch-preset-column-width; }
+  Mod+tab { switch-preset-column-width; }
   Mod+Shift+S { switch-preset-window-height; }
   Mod+0 { reset-window-height; }
   Mod+F { maximize-column; }
   Mod+Ctrl+M { fullscreen-window; }
   Mod+Ctrl+F { maximize-window-to-edges; }
   Mod+Shift+F { expand-column-to-available-width; }
-  Mod+D { center-column; }
+  // Mod+D { center-column; }
   Mod+Ctrl+C { center-visible-columns; }
 
   Mod+Minus { set-column-width "-10%"; }
