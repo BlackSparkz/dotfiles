@@ -1,40 +1,40 @@
 window-rule {
-    geometry-corner-radius 24
-    clip-to-geometry true
+  geometry-corner-radius 24
+  clip-to-geometry true
 }
 
 window-rule {
-    match app-id="^kitty$"
-    background-effect {
-        blur true
-    }
+  match app-id="^kitty$"
+  background-effect {
+    blur true
+  }
 }
 
 window-rule {
-    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
-    match app-id="librewolf" title="^Picture-in-Picture$"
-    open-floating true
-    open-focused false
-    default-floating-position x=32 y=32 relative-to="bottom-right"
-    default-column-width { proportion 0.25; }
-    default-window-height { proportion 0.25; }
+  match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+  match app-id="librewolf" title="^Picture-in-Picture$"
+  open-floating true
+  open-focused false
+  default-floating-position x=32 y=32 relative-to="bottom-right"
+  default-column-width { proportion 0.25; }
+  default-window-height { proportion 0.25; }
 }
 
 layer-rule {
-    match namespace="^rofi$"
-    geometry-corner-radius 50 50 0 0
-    background-effect {
-        blur true
-    }
+  match namespace="^rofi$"
+  geometry-corner-radius 50 50 0 0
+  background-effect {
+    blur true
+  }
 }
 
 layer-rule {
-    match namespace="^waybar$"
-    match namespace="^mako$"
-    match namespace="^logout_dialog$"
-    background-effect {
-        blur true
-    }
+  match namespace="^waybar$"
+  match namespace="^mako$"
+  match namespace="^logout_dialog$"
+  background-effect {
+    blur true
+  }
 }
 
 

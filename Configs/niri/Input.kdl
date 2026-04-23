@@ -1,23 +1,23 @@
 input {
-    keyboard {
-	    repeat-rate 60
-	    repeat-delay 300
-    }
+  keyboard {
+    repeat-rate 60
+    repeat-delay 200
+  }
 
-    touchpad {
-        tap
-        natural-scroll
-        accel-speed 1.0
-        accel-profile "adaptive"
-	      scroll-factor 3.0
-        scroll-method "two-finger"
-    }
+  touchpad {
+    tap
+    natural-scroll
+    accel-speed 1.0
+    accel-profile "adaptive"
+    scroll-factor 3.0
+    scroll-method "two-finger"
+  }
 
-    mouse {
-        accel-speed 1.0
-        accel-profile "adaptive"
-	      scroll-factor 3.0
-    }
+  mouse {
+    accel-speed 1.0
+    accel-profile "adaptive"
+    scroll-factor 3.0
+  }
 
-    focus-follows-mouse max-scroll-amount="10%"
+  focus-follows-mouse max-scroll-amount="10%"
 }

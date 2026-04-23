@@ -1,11 +1,11 @@
 overview {
-    zoom 0.40
-    backdrop-color "#ffffff"
+  zoom 0.40
+  backdrop-color "#ffffff"
 
-    workspace-shadow {
-        softness 200
-        spread 10
-        offset x=0 y=0
-        color "#000000"
-    }
+  workspace-shadow {
+    softness 200
+    spread 10
+    offset x=0 y=0
+    color "#000000"
+  }
 }

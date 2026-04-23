@@ -1,49 +1,303 @@
 animations {
 
-    workspace-switch {
-        spring damping-ratio=0.6 stiffness=1000 epsilon=0.0001
+  workspace-switch {
+    spring damping-ratio=0.6 stiffness=1000 epsilon=0.0001
+  }
+
+  window-open {
+    duration-ms 240
+    curve "linear"
+    custom-shader r"
+    const float PI = 3.14159265358979;
+
+    float easeInExpo(float t)  { return t == 0.0 ? 0.0 : pow(2.0, 10.0*(t-1.0)); }
+    float easeOutExpo(float t) { return t == 1.0 ? 1.0 : 1.0 - pow(2.0,-10.0*t); }
+    float easeInQuad(float t)  { return t*t; }
+    float easeOutQuad(float t) { return 1.0-(1.0-t)*(1.0-t); }
+    float easeInCubic(float t) { return t*t*t; }
+    float easeOutCubic(float t){ float f=t-1.0; return f*f*f+1.0; }
+    float easeOutQuart(float t){ float f=t-1.0; return 1.0-f*f*f*f; }
+
+    // ── Helpers ───────────────────────────────────────────────────────
+    float saturate(float x) { return clamp(x,0.0,1.0); }
+
+    // Remap t from range [a,b] to [0,1], clamped
+    float remap(float t, float a, float b) {
+      return saturate((t-a)/(b-a));
     }
 
-    window-open {
-        duration-ms 150
-        curve "ease-out-expo"
+    vec2 scaleUV(vec2 uv, vec2 scale) {
+      return (uv-0.5)/scale + 0.5;
     }
 
-    window-close {
-        duration-ms 150
-        curve "ease-out-quad"
+    float centerGradient(float x) {
+      x *= 2.0;
+      return x < 1.0 ? x : 2.0-x;
     }
 
-    horizontal-view-movement {
-        spring damping-ratio=0.6 stiffness=800 epsilon=0.0001
+    // ── Simple hash for scanline noise ────────────────────────────────
+    float hash11(float n) { return fract(sin(n)*43758.5453); }
+
+    // ── Barrel distortion (subtle CRT curve) ─────────────────────────
+    // strength 0 = flat, 1 = full barrel
+    vec2 barrelDistort(vec2 uv, float strength) {
+      vec2 cc = uv - 0.5;
+      float dist = dot(cc,cc);
+      return uv + cc * dist * strength;
     }
 
-    window-movement {
-        spring damping-ratio=0.6 stiffness=800 epsilon=0.0001
+    // ── Main ──────────────────────────────────────────────────────────
+    vec4 open_color(vec3 coords_geo, vec3 size_geo) {
+
+      vec2 uv = (niri_geo_to_tex * coords_geo).xy;
+
+      if (uv.x < 0.0 || uv.x > 1.0 || uv.y < 0.0 || uv.y > 1.0)
+      return vec4(0.0);
+
+      float p = niri_clamped_progress;
+
+      // ── Phase timings ─────────────────────────────────────────────
+      // Horizontal expands faster, vertical lags behind (like real CRT deflection)
+      float px = remap(p, 0.05, 0.70);   // x fully open by 70%
+      float py = remap(p, 0.30, 1.00);   // y fully open by 100%
+
+      float scaleX = mix(0.07, 1.0, easeOutCubic(px));
+      float scaleY = mix(0.0,  1.0, easeInQuad(py));
+
+      // Barrel distortion: strong when squished, gone when fully open
+      float barrelStr = (1.0 - easeOutQuad(px)) * 0.25;
+      vec2 bdUV = barrelDistort(uv, barrelStr);
+
+      vec2 suv = scaleUV(bdUV, vec2(scaleX, scaleY));
+
+      if (suv.x < 0.0 || suv.x > 1.0 || suv.y < 0.0 || suv.y > 1.0)
+      return vec4(0.0);
+
+      // ── Soft edge vignette (tighter during expand) ─────────────────
+      float edgeSoft = mix(0.06, 0.14, easeOutQuad(p));
+      float tb  = centerGradient(suv.y);
+      float lr  = centerGradient(suv.x);
+      float mask = smoothstep(0.0, edgeSoft, tb) * smoothstep(0.0, edgeSoft, lr);
+
+      // ── Chromatic aberration ──────────────────────────────────────
+      // Strong when narrow, fades as window reaches full width
+      float aberrAmt = (1.0 - easeOutQuad(px)) * 0.018;
+      vec4 wR = texture2D(niri_tex, scaleUV(bdUV + vec2( aberrAmt, 0.0), vec2(scaleX, scaleY)));
+      vec4 wG = texture2D(niri_tex, suv);
+      vec4 wB = texture2D(niri_tex, scaleUV(bdUV - vec2( aberrAmt, 0.0), vec2(scaleX, scaleY)));
+      vec4 wColor = vec4(wR.r, wG.g, wB.b, wG.a);
+
+      // ── Phosphor tint ─────────────────────────────────────────────
+      // Cold blue-white at start → warm neutral by end
+      // Extra bloom burst in first 15%
+      vec3 coldTint = vec3(0.50, 0.78, 1.00);
+      vec3 warmTint = vec3(0.90, 0.95, 1.00);
+      float tintFade    = easeOutQuad(remap(p, 0.0, 0.85));
+      float bloomBurst  = (1.0 - easeOutExpo(remap(p, 0.0, 0.20))) * 0.55;
+      vec3  phosphorRGB = mix(coldTint, warmTint, tintFade) + bloomBurst;
+
+      // ── Scanline flicker during boot ──────────────────────────────
+      // Random scanlines visible while vertical is still expanding
+      float scanFlicker = 0.0;
+      if (py < 1.0) {
+        float scanLine = floor(suv.y * 80.0);
+        float flicker  = hash11(scanLine + floor(p * 60.0) * 97.3);
+        scanFlicker    = step(0.82, flicker) * (1.0 - easeOutQuad(py)) * 0.45;
+      }
+
+      // ── RGB rainbow sweep ─────────────────────────────────────────
+      // A hue band sweeps across the screen horizontally as the window
+      // expands, then fades out once fully open.
+      // Active only while expanding (p < 0.85), peaks mid-open.
+      float rgbFade  = 1.0 - easeOutQuad(remap(p, 0.40, 0.95));
+      // Sweep position: band moves from left to right as p goes 0→1
+      float sweepPos = suv.x - p * 1.6 + 0.3;
+      float bandWidth = 0.22;
+      float band      = smoothstep(bandWidth, 0.0, abs(sweepPos)) * rgbFade * 0.55;
+      // Hue cycling along the band edge
+      float hueAngle  = sweepPos * PI * 3.0 + p * PI * 4.0;
+      vec3 rgbSweep   = vec3(
+      0.5 + 0.5 * sin(hueAngle),
+      0.5 + 0.5 * sin(hueAngle + PI * 0.667),
+      0.5 + 0.5 * sin(hueAngle + PI * 1.333)
+      ) * band;
+
+      // ── Compose ───────────────────────────────────────────────────
+      float alpha = mask * easeOutQuad(p);
+
+      // Blend: phosphor overlay fades as window content takes over
+      float contentBlend = easeInExpo(p);
+      vec4 phosphorLayer = vec4(phosphorRGB + scanFlicker + rgbSweep, alpha * wColor.a);
+      vec4 final = mix(phosphorLayer, wColor, contentBlend);
+      final.rgb += rgbSweep * (1.0 - contentBlend);
+      final.a   *= mask;
+
+      return final;
+    }
+    "
+  }
+
+  window-close {
+    duration-ms 200
+    curve "linear"
+    custom-shader r"
+    const float PI = 3.14159265358979;
+
+    // ── Easing ────────────────────────────────────────────────────────
+    float easeInExpo(float t)   { return t == 0.0 ? 0.0 : pow(2.0, 10.0*(t-1.0)); }
+    float easeOutExpo(float t)  { return t == 1.0 ? 1.0 : 1.0 - pow(2.0,-10.0*t); }
+    float easeInQuad(float t)   { return t*t; }
+    float easeOutQuad(float t)  { return 1.0-(1.0-t)*(1.0-t); }
+    float easeInCubic(float t)  { return t*t*t; }
+    float easeOutCubic(float t) { float f=t-1.0; return f*f*f+1.0; }
+    float easeInQuart(float t)  { return t*t*t*t; }
+
+    float saturate(float x) { return clamp(x,0.0,1.0); }
+
+    float remap(float t, float a, float b) {
+      return saturate((t-a)/(b-a));
     }
 
-    window-resize {
-        spring damping-ratio=0.6 stiffness=800 epsilon=0.0001
+    vec2 scaleUV(vec2 uv, vec2 scale) {
+      return (uv-0.5)/scale + 0.5;
     }
 
-    config-notification-open-close {
-        spring damping-ratio=0.6 stiffness=800 epsilon=0.001
+    float centerGradient(float x) {
+      x *= 2.0;
+      return x < 1.0 ? x : 2.0-x;
     }
 
-    exit-confirmation-open-close {
-        spring damping-ratio=0.6 stiffness=500 epsilon=0.01
+    vec2 barrelDistort(vec2 uv, float strength) {
+      vec2 cc = uv - 0.5;
+      float dist = dot(cc,cc);
+      return uv + cc * dist * strength;
     }
 
-    screenshot-ui-open {
-        duration-ms 200
-        curve "ease-out-quad"
-    }
+    // ── Main ──────────────────────────────────────────────────────────
+    vec4 close_color(vec3 coords_geo, vec3 size_geo) {
 
-    overview-open-close {
-        spring damping-ratio=0.6 stiffness=800 epsilon=0.0001
-    }
+      if (coords_geo.x < 0.0 || coords_geo.x > 1.0 ||
+      coords_geo.y < 0.0 || coords_geo.y > 1.0)
+      return vec4(0.0);
 
-    recent-windows-close {
-        spring damping-ratio=0.6 stiffness=800 epsilon=0.001
+      vec2 uv = (niri_geo_to_tex * coords_geo).xy;
+
+      if (uv.x < 0.0 || uv.x > 1.0 || uv.y < 0.0 || uv.y > 1.0)
+      return vec4(0.0);
+
+      float p = niri_clamped_progress; // 0=open, 1=closed
+
+      // ── Invert progress for 'closing' direction ───────────────────
+      float inv = 1.0 - p;
+
+      // ── Phase timings (y closes faster than x, like real CRT) ────
+      float py = remap(inv, 0.30, 1.00); // y: close by 70% of anim
+      float px = remap(inv, 0.00, 0.80); // x: close by 100%
+
+      float scaleX = mix(0.06, 1.0, easeOutCubic(px));
+      float scaleY = mix(0.0,  1.0, easeInQuad(py));
+
+      float barrelStr = (1.0 - easeOutQuad(px)) * 0.20;
+      vec2 bdUV = barrelDistort(uv, barrelStr);
+
+      vec2 suv = scaleUV(bdUV, vec2(scaleX, scaleY));
+
+      if (suv.x < 0.0 || suv.x > 1.0 || suv.y < 0.0 || suv.y > 1.0)
+      return vec4(0.0);
+
+      // ── Edge mask (vignette tightens as it collapses) ─────────────
+      float edgeSoft = mix(0.14, 0.04, easeInQuad(p));
+      float tb   = centerGradient(suv.y);
+      float lr   = centerGradient(suv.x);
+      float mask = smoothstep(0.0, edgeSoft, tb) * smoothstep(0.0, edgeSoft, lr);
+
+      // ── Chromatic aberration: appears as power dies ───────────────
+      float aberrAmt = easeInQuad(p) * 0.020;
+      vec4 wR = texture2D(niri_tex, scaleUV(bdUV + vec2( aberrAmt, 0.0), vec2(scaleX, scaleY)));
+      vec4 wG = texture2D(niri_tex, suv);
+      vec4 wB = texture2D(niri_tex, scaleUV(bdUV - vec2( aberrAmt, 0.0), vec2(scaleX, scaleY)));
+      vec4 wColor = vec4(wR.r, wG.g, wB.b, wG.a);
+
+      // ── Desaturation: content loses color as power drops ──────────
+      float desat = easeInQuad(p);
+      float lum   = dot(wColor.rgb, vec3(0.299, 0.587, 0.114));
+      wColor.rgb  = mix(wColor.rgb, vec3(lum), desat * 0.7);
+
+      // ── Phosphor tint: cold blue-white bleeds in at collapse ──────
+      vec3 coldTint   = vec3(0.50, 0.78, 1.00);
+      float tintAmt   = easeInCubic(p);
+      vec3  tintedRGB = mix(wColor.rgb, coldTint, tintAmt * 0.6);
+
+      // ── Phosphor persistence dot ──────────────────────────────────
+      // In the last 20% of the close, a bright white dot lingers at center
+      float dotPhase = remap(p, 0.78, 1.00);
+      float dotDist  = length(uv - 0.5) * 2.0;  // 0 at center, 1 at corner
+      // Horizontal 'line' shape: squished vertically
+      float dotH     = length(vec2(uv.x-0.5, (uv.y-0.5)*8.0));
+      float dotGlow  = smoothstep(0.25, 0.0, dotH) * (1.0 - easeOutExpo(dotPhase));
+      vec3  dotColor = vec3(0.85, 0.92, 1.00) * dotGlow * 2.5;
+
+      // ── RGB rainbow sweep (closing) ───────────────────────────────
+      // Band sweeps right-to-left as window collapses, fades early
+      float rgbFade   = easeOutQuad(remap(inv, 0.15, 0.75));
+      float sweepPos  = suv.x - inv * 1.6 + 0.3;
+      float bandWidth = 0.22;
+      float band      = smoothstep(bandWidth, 0.0, abs(sweepPos)) * rgbFade * 0.50;
+      float hueAngle  = sweepPos * PI * 3.0 + inv * PI * 4.0;
+      vec3 rgbSweep   = vec3(
+      0.5 + 0.5 * sin(hueAngle),
+      0.5 + 0.5 * sin(hueAngle + PI * 0.667),
+      0.5 + 0.5 * sin(hueAngle + PI * 1.333)
+      ) * band;
+
+      // ── Compose ───────────────────────────────────────────────────
+      float alpha  = mask * easeOutQuad(inv);
+
+      // Content fades via easeInExpo on the inv side
+      float contentBlend = easeInExpo(inv);
+      vec4 phosphorLayer = vec4(tintedRGB + dotColor + rgbSweep, alpha * wColor.a);
+      vec4 final = mix(phosphorLayer, wColor, contentBlend);
+      final.rgb += dotColor + rgbSweep * (1.0 - contentBlend);
+      final.a   *= mask;
+
+      // Snap to fully transparent at the very end
+      final *= 1.0 - easeInQuart(remap(p, 0.90, 1.00));
+
+      return final;
     }
+    "
+  }
+
+  horizontal-view-movement {
+    spring damping-ratio=0.6 stiffness=800 epsilon=0.0001
+  }
+
+  window-movement {
+    spring damping-ratio=0.6 stiffness=800 epsilon=0.0001
+  }
+
+  window-resize {
+    spring damping-ratio=0.45 stiffness=750 epsilon=0.0003
+  }
+
+  config-notification-open-close {
+    spring damping-ratio=0.6 stiffness=800 epsilon=0.001
+  }
+
+  exit-confirmation-open-close {
+    spring damping-ratio=0.6 stiffness=500 epsilon=0.01
+  }
+
+  screenshot-ui-open {
+    duration-ms 200
+    curve "ease-out-quad"
+  }
+
+  overview-open-close {
+    spring damping-ratio=0.6 stiffness=800 epsilon=0.0001
+  }
+
+  recent-windows-close {
+    spring damping-ratio=0.6 stiffness=800 epsilon=0.001
+  }
 }

@@ -1,40 +1,40 @@
 layout {
-    gaps 10
-    center-focused-column "never"
-      preset-column-widths {
-        proportion 0.33333
-        proportion 0.5
-        proportion 0.66667
-      }
-        default-column-width { proportion 0.5; }
-          focus-ring {
-	           off
-             width 4
-             active-color "#7fc8ff"
-             inactive-color "#505050"
-           //active-gradient from="#80c8ff" to="#c7ff7f" angle=45
-           }
+  gaps 10
+  center-focused-column "never"
+  preset-column-widths {
+    proportion 0.33333
+    proportion 0.5
+    proportion 0.66667
+  }
+  default-column-width { proportion 0.5; }
+  focus-ring {
+    off
+    width 4
+    active-color "#7fc8ff"
+    inactive-color "#505050"
+    //active-gradient from="#80c8ff" to="#c7ff7f" angle=45
+  }
 
-    border {
-        off
-        width 4
-        active-color "#ffc87f"
-        inactive-color "#505050"
-        urgent-color "#9b0000"
-      //active-gradient from="#e5989b" to="#ffb4a2" angle=45 relative-to="workspace-view" in="oklch longer hue"
-    }
+  border {
+    off
+    width 4
+    active-color "#ffc87f"
+    inactive-color "#505050"
+    urgent-color "#9b0000"
+    //active-gradient from="#e5989b" to="#ffb4a2" angle=45 relative-to="workspace-view" in="oklch longer hue"
+  }
 
-    shadow {
-        off
-        softness 30
-        spread 5
-        offset x=0 y=5
-        color "#0007"
-    }
-    struts {
-         //left 64
-         //right 64
-         //top 64
-         //bottom 64
-    }
+  shadow {
+    off
+    softness 30
+    spread 5
+    offset x=0 y=5
+    color "#0007"
+  }
+  struts {
+    //left 64
+    //right 64
+    //top 64
+    //bottom 64
+  }
 }
