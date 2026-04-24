@@ -1,5 +1,6 @@
 [mgr]
 prepend_keymap = [
-  { on = [ "<C-s>" ], run = "plugin kdeconnect-send", desc = "Send via KDE Connect" },
+  # { on = [ "<C-s>" ], run = "plugin kdeconnect-send", desc = "Send via KDE Connect" },
   { on = [ "<C-w>" ], run = 'shell --orphan "bash -c \"pkill swaybg; swaybg -i %s -m fill\""' },
+  { on = [ "<C-s>" ], run = 'shell --orphan "bash -c \"bash ~/.config/Scripts/kde-send.sh %s\""' },
 ]

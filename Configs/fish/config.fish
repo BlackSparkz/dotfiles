@@ -63,6 +63,7 @@ alias pingg='ping -c 5 archlinux.org'
 alias wifi='nmtui'
 alias bt='bluetui'
 alias gc='git clone'
+alias send='bash ~/.config/Scripts/kde-send.sh'
 
 zoxide init fish | source
 # starship init fish | source

@@ -2,23 +2,23 @@ function clean
     set orphans (pacman -Qdtq)
 
     if test (count $orphans) -gt 0
-        echo "🧹 Removing orphan packages..."
-        sudo pacman -Rns $orphans
+        echo "Removing orphan packages..."
+        sudo pacman -Rns --noconfirm $orphans
     else
-        echo "✔ No orphan packages"
+        echo "No orphan packages"
     end
 
-    echo "📦 Cleaning AUR dependencies..."
-    yay -Yc
+    echo "Cleaning AUR dependencies..."
+    yay -Yc --noconfirm
 
-    echo "🗃️ Cleaning package cache..."
-    sudo pacman -Sc
+    echo "Cleaning package cache..."
+    sudo pacman -Sc --noconfirm
 
-    echo "🧹 Removing yay cache..."
-    rm -rf ~/.cache/yay
+    echo "Removing yay cache..."
+    rm -rf ~/.cache/yay 
 
-    echo "🧾 Cleaning logs..."
+    echo "Cleaning logs..."
     sudo journalctl --vacuum-time=7d
 
-    echo "✅ Cleanup done"
+    echo "Cleanup done"
 end
