@@ -4,9 +4,8 @@ set -g fish_greeting ""
 # Basic
 # ==============================
 alias c='clear'
-alias n='nvim'
+alias cat='bat'
 alias reload='source ~/.config/fish/config.fish ; kitty @ load-config'
-alias bip='pacman -Qqe > ~/hobbyist-dotfiles/Configs/installed-pkg/pkglist.txt && notify-send "Backup" "Package list saved successfully" && echo "Saved path: ~/hobbyist-dotfiles/Configs/installed-pkg/pkglist.txt"'
 alias ls="eza -1h -s modified -r --icons=always --group-directories-first"
 
 # ==============================
@@ -59,11 +58,9 @@ alias ff='fastfetch'
 # ==============================
 # Network
 # ==============================
-alias pingg='ping -c 5 archlinux.org'
 alias wifi='nmtui'
 alias bt='bluetui'
 alias gc='git clone'
 alias send='bash ~/.config/Scripts/kde-send.sh'
 
 zoxide init fish | source
-# starship init fish | source
