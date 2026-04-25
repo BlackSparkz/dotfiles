@@ -1,0 +1,9 @@
+[Unit]
+Description=Niri Wayland Compositor
+
+[Service]
+ExecStart=/usr/bin/niri
+Restart=on-failure
+
+[Install]
+WantedBy=default.target

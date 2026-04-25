@@ -55,4 +55,8 @@ echo "[+] Enabling Bluetooth..."
 sudo systemctl enable --now bluetooth.service
 sudo rfkill unblock bluetooth || true
 
+# --- Setting Niri as default ---
+systemctl --user daemon-reload
+systemctl --user enable niri.service
+
 echo "[✓] Setup completed successfully!"
