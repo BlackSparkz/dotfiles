@@ -2,10 +2,12 @@
 live_config_reload = true
 
 [window]
-dimensions = { columns = 160, lines = 44 }
+# dimensions = { columns = 160, lines = 44 }
 padding = { x = 28, y = 24 }
 decorations = "none"
 dynamic_padding = true
+blur = true
+opacity = 0.4
 
 [font]
 size = 12.0

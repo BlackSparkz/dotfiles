@@ -11,6 +11,13 @@ window-rule {
 }
 
 window-rule {
+  match app-id="^Alacritty$"
+  background-effect {
+    blur true
+  }
+}
+
+window-rule {
   match app-id="librewolf" title="^Picture-in-Picture$"
   match app-id="brave-origin-beta" title="^Picture-in-Picture$"
   open-floating true
@@ -22,7 +29,7 @@ window-rule {
 
 layer-rule {
   match namespace="^rofi$"
-  geometry-corner-radius 50 50 0 0
+  geometry-corner-radius 50
   background-effect {
     blur true
   }
@@ -30,11 +37,15 @@ layer-rule {
 
 layer-rule {
   match namespace="^waybar$"
-  match namespace="^mako$"
   match namespace="^logout_dialog$"
   background-effect {
     blur true
   }
 }
 
-
+// layer-rule {
+//   match namespace="^notifications$"
+//   background-effect {
+//     blur true
+//   }
+// }

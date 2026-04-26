@@ -4,13 +4,12 @@ font: "Google Sans Flex 14";
 bg0:    rgba(00,00,00,20%);
 bg1:    #7E7E7E80;
 bg2:    rgba(255,255,255, 14%);
-
 fg0:    #DEDEDE;
 fg1:    #FFFFFF;
 fg2:    #DEDEDE80;
 
-        background-color:   transparent;
-        text-color:         @fg0;
+background-color:   transparent;
+text-color:         @fg0;
 
 margin:     0;
 padding:    0;
@@ -18,16 +17,16 @@ spacing:    0;
 }
 
 window {
-  background-color:   @bg0;
+background-color:   @bg0;
 location:       center;
-width:          600;
-                border-radius:  32;
-padding: 24px;
+width:          700;
+border-radius:  50;
+padding: 40px;
 }
 
 inputbar {
-  background-color : rgba(255,255,255, 14%);
-  border-radius    : 24px;
+background-color : rgba(255,255,255, 14%);
+border-radius    : 24px;
 font: "Google Sans Flex 12";
 padding:    10px 0px 10px 24px;
 spacing:    20px;
@@ -39,9 +38,9 @@ icon-search, entry, element-icon, element-text {
 }
 
 entry {
-font:   inherit;
+font                :   inherit;
 placeholder         : "Search clipboard ...";
-                      placeholder-color   : white;
+placeholder-color   : white;
 }
 
 message {
@@ -55,7 +54,7 @@ padding:    8px 24px;
 }
 
 listview {
-lines:      6;
+lines:      7;
 cycle:      false;
 columns:    1;
 padding       : 16px 0px 0px 0px;
