@@ -30,6 +30,7 @@ mpv
 ncdu
 neovim
 niri-git
+xwayland-satellite
 nwg-look
 otf-font-awesome
 pipewire-alsa
