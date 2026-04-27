@@ -1,7 +1,7 @@
 spawn-sh-at-startup "waybar -c $HOME/.config/waybar/Niri/config.jsonc -s $HOME/.config/waybar/style.css &"
 spawn-sh-at-startup "bash $HOME/.config/Scripts/random_wall_on_home.sh"
 spawn-at-startup "kitty"
-spawn-at-startup "kdeconnect-indicator"
+spawn-at-startup "kdeconnectd"
 spawn-at-startup "mako"
 spawn-sh-at-startup "wl-paste --type text --watch cliphist store"
 spawn-sh-at-startup "wl-paste --type image --watch cliphist store"
