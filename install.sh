@@ -57,6 +57,10 @@ sudo rfkill unblock bluetooth || true
 
 # --- Setting Niri as default ---
 systemctl --user daemon-reload
-systemctl --user enable niri.service
+systemctl --user enable --now niri.service
+
+# --- Enabling mako sound ---
+systemctl --user daemon-reload
+systemctl --user enable --now mako-sound
 
 echo "[✓] Setup completed successfully!"
