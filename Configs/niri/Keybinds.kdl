@@ -8,6 +8,7 @@ binds {
   Mod+S { spawn "gtk-launch" "brave-agimnkijcaahngcdmfeangaknmldooml-Default.desktop"; }
   Mod+A { spawn "alacritty"; }
   Mod+N { spawn-sh "kitty -e yazi"; }
+  Mod+G { spawn-sh "kitty -e btop"; }
   Mod+E { spawn-sh "kitty -e bluetui"; }
   Mod+Y { spawn-sh "kitty -e nmtui"; }
   Mod+X { spawn-sh "kitty -e cmus"; }
