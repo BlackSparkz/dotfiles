@@ -1,40 +1,36 @@
 {
-    //"margin-top": 5,
-    //"margin-left": 10,
-    //"margin-right": 10,
-    "layer": "top",
-    "position": "top",
-    "spacing": 6,
-    "reload_style_on_change": true,
+  "layer": "top",
+  "position": "top",
+  "spacing": 6,
+  "reload_style_on_change": true,
 
-"modules-left":[
-        "custom/logo",
-        "custom/mpris",
-        "ext/workspaces"
+  "modules-left":[
+    "custom/logo",
+    "custom/mpris",
+    "ext/workspaces"
 ],
 
 "custom/logo": {
-    "format" : "󰣇   MangoWM",
-    "tooltip": false,
-    "tooltip-format": "App launcher",
-    "on-click": "pkill rofi || rofi -show drun",
-    "on-click-right": "kitty"
+  "format" : "󰣇   MangoWM",
+  "tooltip": false,
+  "tooltip-format": "App launcher",
+  "on-click": "pkill rofi || rofi -show drun",
+  "on-click-right": "kitty"
 },
 
 "ext/workspaces": {
-      "format": "{icon}",
-        "format-icons": {
-          "active": "",
-		      "default": ""
-        },
-      "ignore-hidden": true,
-      "on-click": "activate",
-      "on-click-right": "deactivate",
-      "sort-by-id": true
+  "format": "{icon}",
+  "format-icons": {
+    "active": "",
+    "default": ""
+  },
+  "ignore-hidden": true,
+  "on-click": "activate",
+  "on-click-right": "deactivate",
+  "sort-by-id": true
 },
 
 "include": [
-    "~/.config/waybar/Modules/*.jsonc"
+  "~/.config/waybar/Modules/*.jsonc"
 ]
-
 }

@@ -1,33 +1,29 @@
 {
-    //"margin-top": 5,
-    //"margin-left": 10,
-    //"margin-right": 10,
-    "layer": "top",
-    "position": "top",
-    "spacing": 6,
-    "reload_style_on_change": true,
+  "layer": "top",
+  "position": "top",
+  "spacing": 6,
+  "reload_style_on_change": true,
 
-"modules-left":[
+  "modules-left":[
     "custom/logo",
     "custom/mpris",
     "niri/workspaces"
-],
-    
-"custom/logo": {
+  ],
+
+  "custom/logo": {
     "format" : "󰣇   Niri",
     "tooltip": false,
     "tooltip-format": "App launcher",
     "on-click": "pkill rofi || rofi -show drun",
     "on-click-right": "kitty"
-},
+  },
 
-"niri/workspaces": {
+  "niri/workspaces": {
     "format": "{icon}",
     "format-icons": { "active": "", "default": "" }
-},
+  },
 
-"include": [
-      "~/.config/waybar/Modules/*.jsonc"
-]
-
+  "include": [
+    "~/.config/waybar/Modules/*.jsonc"
+  ]
 }
