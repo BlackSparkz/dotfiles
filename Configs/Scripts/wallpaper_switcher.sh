@@ -107,6 +107,21 @@ if [[ ! -f "$selected_path" ]]; then
     exit 1
 fi
 
+# ── apply wallpaper ──────────────────────────────────────────────────────────
+
+# Persist path for hypr session restore
+if [[ -f "$HOME/.config/hypr/shellwrapper.sh" ]]; then
+    sed -i "s|^WALLPAPER=.*|WALLPAPER=\"$selected_path\"|" \
+        "$HOME/.config/hypr/shellwrapper.sh"
+fi
+
+# Pywal (optional — skip if wal not found)
+WAL="$HOME/.local/bin/wal"
+if command -v "$WAL" &>/dev/null || command -v wal &>/dev/null; then
+    "${WAL:-wal}" -i "$selected_path"
+    sleep 2
+fi
+
 # swaybg
 pkill -x swaybg 2>/dev/null
 swaybg -i "$selected_path" -m fill &

@@ -6,6 +6,6 @@
     "max-length": 15,
     "on-click": "playerctl play-pause",
     "tooltip": false
-}
+  }
 
 }

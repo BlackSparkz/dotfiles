@@ -28,7 +28,7 @@ inputbar {
 background-color : rgba(255,255,255, 14%);
 border-radius    : 32px;
 font: "Google Sans Flex 12";
-padding:    14px 0px 14px 24px;
+padding:    14px 0px 14px 32px;
 spacing:    20px;
 children:   [ entry ];
 }
@@ -39,7 +39,7 @@ icon-search, entry, element-icon, element-text {
 
 entry {
 font                : inherit;
-placeholder         : "Search clipboard";
+placeholder         : "Type here to search";
 placeholder-color   : rgba(255,255,255,0.6);
 }
 

@@ -6,12 +6,11 @@ bg1:  #363636;
 bg2:  #f5f5f520;
 bg3:  #f5f5f540;
 bg4:  #5962ffff;
-
 fg0:  #f5f5f5;
 fg1:  #f5f5f580;
 
-      background-color: transparent;
-      text-color:       @fg0;
+background-color: transparent;
+text-color:       @fg0;
 padding:          0px;
 margin:           0px;
 }
@@ -19,7 +18,7 @@ margin:           0px;
 window {
 fullscreen: true;
 padding: 10px;
-         background-color: @bg0;
+background-color: @bg0;
 }
 
 mainbox {
@@ -27,16 +26,13 @@ padding:  8px;
 }
 
 inputbar {
-  background-color: @bg2;
-
+background-color: @bg2;
 margin:   48px calc( 50% - 200px );
-padding:  10px 20px;
+padding:  10px 10px;
 spacing:  10px;
-
 border:         1px;
-                border-radius:  24px;
-                border-color:   @bg3;
-
+border-radius:  24px;
+border-color:   @bg3;
 children: [icon-search,entry];
 }
 
@@ -47,19 +43,19 @@ enabled:  false;
 icon-search {
 expand:   false;
 filename: "search";
-          vertical-align: 0.5;
+vertical-align: 0.5;
 }
 
 entry {
-placeholder:        "Search";
-                    placeholder-color:  @fg1;
+placeholder:        "Type here to search";
+placeholder-color:  @fg1;
 }
 
 listview {
 margin: 64px calc( 50% - 800px );
 spacing:  48px;
 columns:  8;
-          fixed-columns: false;
+fixed-columns: false;
 }
 
 element, element-text, element-icon {
@@ -69,9 +65,8 @@ cursor: pointer;
 element {
 padding:      8px;
 spacing:      4px;
-
 orientation:    vertical;
-                border-radius:  32px;
+border-radius:  32px;
 children: [ element-icon ,element-text ];
 }
 

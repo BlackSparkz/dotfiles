@@ -51,7 +51,6 @@ tooltip label {
 #battery.critical:not(.charging),
 #battery.warning:not(.charging),
 #battery.charging,
-/*#custom-battery,*/
 #battery.plugged,
 #battery.full,
 #custom-logo,
@@ -81,9 +80,8 @@ padding: 0px 4px 0px 4px;
 }
 
 #battery.charging,
-#battery.plugged
-/*#custom-battery.charging*/ {
-background-color: /*#27D301*/#00aa01;
+#battery.plugged {
+background-color: #00aa01;
 }
 
 @keyframes blink {
@@ -94,8 +92,7 @@ background-color: /*#27D301*/#00aa01;
 }
 
 #battery.critical:not(.charging),
-#temperature.critical
-/*#custom-battery.critical*/ {
+#temperature.critical {
 background-color: #FF0000;
 animation-name: blink;
 animation-duration: 1.0s;
@@ -105,8 +102,7 @@ animation-direction: alternate;
 }
 
 #battery.warning:not(.charging),
-#temperature.warning
-/*#custom-battery.warning*/ {
+#temperature.warning {
 background-color: #FF7300;
 }
 

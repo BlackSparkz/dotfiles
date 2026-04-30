@@ -3,12 +3,11 @@
         "custom/power",
 	      "temperature",
         "cpu",
-        "memory",
+        /*"memory",*/
         "disk",
         "network",
         "pulseaudio",
         "backlight",
-	      /*"custom/battery"*/
         "battery"
     ]
 

@@ -4,7 +4,7 @@
         "tooltip": true,
         "tooltip-format": "Power menu",
         //"menu": "on-click",
-        "on-click-right": "pkill wlogout || wlogout",
+        "on-click-right": "pkill rofi || bash ~/.config/Scripts/powermenu.sh",
 	      "on-click": "pkill wlogout || wlogout",
         "on-click-middle": "systemctl poweroff"
         //"menu-file": "~/.config/waybar/power_menu.xml",

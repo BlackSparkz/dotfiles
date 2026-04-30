@@ -6,7 +6,6 @@
 
 window {
     width: 1000px;
-    // height: 600px;
     padding: 40px 32px 32px 32px;
     border: none;
     border-radius: 50px;
@@ -14,7 +13,6 @@ window {
 }
 
 mainbox {
-    padding: 0px;
     spacing: 32px;
     children: [ inputbar, message, listview ];
     background-color: transparent;
@@ -22,15 +20,14 @@ mainbox {
 
 inputbar {
     enabled: true;
-    padding: 16px 24px;
-    margin-bottom: 8px;
+    padding: 16px 32px;
     border-radius: 32px;
     background-color: rgba(255,255,255,0.08);
     border: none;
 }
 
 entry {
-  placeholder: "Search wallpapers";
+  placeholder: "Type here to search";
   placeholder-color: rgba(255,255,255,0.6);
   font: "Google Sans Flex 12";
 }
@@ -41,37 +38,27 @@ listview {
     cycle: true;
     scrollbar: false;
     fixed-height: true;
-    spacing: 0px;       /* elements ke beech gap */
-    padding: 0px;
     background-color: transparent;
 }
 
 element {
     orientation: vertical;
     border-radius: 32px;
-    padding: 0px;
-    margin: 0px;
     background-color: transparent;
 }
 
 element selected {
     background-color: rgba(255,255,255,0.12);
     border: none;
-    padding: 0px;
-    margin: 0px;
 }
 
 element-icon {
     size: 160px;
     border-radius: 32px;
-    margin: 0px;
     horizontal-align: 0.5;
     background-color: transparent;
 }
 
 element-text {
     enabled : false;
-    horizontal-align: 0.5;
-    background-color: transparent;
-    text-color: rgba(255,255,255,0.85);
 }
