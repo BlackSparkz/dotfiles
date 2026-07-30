@@ -45,7 +45,7 @@ hl.layer_rule({
   blur = true,
   blur_popups = false,
   ignore_alpha = 0,
-  animation = "slide left",
+  animation = "slide top",
 })
 
 hl.layer_rule({

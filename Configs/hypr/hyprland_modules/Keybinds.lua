@@ -5,7 +5,7 @@
 local mainMod = "SUPER"
 
 local primary_browser = "librewolf"
-local secondary_browser = "brave"
+local secondary_browser = "helium-browser"
 local terminal = "kitty"
 
 hl.bind(mainMod .. " + A", hl.dsp.exec_cmd("bash $HOME/.config/Scripts/auto_detect_terminal.sh"))
