@@ -11,3 +11,4 @@ padding=20
 max-icon-size=48
 default-timeout=10000
 font=Google Sans Flex 12
+on-notify=exec paplay /usr/share/sounds/freedesktop/stereo/message.oga

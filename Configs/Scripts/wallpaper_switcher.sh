@@ -8,17 +8,6 @@ MAPPING_FILE="/tmp/wallpaper_mapping_$$"
 mkdir -p "$THUMB_DIR"
 trap 'rm -f "$MAPPING_FILE"' EXIT
 
-# ── dependency check ────────────────────────────────────────────────────────
-for cmd in rofi awww; do
-    command -v "$cmd" &>/dev/null || { echo "$cmd is not installed."; exit 1; }
-done
-
-if ! command -v magick &>/dev/null && ! command -v convert &>/dev/null; then
-    echo "ImageMagick is required for thumbnail generation."
-    exit 1
-fi
-convert_cmd=$(command -v magick || command -v convert)
-
 # ── helpers ──────────────────────────────────────────────────────────────────
 # Tab-delimited mapping: display_name \t full_path
 # Tabs cannot appear in filenames on Linux, so this is a safe delimiter.
@@ -115,6 +104,12 @@ fi
 types=(wipe any)
 chosen=${types[$RANDOM % ${#types[@]}]}
 
+ffmpeg -y -i "$selected_path" -vf \
+"split[orig][blur]; \
+[blur]crop=iw*0.35:ih:0:0,gblur=sigma=80[bleft]; \
+[orig][bleft]overlay=0:0" \
+/tmp/partial_blured.jpg
+
 awww img "$selected_path" --transition-type "$chosen" --transition-fps 60 --transition-bezier 0.33,1.0,0.68,1.0 --transition-duration 1.6
 
 NIRI=/tmp/blurred_wall.jpg
@@ -125,4 +120,4 @@ if [[ $status == "niri" ]]; then
   awww img --namespace niri "$NIRI" --transition-type "$chosen" --transition-fps 60 --transition-bezier 0.33,1.0,0.68,1.0 --transition-duration 1.6
 fi
 
-# sleep 1 && notify-send "Wallpaper changed" "$(basename "$selected_path")" -i "$selected_path"
+sleep 1 && notify-send "Wallpaper changed" "$(basename "$selected_path")" -i "$selected_path"

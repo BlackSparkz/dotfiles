@@ -155,7 +155,6 @@ Configs/
 ├── bat
 │   └── config
 ├── btop
-│   ├── themes
 │   └── btop.conf
 ├── cava
 │   ├── shaders
@@ -207,8 +206,11 @@ Configs/
 │   └── settings.ini
 ├── hypr
 │   ├── hyprland_modules
-│   │   ├── Animations_End4.lua
-│   │   ├── Animations.lua
+│   │   ├── Animations
+│   │   │   ├── Animations_End4.lua
+│   │   │   ├── Animations_standard.lua
+│   │   │   ├── hyprland_default.lua
+│   │   │   └── Invincible_edit.lua
 │   │   ├── Autostart.lua
 │   │   ├── Decorations.lua
 │   │   ├── Generals.lua
@@ -220,8 +222,10 @@ Configs/
 │   │   ├── Monitors.lua
 │   │   └── Rules.lua
 │   ├── hyprlock_themes
-│   │   ├── hyprlock_0.conf
-│   │   └── hyprlock_1.conf
+│   │   ├── hyprlock_1.conf
+│   │   ├── hyprlock_2.conf
+│   │   ├── hyprlock_3.conf
+│   │   └── hyprlock_4.conf
 │   └── hyprland.lua
 ├── installed-pkg
 │   └── pkglist.txt
@@ -305,7 +309,9 @@ Configs/
 │   │   ├── GoogleSansCodeNF-Bold.ttf
 │   │   ├── GoogleSansCodeNF-Medium.ttf
 │   │   ├── GoogleSansCodeNF-Regular.ttf
-│   │   └── GoogleSansFlex-VariableFont_GRAD,ROND,opsz,slnt,wdth,wght.ttf
+│   │   ├── GoogleSansFlex-VariableFont_GRAD,ROND,opsz,slnt,wdth,wght.ttf
+│   │   ├── SF Pro Display Bold.otf
+│   │   └── SF Pro Display Regular.otf
 │   └── images
 │       ├── PFP.jpg
 │       └── red_dots.png
@@ -316,6 +322,7 @@ Configs/
 │   ├── launchpad.rasi
 │   └── wallpaper-selector.rasi
 ├── Scripts
+│   ├── animation_switcher.sh
 │   ├── auto_detect_terminal.sh
 │   ├── bashfix.sh
 │   ├── clipboard.sh
@@ -327,7 +334,6 @@ Configs/
 │   ├── launcher.sh
 │   ├── launcher_toggle.sh
 │   ├── lockscr_greet.sh
-│   ├── mako-sound.sh
 │   ├── partial_screenshot.sh
 │   ├── powermenu.sh
 │   ├── powermenu_toggle.sh
@@ -348,9 +354,7 @@ Configs/
 ├── systemd
 │   └── user
 │       ├── default.target.wants
-│       │   ├── mako-sound.service -> /home/blackspark/.config/systemd/user/mako-sound.service
 │       │   └── niri.service -> /home/blackspark/.config/systemd/user/niri.service
-│       ├── mako-sound.service
 │       └── niri.service
 ├── waybar
 │   ├── DriftWM
@@ -393,50 +397,24 @@ Configs/
 │   └── style.css
 ├── xsettingsd
 │   └── xsettingsd.conf
-├── yazi
-│   ├── flavors
-│   │   └── dracula.yazi
-│   │       ├── flavor.toml
-│   │       ├── LICENSE
-│   │       ├── LICENSE-tmtheme
-│   │       ├── preview.png
-│   │       ├── README.md
-│   │       └── tmtheme.xml
-│   ├── plugins
-│   │   └── full-border.yazi
-│   │       ├── LICENSE
-│   │       ├── main.lua
-│   │       └── README.md
-│   ├── init.lua
-│   ├── keymap.toml
-│   ├── package.toml
-│   ├── theme.toml
-│   └── yazi.toml
-├── dolphinrc
-├── kactivitymanagerdrc
-├── kactivitymanagerd-statsrc
-├── kcminputrc
-├── kconf_updaterc
-├── kded5rc
-├── kdeglobals
-├── kfontinstuirc
-├── kglobalshortcutsrc
-├── kiorc
-├── klipperrc
-├── kmenueditrc
-├── kservicemenurc
-├── ksmserverrc
-├── ksplashrc
-├── ktimezonedrc
-├── ktrashrc
-├── kwinoutputconfig.json
-├── kwinrc
-├── plasma-localerc
-├── plasma-nm
-├── plasma-org.kde.plasma.desktop-appletsrc
-├── plasmaparc
-├── plasmarc
-├── plasmashellrc
-└── powermanagementprofilesrc
+└── yazi
+    ├── flavors
+    │   └── dracula.yazi
+    │       ├── flavor.toml
+    │       ├── LICENSE
+    │       ├── LICENSE-tmtheme
+    │       ├── preview.png
+    │       ├── README.md
+    │       └── tmtheme.xml
+    ├── plugins
+    │   └── full-border.yazi
+    │       ├── LICENSE
+    │       ├── main.lua
+    │       └── README.md
+    ├── init.lua
+    ├── keymap.toml
+    ├── package.toml
+    ├── theme.toml
+    └── yazi.toml
 ```
 <!-- TREE_END -->

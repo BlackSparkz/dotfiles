@@ -8,6 +8,7 @@ hl.workspace_rule({ workspace = "3", layout = "dwindle" })
 hl.window_rule({
   name   = "float-file-pickers",
   match  = { title = "^(Open File|Open Folder|Open|Save|Save As|Export|Import|Choose File|Rename)$" },
+  match  = { class = "xdg-desktop-portal-gtk" },
   float  = true,
   center = true,
   decorate = false
@@ -20,11 +21,15 @@ hl.window_rule({
   float = true,
   move = {1470,820},
   opacity = "1.0",
-  border_size = 2,
   pin = true,
   keep_aspect_ratio = true,
   size = {"(monitor_w*0.22)","(monitor_h*0.22)"},
   no_initial_focus = true,
+})
+
+hl.window_rule({
+    match = { class = "cmus"},
+    workspace = "4 silent",
 })
 
 hl.layer_rule({
@@ -40,7 +45,7 @@ hl.layer_rule({
   blur = true,
   blur_popups = false,
   ignore_alpha = 0,
-  animation = "slide top",
+  animation = "slide left",
 })
 
 hl.layer_rule({
@@ -60,14 +65,12 @@ hl.layer_rule({
 hl.window_rule({
   name  = "Dashboard",
   match = { class = "dashboard" },
-  -- animation = "slide right",
   float = true,
-  border_size = 3,
   no_initial_focus = false,
-  move = {1260,730},
+  move = {1260,750},
   opacity = "1.0",
   pin = true,
-  size = {"(monitor_w*0.33)","(monitor_h*0.30)"},
+  size = {"(monitor_w*0.33)","(monitor_h*0.28)"},
 })
 
 hl.window_rule({
@@ -84,6 +87,11 @@ hl.window_rule({
   size = {"(monitor_w*1.00)","(monitor_h*0.18)"},
 })
 
+hl.window_rule({
+  name = "Fullscreen apps",
+  match = { class = "codium|Waydroid|waydroid.app.morphe.android.youtube" },
+  fullscreen = true,
+})
 
 hl.window_rule({
   name  = "move-hyprland-run",
@@ -113,10 +121,9 @@ local suppressMaximizeRule = hl.window_rule({
 
 hl.window_rule({
   name  = "Floating windows",
-  match = { class = "sensors|bluetui|thunar|nwg-look|org.kde.kdeconnect.sms|aichat|nmtui|battery|pulsemixer|org.gnome.Nautilus|org.kde.kdeconnect.app|localsend" },
+  match = { class = "sensors|bluetui|pulsemixer|thunar|nwg-look|org.kde.kdeconnect.sms|aichat|nmtui|battery|pulsemixer|org.gnome.Nautilus|org.kde.kdeconnect.app|localsend|localsend_app" },
   float = true,
   no_initial_focus = false,
-  border_size = 2,
   move = {960,510},
   opacity = "1.0",
   pin = true,

@@ -1,9 +1,0 @@
-[Unit]
-Description=Mako Notification Sound
-
-[Service]
-ExecStart=bash %h/.config/Scripts/mako-sound.sh
-Restart=always
-
-[Install]
-WantedBy=default.target
