@@ -200,10 +200,7 @@ Configs/
 ├── hypr
 │   ├── hyprland_modules
 │   │   ├── Animations
-│   │   │   ├── Animations_End4.lua
-│   │   │   ├── Animations_standard.lua
-│   │   │   ├── hyprland_default.lua
-│   │   │   └── Invincible_edit.lua
+│   │   │   └── Animations_End4.lua
 │   │   ├── Autostart.lua
 │   │   ├── Decorations.lua
 │   │   ├── Generals.lua
