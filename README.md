@@ -65,15 +65,15 @@
 
 |     **Category**      | **Application**                                         | **Description**                                                                                                             |
 | :-------------------: | :------------------------------------------------------ | :-------------------------------------------------------------------------------------------------------------------------- |
-|  **Window Manager**   | [MangoWM](https://github.com/mangowm/mango)             | Practical and powerful Wayland compositor (dwm but Wayland)                                                                 |
-|                       | [Niri](https://github.com/niri-wm/niri)                 | A scrollable-tiling Wayland compositor.                                                                                     |
+|   **Window Manager**  | [Niri](https://github.com/niri-wm/niri)                 | A scrollable-tiling Wayland compositor.                                                                                     |
 |                       | [Hyprland](https://github.com/hyprwm/Hyprland)          | Highly customizable dynamic tiling Wayland compositor.                                                                      |
+|                       | [MangoWM](https://github.com/mangowm/mango)             | Practical and powerful Wayland compositor (dwm but Wayland)                                                                 |
 |                       | [DriftWM](https://github.com/malbiruk/driftwm)          | A trackpad-first infinite canvas Wayland compositor.                                                                        |
 |                       | [Qtile](https://github.com/qtile/qtile/)                | A full-featured, hackable tiling window manager written and configured in Python `No longer maintained` `Skill issue`       |
 |    **Status Bar**     | [Waybar](https://github.com/Alexays/Waybar)             | Highly customizable modular status bar.                                                                                     |
 |    **Info fetch**     | [Fastfetch](https://github.com/fastfetch-cli/fastfetch) | Fastfetch is a neofetch-like tool for fetching system information                                                           |
 | **Wallpaper Manager** | [swaybg](https://github.com/swaywm/swaybg)              | Wallpaper tool for Wayland compositors.                                                                                     |
-|     **Terminal**      | [Foot](https://codeberg.org/dnkl/foot)                  | A fast, lightweight and minimalistic Wayland terminal emulator                                                              |                           |
+|     **Terminal**      | [Foot](https://codeberg.org/dnkl/foot)                  | A fast, lightweight and minimalistic Wayland terminal emulator                                                              |           
 |                       | [Kitty](https://github.com/kovidgoyal/kitty)            | Fast, feature-rich, GPU-based terminal emulator.                                                                            |
 |       **Shell**       | [Fish](https://fishshell.com/)                          | User-friendly command line shell.                                                                                           |
 |      **Editor**       | [Neovim](https://neovim.io/)                            | Neovim is a modern, fast and feature-rich editor that is fully compatible with Vim. Powered by [NvChad](https://nvchad.com) |
