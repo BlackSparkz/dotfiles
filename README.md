@@ -72,7 +72,7 @@
 |                       | [Qtile](https://github.com/qtile/qtile/)                | A full-featured, hackable tiling window manager written and configured in Python `No longer maintained` `Skill issue`       |
 |    **Status Bar**     | [Waybar](https://github.com/Alexays/Waybar)             | Highly customizable modular status bar.                                                                                     |
 |    **Info fetch**     | [Fastfetch](https://github.com/fastfetch-cli/fastfetch) | Fastfetch is a neofetch-like tool for fetching system information                                                           |
-| **Wallpaper Manager** | [swaybg](https://github.com/swaywm/swaybg)              | Wallpaper tool for Wayland compositors.                                                                                     |
+| **Wallpaper Manager** | [Awww](https://codeberg.org/LGFae/awww)                 | An efficient animated wallpaper daemon for wayland                                                                            |
 |     **Terminal**      | [Foot](https://codeberg.org/dnkl/foot)                  | A fast, lightweight and minimalistic Wayland terminal emulator                                                              |           
 |                       | [Kitty](https://github.com/kovidgoyal/kitty)            | Fast, feature-rich, GPU-based terminal emulator.                                                                            |
 |       **Shell**       | [Fish](https://fishshell.com/)                          | User-friendly command line shell.                                                                                           |
