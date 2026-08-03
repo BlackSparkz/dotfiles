@@ -94,7 +94,7 @@ size = 24                   # sets XCURSOR_SIZE
 trackpad_speed = 1.5        # trackpad (scroll/gestures) pan multiplier
 mouse_speed = 1.5           # mouse (drag) pan multiplier (1.0 = direct)
 drift = 0.5                   # momentum decay (0.90=snappy, 0.98=floaty)
-animation_speed = 0.3       # camera lerp factor (higher = faster)
+camera_speed = 0.3       # camera lerp factor (higher = faster)
 auto_navigate_on_close = true  # on close, pan to the newly focused window if off-screen
 nudge_step = 60             # px per nudge-window action (mod-shift-arrow by default)
 pan_step = 100.0            # px per pan-viewport action (mod-ctrl-arrow by default)
@@ -173,7 +173,7 @@ default_mode = "minimal"        # decoration mode for windows without a rule.
 [effects]
 blur_radius = 3                # number of Kawase down+up passes (default: 2)
 blur_strength = 1.0            # per-pass texel spread (default: 1.1)
-animate_blur = true            # re-blur every frame when the wallpaper is animated
+animate_blur_fps = 20          # re-blur every frame when the wallpaper is animated
                                  # (expensive; default: false — blur is captured once and
                                  # only refreshed when geometry/camera/static bg change)
 
