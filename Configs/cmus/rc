@@ -15,7 +15,8 @@ bind -f common - vol -1%
 bind -f common right seek +10
 bind -f common left seek -10
 
-bind -f common R toggle repeat_current
+bind -f common R toggle repeat
+bind -f common r toggle repeat_current
 bind -f common l win-next
 bind -f common h win-next
 bind -f common n win-add-Q

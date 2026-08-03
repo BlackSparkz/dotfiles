@@ -155,6 +155,7 @@ Configs/
 ├── bat
 │   └── config
 ├── btop
+│   ├── themes
 │   └── btop.conf
 ├── cava
 │   ├── shaders
@@ -169,7 +170,14 @@ Configs/
 │   │   └── tricolor
 │   └── config
 ├── cmus
-│   └── rc
+│   ├── playlists
+│   │   └── Default
+│   ├── autosave
+│   ├── cache
+│   ├── command-history
+│   ├── lib.pl
+│   ├── rc
+│   └── search-history
 ├── driftwm
 │   └── config.toml
 ├── fastfetch

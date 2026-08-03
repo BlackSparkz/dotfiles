@@ -29,7 +29,7 @@ hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + W", hl.dsp.exec_cmd("bash $HOME/.config/Scripts/random_wall_on_home.sh"))
 hl.bind(mainMod .. " + X", hl.dsp.exec_cmd("footclient --app-id cmus -e cmus"), { repeating = false })
 hl.bind(mainMod .. " + Y", hl.dsp.exec_cmd("footclient --app-id nmtui -e nmtui"))
-hl.bind(mainMod .. " + Z", hl.dsp.exec_cmd("pkill localsend_app || localsend_app"), { repeating = false })
+hl.bind(mainMod .. " + Z", hl.dsp.exec_cmd("pkill localsend || localsend"), { repeating = false })
 
 hl.bind(mainMod .. " + Space",  hl.dsp.exec_cmd("pkill rofi || rofi -show drun -theme ~/.config/rofi/launchpad.rasi"))
 hl.bind(mainMod .. " + Delete", hl.dsp.exec_cmd("cliphist wipe"))
