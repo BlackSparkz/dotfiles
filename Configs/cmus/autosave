@@ -101,7 +101,7 @@ set pl_sort=
 set play_library=true
 set play_sorted=false
 set progress_bar=line
-set repeat=true
+set repeat=false
 set repeat_current=true
 set replaygain=disabled
 set replaygain_limit=true
@@ -116,7 +116,7 @@ set show_current_bitrate=false
 set show_hidden=false
 set show_playback_position=true
 set show_remaining_time=false
-set shuffle=off
+set shuffle=tracks
 set skip_track_info=false
 set smart_artist_sort=true
 set softvol=false
@@ -159,7 +159,7 @@ bind common L push live-filter
 bind common M toggle play_library
 bind common N search-prev
 bind common P win-mv-before
-bind common R toggle repeat_current
+bind common R toggle repeat
 bind common U win-update-cache
 bind common Z player-prev-album
 bind common [ vol +1% +0
@@ -209,7 +209,7 @@ bind common p win-mv-after
 bind common page_down win-page-down
 bind common page_up win-page-up
 bind common q quit -i
-bind common r toggle repeat
+bind common r toggle repeat_current
 bind common right seek +10
 bind common s toggle shuffle
 bind common space win-toggle
