@@ -104,9 +104,9 @@ fi
 types=(wipe any)
 chosen=${types[$RANDOM % ${#types[@]}]}
 
-ffmpeg -y -i "$selected_path" -vf \
+ffmpeg -y -i "$WALL" -vf \
 "split[orig][blur]; \
-[blur]crop=iw*0.35:ih:0:0,gblur=sigma=80[bleft]; \
+[blur]crop=iw*0.35:ih:0:0,gblur=sigma=80,eq=brightness=-0.10[bleft]; \
 [orig][bleft]overlay=0:0" \
 /tmp/partial_blured.jpg
 
