@@ -104,7 +104,7 @@ fi
 types=(wipe any)
 chosen=${types[$RANDOM % ${#types[@]}]}
 
-ffmpeg -y -i "$WALL" -vf \
+ffmpeg -y -i "$selected_path" -vf \
 "split[orig][blur]; \
 [blur]crop=iw*0.35:ih:0:0,gblur=sigma=80,eq=brightness=-0.10[bleft]; \
 [orig][bleft]overlay=0:0" \
