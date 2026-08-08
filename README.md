@@ -155,7 +155,6 @@ Configs/
 ├── bat
 │   └── config
 ├── btop
-│   ├── themes
 │   └── btop.conf
 ├── cava
 │   ├── shaders
@@ -239,8 +238,6 @@ Configs/
 ├── klassy
 │   ├── klassyrc
 │   └── windecopresetsrc
-├── lazygit
-│   └── config.yml
 ├── mako
 │   └── config
 ├── mango

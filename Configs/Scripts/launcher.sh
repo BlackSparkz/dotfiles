@@ -2,7 +2,6 @@
 
 TMPFILE=$(mktemp)
 
-# .desktop files parse karke tmpfile mein store
 for f in /usr/share/applications/*.desktop ~/.local/share/applications/*.desktop; do
   [[ -f "$f" ]] || continue
   grep -q "^NoDisplay=true" "$f" && continue
