@@ -33,7 +33,7 @@
 
 |        **App launcher**         |
 | :-----------------------------: |
-|  ![Rofi](Screenshots/rofi.png)  |
+| ![Rofi](Screenshots/rofi.png)  |
 | ![Rofi2](Screenshots/rofi2.png) |
 
 |          **Clipboard history**          |
@@ -46,13 +46,15 @@
 
 |                 **Power menu**                 |
 | :--------------------------------------------: |
-|      ![Wlogout](Screenshots/wlogout.png)       |
-| ![powermenu_rofi](Screenshots/powermenu_1.png) |
+| ![Wlogout](Screenshots/wlogout.png)       |
+| ![powermenu_quickshell](Screenshots/powermenu.png) |
 
 |                **Screenlock**                 |
 | :-------------------------------------------: |
-|     ![hyprlock](Screenshots/hyprlock.png)     |
-| ![hyprlock_alt](Screenshots/hyprlock_alt.png) |
+| ![hyprlock_1](Screenshots/hyprlock_1.png)     |
+| ![hyprlock_2](Screenshots/hyprlock_2.png) |
+| ![hyprlock_3](Screenshots/hyprlock_3.png) |
+| ![hyprlock_4](Screenshots/hyprlock_4.png) |
 
 |              **Fastfetch**              |
 | :-------------------------------------: |
