@@ -4,6 +4,7 @@
 bind -f common x player-prev
 bind -f common c player-pause
 bind -f common v player-next
+bind -f common q quit
 
 bind -f common b seek +1
 bind -f common z seek -1

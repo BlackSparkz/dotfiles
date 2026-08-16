@@ -244,20 +244,21 @@ Configs/
 ├── mako
 │   └── config
 ├── mango
-│   ├── Animations.conf
-│   ├── Autostart.conf
-│   ├── Blur.conf
-│   ├── config.conf
-│   ├── Dwindle_layout.conf
-│   ├── Environments.conf
-│   ├── General.conf
-│   ├── Keybinds.conf
-│   ├── Master-Stack.conf
-│   ├── Monitors.conf
-│   ├── Rules.conf
-│   ├── Scroller_layout.conf
-│   ├── Shadows.conf
-│   └── Tagrules.conf
+│   ├── Modules
+│   │   ├── Animations.conf
+│   │   ├── Autostart.conf
+│   │   ├── Blur.conf
+│   │   ├── Dwindle_layout.conf
+│   │   ├── Environments.conf
+│   │   ├── General.conf
+│   │   ├── Keybinds.conf
+│   │   ├── Master-Stack.conf
+│   │   ├── Monitors.conf
+│   │   ├── Rules.conf
+│   │   ├── Scroller_layout.conf
+│   │   ├── Shadows.conf
+│   │   └── Tagrules.conf
+│   └── config.conf
 ├── mpv
 │   ├── fonts
 │   │   └── modernz-icons.ttf
@@ -269,18 +270,19 @@ Configs/
 │   ├── input.conf
 │   └── mpv.conf
 ├── niri
-│   ├── Animations.kdl
-│   ├── Autostart.kdl
-│   ├── Blur.kdl
-│   ├── config.kdl
-│   ├── Cursor.kdl
-│   ├── Input.kdl
-│   ├── Keybinds.kdl
-│   ├── Layout.kdl
-│   ├── Others.kdl
-│   ├── Outputs.kdl
-│   ├── Overview.kdl
-│   └── Rules.kdl
+│   ├── Modules
+│   │   ├── Animations.kdl
+│   │   ├── Autostart.kdl
+│   │   ├── Blur.kdl
+│   │   ├── Cursor.kdl
+│   │   ├── Input.kdl
+│   │   ├── Keybinds.kdl
+│   │   ├── Layout.kdl
+│   │   ├── Others.kdl
+│   │   ├── Outputs.kdl
+│   │   ├── Overview.kdl
+│   │   └── Rules.kdl
+│   └── config.kdl
 ├── nvim
 │   ├── lua
 │   │   ├── configs
