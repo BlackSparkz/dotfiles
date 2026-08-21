@@ -121,7 +121,7 @@ local suppressMaximizeRule = hl.window_rule({
 
 hl.window_rule({
   name  = "Floating windows",
-  match = { class = "sensors|bluetui|pulsemixer|thunar|nwg-look|org.kde.kdeconnect.sms|aichat|nmtui|battery|pulsemixer|org.gnome.Nautilus|org.kde.kdeconnect.app|localsend|localsend_app" },
+  match = { class = "sensors|bluetui|pulsemixer|thunar|nwg-look|org.kde.kdeconnect.sms|aichat|nmtui|battery|pulsemixer|org.gnome.Nautilus|org.kde.kdeconnect.app|localsend|localsend_app|org.localsend.localsend_app" },
   float = true,
   no_initial_focus = false,
   move = {960,510},

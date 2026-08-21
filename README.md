@@ -194,7 +194,8 @@ Configs/
 │   │   ├── fish_prompt.fish
 │   │   ├── gacp.fish
 │   │   ├── ydl.fish
-│   │   └── y.fish
+│   │   ├── y.fish
+│   │   └── yt.fish
 │   ├── config.fish
 │   └── fish_variables
 ├── foot
