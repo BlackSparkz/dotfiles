@@ -4,7 +4,6 @@
 bind -f common x player-prev
 bind -f common c player-pause
 bind -f common v player-next
-bind -f common q quit
 
 bind -f common b seek +1
 bind -f common z seek -1
@@ -22,6 +21,7 @@ bind -f common l win-next
 bind -f common h win-next
 bind -f common n win-add-Q
 bind -f common d win-remove
+bind -f common q quit
 
 set start_view=sorted
 set lib_sort=-filemtime
