@@ -8,17 +8,12 @@ printf "[+] Starting Hobbyist dotfiles teardown...\n"
 
 # --- unstow dotfiles ---
 if [ -d "$DOTFILES" ]; then
-  if [[ -f "$DOTFILES/stow-configs.sh" ]]; then
-    printf "[+] Unstowing dotfiles...\n"
-    if grep -q -- '-D' "$DOTFILES/stow-configs.sh" 2>/dev/null; then
-      bash "$DOTFILES/stow-configs.sh" -D
-    else
-      printf "[!] stow-configs.sh has no -D handling — unstow manually:\n"
-      printf "    cd %s/Configs && stow -D -t \$HOME <package>\n" "$DOTFILES"
-    fi
-  fi
+  printf "[+] Unstowing dotfiles...\n"
+  cd ~/hobbyist-dotfiles/
+  stow -D -t ~/.config Configs
+fi
 
-  pkglist="$DOTFILES/Configs/installed-pkg/pkglist.txt"
+pkglist="$DOTFILES/Configs/installed-pkg/pkglist.txt"
   if [ -f "$pkglist" ]; then
     read -rp "Remove packages listed in pkglist.txt? (y/n) " rmpkg
     if [[ "$rmpkg" == "y" ]]; then
@@ -26,9 +21,6 @@ if [ -d "$DOTFILES" ]; then
       xargs -r sudo pacman -Rns --noconfirm < "$pkglist" || true
     fi
   fi
-else
-  printf "[!] Dotfiles repo not found at $DOTFILES — skipping unstow and pkglist removal.\n"
-fi
 
 # --- fonts / wallpapers copied in ---
 read -rp "Remove fonts and wallpapers copied by install.sh? (y/n) " rmassets
