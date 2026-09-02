@@ -157,7 +157,6 @@ Configs/
 ├── bat
 │   └── config
 ├── btop
-│   ├── themes
 │   └── btop.conf
 ├── cava
 │   ├── shaders
@@ -205,8 +204,12 @@ Configs/
 ├── ghostty
 │   └── config
 ├── gtk-3.0
+│   ├── colors.css
+│   ├── gtk.css
 │   └── settings.ini
 ├── gtk-4.0
+│   ├── colors.css
+│   ├── gtk.css
 │   └── settings.ini
 ├── hypr
 │   ├── hyprland_modules

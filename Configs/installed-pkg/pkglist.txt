@@ -3,6 +3,7 @@ aichat
 android-tools
 bat
 bibata-cursor-theme-bin
+libayatana-indicator
 bluetui
 bluez-utils
 brightnessctl

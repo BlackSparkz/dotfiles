@@ -29,7 +29,7 @@ hl.window_rule({
 
 hl.window_rule({
     match = { class = "cmus"},
-    workspace = "4 silent",
+    workspace = "4",
 })
 
 hl.layer_rule({
