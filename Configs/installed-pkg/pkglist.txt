@@ -1,3 +1,7 @@
+niri
+hyprland
+mangowm
+driftwm
 7zip
 aichat
 android-tools
@@ -30,8 +34,6 @@ librewolf-bin
 helium-browser-bin
 localsend-bin
 mako
-niri
-hyprland
 mpv
 ncdu
 neovim
