@@ -1,5 +1,7 @@
 [General]
 IgnoreImages=false
+IgnoreSelection=false
 MaxClipItems=100
+SyncClipboards=true
 TimeoutForActionPopups=20
-Version=6.6.5
+Version=6.7.4

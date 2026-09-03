@@ -2,6 +2,26 @@
 MiddleButton;NoModifier=org.kde.paste
 RightButton;NoModifier=org.kde.contextmenu
 
+[ActionPlugins][0][RightButton;NoModifier]
+_add panel=false
+_context=true
+_display_settings=true
+_lock_screen=false
+_logout=false
+_open_terminal=false
+_run_command=false
+_sep1=true
+_sep2=true
+_sep3=true
+_sep4=true
+_wallpaper=true
+add widgets=false
+configure=true
+configure shortcuts=false
+desktop edit mode=true
+manage activities=true
+remove=true
+
 [ActionPlugins][1]
 RightButton;NoModifier=org.kde.contextmenu
 
@@ -72,7 +92,7 @@ immutability=1
 plugin=org.kde.plasma.icontasks
 
 [Containments][1][Applets][4][Configuration][General]
-launchers=applications:systemsettings.desktop,preferred://browser,applications:yazi.desktop,applications:kitty.desktop,applications:foot.desktop,applications:org.telegram.desktop.desktop,applications:org.kde.dolphin.desktop
+launchers=applications:systemsettings.desktop,preferred://browser,applications:helium.desktop,applications:yazi.desktop,applications:kitty.desktop,applications:foot.desktop,applications:org.telegram.desktop.desktop,applications:localsend.desktop
 
 [Containments][1][Applets][5]
 immutability=1
@@ -131,6 +151,30 @@ plugin=org.kde.plasma.networkmanagement
 immutability=1
 plugin=org.kde.plasma.brightness
 
+[Containments][1][Applets][6][Applets][28]
+immutability=1
+plugin=org.kde.plasma.vault
+
+[Containments][1][Applets][6][Applets][29]
+immutability=1
+plugin=org.kde.plasma.keyboardindicator
+
+[Containments][1][Applets][6][Applets][30]
+immutability=1
+plugin=org.kde.plasma.weather
+
+[Containments][1][Applets][6][Applets][31]
+immutability=1
+plugin=org.kde.kscreen
+
+[Containments][1][Applets][6][Applets][32]
+immutability=1
+plugin=org.kde.plasma.printmanager
+
+[Containments][1][Applets][6][Applets][33]
+immutability=1
+plugin=org.kde.plasma.bluetooth
+
 [Containments][1][Applets][6][Applets][7]
 immutability=1
 plugin=org.kde.kdeconnect
@@ -148,8 +192,8 @@ DialogHeight=630
 DialogWidth=810
 
 [Containments][1][Applets][6][General]
-extraItems=org.kde.plasma.cameraindicator,org.kde.plasma.devicenotifier,org.kde.plasma.manage-inputmethod,org.kde.plasma.notifications,org.kde.plasma.keyboardlayout,org.kde.plasma.clipboard,org.kde.plasma.volume,org.kde.plasma.brightness,org.kde.plasma.battery,org.kde.plasma.mediacontroller,org.kde.kdeconnect,org.kde.plasma.networkmanagement
-knownItems=org.kde.kdeconnect,org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.plasma.keyboardlayout,org.kde.plasma.volume,org.kde.plasma.networkmanagement
+extraItems=org.kde.plasma.cameraindicator,org.kde.plasma.devicenotifier,org.kde.plasma.manage-inputmethod,org.kde.plasma.notifications,org.kde.plasma.keyboardlayout,org.kde.plasma.clipboard,org.kde.plasma.volume,org.kde.plasma.brightness,org.kde.plasma.battery,org.kde.plasma.mediacontroller,org.kde.kdeconnect,org.kde.plasma.networkmanagement,org.kde.plasma.vault,org.kde.plasma.bluetooth,org.kde.plasma.keyboardindicator,org.kde.plasma.weather,org.kde.kscreen,org.kde.plasma.printmanager
+knownItems=org.kde.kdeconnect,org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.plasma.keyboardlayout,org.kde.plasma.volume,org.kde.plasma.networkmanagement,org.kde.plasma.vault,org.kde.plasma.bluetooth,org.kde.plasma.keyboardindicator,org.kde.plasma.weather,org.kde.kscreen,org.kde.plasma.printmanager
 scaleIconsToFit=true
 shownItems=org.kde.plasma.clipboard,org.kde.plasma.volume,org.kde.plasma.brightness,org.kde.plasma.battery
 
@@ -160,6 +204,7 @@ AppletOrder=2;4;5;6;22;27
 global=
 
 [Containments][24]
+ItemGeometries-0x0=Applet-19:1392,112,400,256,0;
 ItemGeometries-1920x1080=Applet-19:1392,112,400,256,0;
 ItemGeometriesHorizontal=Applet-19:1392,112,400,256,0;
 activityId=41420b54-4a05-4b56-a63c-d4555c91b111
@@ -203,7 +248,8 @@ locked=true
 url=activities:/current/
 
 [Containments][24][Wallpaper][org.kde.image][General]
-Image=/home/blackspark/Wallpapers/1358230.jpeg
+DynamicMode=3
+Image=file:///home/blackspark/Wallpapers/snowy-mountains-5120x3413-26363.jpg
 SlidePaths=/usr/share/wallpapers/
 
 [ScreenMapping]

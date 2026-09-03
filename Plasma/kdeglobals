@@ -48,6 +48,34 @@ ForegroundNormal=252,252,252
 ForegroundPositive=39,174,96
 ForegroundVisited=155,89,182
 
+[Colors:Header]
+BackgroundAlternate=239,240,241
+BackgroundNormal=222,224,226
+DecorationFocus=146,110,228
+DecorationHover=146,110,228
+ForegroundActive=146,110,228
+ForegroundInactive=112,125,138
+ForegroundLink=118,54,221
+ForegroundNegative=218,68,83
+ForegroundNeutral=246,116,0
+ForegroundNormal=35,38,41
+ForegroundPositive=39,174,96
+ForegroundVisited=155,89,182
+
+[Colors:Header][Inactive]
+BackgroundAlternate=227,229,231
+BackgroundNormal=239,240,241
+DecorationFocus=61,174,233
+DecorationHover=61,174,233
+ForegroundActive=61,174,233
+ForegroundInactive=112,125,138
+ForegroundLink=41,128,185
+ForegroundNegative=218,68,83
+ForegroundNeutral=246,116,0
+ForegroundNormal=35,38,41
+ForegroundPositive=39,174,96
+ForegroundVisited=155,89,182
+
 [Colors:Selection]
 BackgroundAlternate=178,153,236
 BackgroundNormal=178,153,236
@@ -92,7 +120,7 @@ ForegroundVisited=155,89,182
 
 [Colors:Window]
 BackgroundAlternate=227,229,231
-BackgroundNormal=240,240,240
+BackgroundNormal=239,240,241
 DecorationFocus=146,110,228
 DecorationHover=146,110,228
 ForegroundActive=146,110,228
@@ -106,22 +134,22 @@ ForegroundVisited=155,89,182
 
 [General]
 AccentColor=146,110,228
-ColorSchemeHash=3ac57dc0b7583c2f444b9148582a2e2fc560632c
+ColorScheme=BreezeLight
+ColorSchemeHash=35c73fb379a4940e5f22982a33078640b27cf788
 LastUsedCustomAccentColor=146,110,228
 TerminalApplication=foot
 TerminalService=foot.desktop
 UseSystemBell=true
 XftAntialias=true
 XftHintStyle=hintslight
-XftSubPixel=rgb
-fixed=Hack,12,-1,5,400,0,0,0,0,0,0,0,0,0,0,1,,0,0
+XftSubPixel=none
+fixed=Google Sans Code NF,14,-1,5,400,0,0,0,0,0,0,0,0,0,0,1,,0,0
 font=Noto Sans,12,-1,5,400,0,0,0,0,0,0,0,0,0,0,1,,0,0
 
 [Icons]
 Theme=Tela
 
 [KDE]
-AnimationDurationFactor=0.35355339059327373
 DefaultDarkLookAndFeel=org.kde.klassykitedarkbottompanel.desktop
 DefaultLightLookAndFeel=org.kde.klassykitelightbottompanel.desktop
 LookAndFeelPackage=org.kde.klassykitelightbottompanel.desktop
@@ -129,6 +157,7 @@ ShowDeleteCommand=true
 SingleClick=true
 contrast=4
 frameContrast=0.2
+widgetStyle=Breeze
 
 [KFileDialog Settings]
 Allow Expansion=false
@@ -154,10 +183,14 @@ Dialog Size=600,480
 EnableRemoteFolderThumbnail=false
 MaximumRemoteSize=0
 
+[Shortcuts]
+Cut=Ctrl+X
+ShowHideHiddenFiles=Ctrl+H
+
 [WM]
-activeBackground=42,46,50,191
+activeBackground=227,229,231
 activeBlend=227,229,231
-activeForeground=252,252,252
+activeForeground=35,38,41
 inactiveBackground=239,240,241
 inactiveBlend=239,240,241
 inactiveForeground=112,125,138

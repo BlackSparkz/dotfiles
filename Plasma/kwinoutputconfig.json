@@ -2,9 +2,15 @@
     {
         "data": [
             {
+                "abmLevel": 0,
                 "allowDdcCi": true,
                 "allowSdrSoftwareBrightness": false,
                 "autoBrightnessCurve": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
                     0,
                     0,
                     0,
@@ -14,7 +20,7 @@
                 ],
                 "autoRotation": "InTabletMode",
                 "automaticBrightness": false,
-                "brightness": 0.2,
+                "brightness": 0.4,
                 "colorPowerTradeoff": "PreferEfficiency",
                 "colorProfileSource": "sRGB",
                 "connectorName": "eDP-1",
@@ -24,6 +30,8 @@
                 "edidHash": "024a88bbf8d9292d3ffae6599764323e",
                 "edidIdentifier": "AUO 19097 0 1 2021 0",
                 "edrPolicy": "always",
+                "hdrColorProfileSource": "EDID",
+                "hdrIccProfilePath": "",
                 "highDynamicRange": false,
                 "iccProfilePath": "",
                 "maxBitsPerColor": 0,

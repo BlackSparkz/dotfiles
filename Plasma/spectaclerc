@@ -1,0 +1,9 @@
+[General]
+ocrLanguages=afr
+
+[ImageSave]
+lastImageSaveLocation=file:///home/blackspark/Screenshots/Screenshot_20260903_101439.png
+translatedScreenshotsFolder=Screenshots
+
+[VideoSave]
+translatedScreencastsFolder=Screencasts

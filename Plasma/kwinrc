@@ -7,7 +7,8 @@ Id_5=05bb3bd7-3d79-49ea-a9e4-8f0abbccc3eb
 Id_6=039ead86-8df8-4ae0-a2ae-c53884b9aede
 Id_7=94235bc3-05c0-4d55-93ae-871e561f633e
 Id_8=8338888b-034d-4a2a-adcd-39c5a7c4bb7c
-Id_9=53226427-f09c-43b0-b615-3597eef4e514
+Id_9=92ff75f9-72a8-4e7b-a770-7a76a2029c3e
+Name_9=New Desktop
 Number=9
 Rows=3
 
@@ -15,8 +16,14 @@ Rows=3
 NoiseStrength=0
 Saturation=500
 
+[Effect-cube]
+CubeFaceDisplacement=137
+
 [Effect-hidecursor]
 InactivityDuration=5
+
+[Effect-login]
+FadeToBlack=true
 
 [Effect-mousemark]
 LineWidth=4
@@ -24,32 +31,48 @@ LineWidth=4
 [Effect-overview]
 GridBorderActivate=1
 
+[Effect-scale]
+InScale=0.6
+OutScale=0.6
+
 [Effect-shakecursor]
-Magnification=6
+Magnification=7
+
+[Effect-slide]
+HorizontalGap=40
+VerticalGap=40
 
 [Effect-wobblywindows]
-AdvancedMode=true
-Drag=90
-Stiffness=6
-WobblynessLevel=2
+Drag=92
+MoveFactor=20
+Stiffness=3
+WobblynessLevel=3
 
 [ElectricBorders]
 BottomLeft=ApplicationLauncher
 BottomRight=ShowDesktop
 
 [MouseBindings]
+CommandAllWheel=Previous/Next Desktop
 CommandTitlebarWheel=Change Opacity
 
 [NightColor]
 Active=true
-NightTemperature=4000
+NightTemperature=3600
 
 [Plugins]
+cubeEnabled=true
 hidecursorEnabled=true
+magiclampEnabled=true
 mousemarkEnabled=true
+sheetEnabled=true
 slidebackEnabled=true
+squashEnabled=false
 thumbnailasideEnabled=true
 wobblywindowsEnabled=true
+
+[ScreenEdges]
+RemainActiveOnFullscreen=true
 
 [Tiling][00ea9bca-910a-4ff0-92b0-d398606e2fb3][ee39505c-9a75-4ec1-976b-dbec331ce2a9]
 padding=4
@@ -115,6 +138,10 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 padding=4
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
+[Tiling][92ff75f9-72a8-4e7b-a770-7a76a2029c3e][ee39505c-9a75-4ec1-976b-dbec331ce2a9]
+padding=4
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
 [Tiling][94235bc3-05c0-4d55-93ae-871e561f633e][ee39505c-9a75-4ec1-976b-dbec331ce2a9]
 padding=4
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
@@ -154,18 +181,20 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 [Windows]
 AutoRaise=true
 AutoRaiseInterval=400
-BorderSnapZone=20
+BorderSnapZone=30
 ElectricBorderCooldown=300
 ElectricBorderCornerRatio=0.24
+ElectricBorders=2
 FocusPolicy=FocusFollowsMouse
 RollOverDesktops=true
-WindowSnapZone=20
+SnapOnlyWhenOverlapping=true
+WindowSnapZone=30
 
 [Xwayland]
 Scale=1
 
 [org.kde.kdecoration2]
-BorderSize=None
-BorderSizeAuto=false
 ButtonsOnLeft=
 ButtonsOnRight=IAX
+library=org.kde.kwin.aurorae.v2
+theme=__aurorae__svg__MacSequoia-Light

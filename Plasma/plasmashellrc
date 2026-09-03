@@ -15,6 +15,7 @@ floatingApplets=1
 panelLengthMode=0
 panelOpacity=2
 panelVisibility=2
+shell=org.kde.plasma.desktop
 
 [PlasmaViews][Panel 1][Defaults]
 thickness=46

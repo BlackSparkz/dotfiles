@@ -7,12 +7,18 @@ RepeatRate=100
 PointerAcceleration=0.800
 ScrollFactor=3
 
+[Libinput][1267][12734][ELAN06FA:00 04F3:31BE Mouse]
+PointerAcceleration=1.000
+ScrollFactor=3
+ScrollMethod=0
+
 [Libinput][1267][12734][ELAN06FA:00 04F3:31BE Touchpad]
+DisableEventsOnExternalMouse=false
 LmrTapButtonMap=false
 NaturalScroll=true
 PointerAcceleration=1.000
-ScrollFactor=1.5
+ScrollFactor=3
 TapDragLock=false
 
 [Mouse]
-cursorTheme=default
+cursorTheme=Bibata-Modern-Ice
