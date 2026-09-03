@@ -59,7 +59,7 @@ MoveZoomRight=none,none,Move Zoomed Area to Right
 MoveZoomUp=none,none,Move Zoomed Area Upwards
 Overview=Meta+O,Meta+W,Toggle Overview
 Setup Window Shortcut=none,none,Setup Window Shortcut
-Show Desktop=Meta+D,Meta+D,Peek at Desktop
+Show Desktop=none,Meta+D,Peek at Desktop
 Switch One Desktop Down=Meta+Ctrl+Down,Meta+Ctrl+Down,Switch One Desktop Down
 Switch One Desktop Up=Meta+Ctrl+Up,Meta+Ctrl+Up,Switch One Desktop Up
 Switch One Desktop to the Left=Meta+U,Meta+Ctrl+Left,Switch One Desktop to the Left
@@ -317,6 +317,9 @@ _launch=Meta+M
 
 [services][systemsettings.desktop]
 _launch=Meta+S
+
+[services][thunar.desktop]
+_launch=Meta+D
 
 [services][yazi.desktop]
 _launch=Meta+N
