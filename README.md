@@ -340,8 +340,6 @@ Configs/
 │   └── init.lua
 ├── systemd
 │   └── user
-│       ├── default.target.wants
-│       │   └── niri.service -> /home/blackspark/.config/systemd/user/niri.service
 │       └── niri.service
 ├── waybar
 │   ├── DriftWM
