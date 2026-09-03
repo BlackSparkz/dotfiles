@@ -28,10 +28,17 @@ fi
 printf "[+] Creating config directories...\n"
 mkdir -p ~/.local/share/fonts
 
+if [ -d "$HOME/.config" ]; then
+    mv "$HOME/.config" "$HOME/.config.bak"
+fi
+
+mkdir -p "$HOME/.config"
+
 DOTFILES="$HOME/hobbyist-dotfiles"
 
 if [ -d "$DOTFILES" ]; then
   printf "[+] Applying dotfiles...\n"
+  cd ~/hobbyist-dotfiles/
   stow -t ~/.config/ Configs/
   stow -t ~/.config/ Plasma/
 

@@ -11,6 +11,7 @@ if [ -d "$DOTFILES" ]; then
   printf "[+] Unstowing dotfiles...\n"
   cd ~/hobbyist-dotfiles/
   stow -D -t ~/.config Configs
+  stow -D -t ~/.config Plasma
 fi
 
 pkglist="$DOTFILES/Configs/installed-pkg/pkglist.txt"
