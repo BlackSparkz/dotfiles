@@ -56,7 +56,7 @@ alias tsl='sudo timeshift --list'
 alias timeshift='sudo timeshift-gtk'
 alias gparted='sudo -E gparted'
 alias ff='fastfetch'
-
+alias plasma='dbus-run-session startplasma-wayland'
 # ==============================
 # Network
 # ==============================
