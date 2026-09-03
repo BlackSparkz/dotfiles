@@ -2,7 +2,7 @@
 ordering=preferred://browser,applications:helium.desktop,applications:systemsettings.desktop,applications:foot.desktop,applications:kitty.desktop,applications:localsend.desktop,applications:org.telegram.desktop.desktop,applications:thunar.desktop
 
 [Favorites-org.kde.plasma.kickoff.favorites.instance-2-41420b54-4a05-4b56-a63c-d4555c91b111]
-ordering=applications:kitty.desktop,applications:foot.desktop,preferred://browser,applications:systemsettings.desktop,applications:org.kde.kdeconnect.app.desktop,applications:yazi.desktop,applications:timeshift-gtk.desktop,applications:mpv.desktop,applications:nvim.desktop,applications:klassy-settings.desktop,applications:org.telegram.desktop.desktop,applications:gparted.desktop,applications:localsend.desktop
+ordering=applications:kitty.desktop,applications:foot.desktop,applications:librewolf.desktop,preferred://browser,applications:systemsettings.desktop,applications:org.telegram.desktop.desktop,applications:localsend.desktop,applications:thunar.desktop
 
 [Favorites-org.kde.plasma.kickoff.favorites.instance-2-global]
-ordering=preferred://browser,applications:helium.desktop,applications:systemsettings.desktop,applications:foot.desktop,applications:kitty.desktop,applications:localsend.desktop,applications:org.telegram.desktop.desktop,applications:thunar.desktop
+ordering=applications:kitty.desktop,applications:foot.desktop,applications:librewolf.desktop,preferred://browser,applications:systemsettings.desktop,applications:org.telegram.desktop.desktop,applications:localsend.desktop,applications:thunar.desktop

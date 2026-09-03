@@ -92,7 +92,7 @@ immutability=1
 plugin=org.kde.plasma.icontasks
 
 [Containments][1][Applets][4][Configuration][General]
-launchers=applications:systemsettings.desktop,preferred://browser,applications:helium.desktop,applications:yazi.desktop,applications:kitty.desktop,applications:foot.desktop,applications:org.telegram.desktop.desktop,applications:localsend.desktop
+launchers=applications:systemsettings.desktop,applications:librewolf.desktop,applications:helium.desktop,applications:yazi.desktop,applications:kitty.desktop,applications:foot.desktop,applications:org.telegram.desktop.desktop,applications:localsend.desktop
 
 [Containments][1][Applets][5]
 immutability=1
