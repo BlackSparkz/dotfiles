@@ -32,7 +32,8 @@ DOTFILES="$HOME/hobbyist-dotfiles"
 
 if [ -d "$DOTFILES" ]; then
   printf "[+] Applying dotfiles...\n"
-  bash "$DOTFILES/stow-configs.sh"
+  stow -t ~/.config/ Configs/
+  stow -t ~/.config/ Plasma/
 
   printf "[+] Copying fonts and wallpapers...\n"
   cp -r "$DOTFILES/Configs/Resources/fonts/." ~/.local/share/fonts/
