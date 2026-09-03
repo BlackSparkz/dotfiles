@@ -163,6 +163,16 @@ plugin=org.kde.plasma.keyboardindicator
 immutability=1
 plugin=org.kde.plasma.weather
 
+[Containments][1][Applets][6][Applets][30][Configuration][ConfigDialog]
+DialogHeight=630
+DialogWidth=810
+
+[Containments][1][Applets][6][Applets][30][Configuration][Units]
+pressureUnit=5010
+speedUnit=9001
+temperatureUnit=6001
+visibilityUnit=2007
+
 [Containments][1][Applets][6][Applets][31]
 immutability=1
 plugin=org.kde.kscreen
