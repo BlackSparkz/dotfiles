@@ -105,7 +105,7 @@
 ## Installation
 
 > [!IMPORTANT]
-> Please review the [pkglist](Configs/installed-pkg/pkglist.txt) before executing install.sh so you have an idea of what will be installed. By default, you will get Niri and Hyprland, with Niri set as the default session.
+> Please review the [pkglist](Configs/installed-pkg/pkglist.txt) before executing install.sh so you have an idea of what will be installed. By default, you will get Niri, Hyprland, MangoWM and DriftWM with Niri set as the default session.
 
 > [!WARNING]
 > The Installation script uses [GNU Stow](https://www.gnu.org/software/stow/) under the hood, so do **not** delete or move `~/hobbyist-dotfiles/`, otherwise all Stow-based symlinks will break.
