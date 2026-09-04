@@ -53,7 +53,6 @@ applicationsDisplay=0
 compactMode=true
 favoritesPortedToKAstats=true
 icon=start-here-archlinux
-switchCategoryOnHover=true
 systemFavorites=suspend\\,hibernate\\,reboot\\,shutdown
 
 [Containments][1][Applets][2][Shortcuts]

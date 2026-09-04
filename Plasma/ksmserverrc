@@ -1,6 +1,5 @@
 [General]
 confirmLogout=false
-loginMode=restoreSavedSession
 
 [LegacySession: saved at previous logout]
 count=0

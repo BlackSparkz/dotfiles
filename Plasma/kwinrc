@@ -35,9 +35,6 @@ GridBorderActivate=1
 InScale=0.6
 OutScale=0.6
 
-[Effect-shakecursor]
-Magnification=7
-
 [Effect-slide]
 HorizontalGap=40
 VerticalGap=40
