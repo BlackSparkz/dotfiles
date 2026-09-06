@@ -184,6 +184,9 @@ plugin=org.kde.plasma.printmanager
 immutability=1
 plugin=org.kde.plasma.bluetooth
 
+[Containments][1][Applets][6][Applets][33][Configuration][General]
+showNumberOfConnectedDevices=true
+
 [Containments][1][Applets][6][Applets][7]
 immutability=1
 plugin=org.kde.kdeconnect

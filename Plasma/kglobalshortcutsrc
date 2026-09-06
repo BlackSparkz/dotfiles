@@ -278,6 +278,9 @@ toggle do not disturb=none,none,Toggle do not disturb
 [services][foot.desktop]
 _launch=Meta+A
 
+[services][helium.desktop]
+_launch=Meta+S
+
 [services][kitty.desktop]
 _launch=Meta+T
 
@@ -316,7 +319,7 @@ ToggleTouchpad=Touchpad Toggle
 _launch=Meta+M
 
 [services][systemsettings.desktop]
-_launch=Meta+S
+_launch=Meta+R
 
 [services][thunar.desktop]
 _launch=Meta+D
