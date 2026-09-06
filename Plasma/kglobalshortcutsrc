@@ -290,6 +290,9 @@ _launch=Meta+B
 [services][localsend.desktop]
 _launch=Meta+Z
 
+[services][org.kde.kdeconnect.app.desktop]
+_launch=Alt+K
+
 [services][org.kde.krunner.desktop]
 RunClipboard=none
 _launch=none
