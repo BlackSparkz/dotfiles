@@ -25,9 +25,9 @@ push_to_talk=none,none,Push to talk
 
 [ksmserver]
 Halt Without Confirmation=Alt+O,none,Shut Down Without Confirmation
-Lock Session=Screensaver\tMeta+L,Screensaver\tMeta+L,Lock Session
+Lock Session=Screensaver\tAlt+L,Screensaver\tMeta+L,Lock Session
 Log Out=Ctrl+Alt+Del,Ctrl+Alt+Del,Show Logout Screen
-Log Out Without Confirmation=Meta+Ctrl+E,none,Log Out Without Confirmation
+Log Out Without Confirmation=Meta+Esc\tMeta+Ctrl+E,none,Log Out Without Confirmation
 LogOut=none,none,Log Out
 Reboot=none,none,Reboot
 Reboot Without Confirmation=Alt+R,none,Reboot Without Confirmation
@@ -136,7 +136,7 @@ Window Lower=none,none,Lower Window
 Window Maximize=Meta+F,Meta+PgUp,Maximize Window
 Window Maximize Horizontal=none,none,Maximize Window Horizontally
 Window Maximize Vertical=none,none,Maximize Window Vertically
-Window Minimize=none,Meta+PgDown,Minimize Window
+Window Minimize=Alt+U,Meta+PgDown,Minimize Window
 Window Move=none,none,Move Window
 Window Move Center=none,none,Move Window to the Center
 Window No Border=none,none,Toggle Window Titlebar and Frame

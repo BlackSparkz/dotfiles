@@ -218,7 +218,6 @@ BorderSnapZone=30
 ElectricBorderCooldown=300
 ElectricBorderCornerRatio=0.24
 FocusPolicy=FocusFollowsMouse
-RollOverDesktops=true
 SnapOnlyWhenOverlapping=true
 WindowSnapZone=30
 
