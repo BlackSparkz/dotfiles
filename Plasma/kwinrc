@@ -217,7 +217,6 @@ AutoRaiseInterval=400
 BorderSnapZone=30
 ElectricBorderCooldown=300
 ElectricBorderCornerRatio=0.24
-ElectricBorders=2
 FocusPolicy=FocusFollowsMouse
 RollOverDesktops=true
 SnapOnlyWhenOverlapping=true
