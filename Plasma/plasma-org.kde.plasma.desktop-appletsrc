@@ -86,6 +86,14 @@ DialogWidth=810
 immutability=1
 plugin=org.kde.plasma.marginsseparator
 
+[Containments][1][Applets][39]
+immutability=1
+plugin=org.kde.plasma.pager
+
+[Containments][1][Applets][39][Configuration][ConfigDialog]
+DialogHeight=630
+DialogWidth=810
+
 [Containments][1][Applets][4]
 immutability=1
 plugin=org.kde.plasma.icontasks
@@ -210,12 +218,12 @@ scaleIconsToFit=true
 shownItems=org.kde.plasma.clipboard,org.kde.plasma.volume,org.kde.plasma.brightness,org.kde.plasma.battery
 
 [Containments][1][General]
-AppletOrder=2;4;5;6;22;27
+AppletOrder=2;4;39;5;6;22;27
 
 [Containments][1][Shortcuts]
 global=
 
-[Containments][24]
+[Containments][35]
 ItemGeometries-0x0=Applet-19:1392,112,400,256,0;
 ItemGeometries-1024x768=Applet-19:624,112,400,256,0;
 ItemGeometries-1920x1080=Applet-19:1392,112,400,256,0;
@@ -226,17 +234,17 @@ immutability=1
 lastScreen=0
 location=0
 plugin=org.kde.desktopcontainment
-wallpaperplugin=org.kde.image
+wallpaperplugin=org.kde.potd
 
-[Containments][24][Applets][19]
+[Containments][35][Applets][19]
 immutability=1
 plugin=org.kde.plasma.digitalclock
 
-[Containments][24][Applets][19][Configuration]
+[Containments][35][Applets][19][Configuration]
 popupHeight=450
 popupWidth=560
 
-[Containments][24][Applets][19][Configuration][Appearance]
+[Containments][35][Applets][19][Configuration][Appearance]
 autoFontAndSize=false
 boldText=true
 dateDisplayFormat=BelowTime
@@ -247,24 +255,34 @@ fontStyleName=SemiBold
 fontWeight=600
 use24hFormat=2
 
-[Containments][24][Applets][19][Configuration][ConfigDialog]
+[Containments][35][Applets][19][Configuration][ConfigDialog]
 DialogHeight=630
 DialogWidth=810
 
-[Containments][24][ConfigDialog]
-DialogHeight=630
-DialogWidth=810
+[Containments][35][ConfigDialog]
+DialogHeight=813
+DialogWidth=1424
 
-[Containments][24][General]
+[Containments][35][General]
 arrangement=1
 locked=true
 url=activities:/current/
 
-[Containments][24][Wallpaper][org.kde.image][General]
+[Containments][35][Wallpaper][a2n.blur][General]
+ActiveColorColor=#000000
+BlurRadius=64
+Image=file:///home/blackspark/Wallpapers/snowy-mountains-5120x3413-26363.jpg
+SlidePaths=/usr/share/wallpapers/
+
+[Containments][35][Wallpaper][org.kde.image][General]
 DynamicMode=3
 Image=file:///home/blackspark/Wallpapers/snowy-mountains-5120x3413-26363.jpg
 SlidePaths=/usr/share/wallpapers/
 
+[Containments][35][Wallpaper][org.kde.potd][General]
+Provider=bing
+UpdateOverMeteredConnection=1
+
 [ScreenMapping]
-itemsOnDisabledScreens=0,41420b54-4a05-4b56-a63c-d4555c91b111,5,desktop:/hobbyist-dotfiles,desktop:/Pictures,desktop:/Wallpapers,desktop:/Applications,desktop:/Music
+itemsOnDisabledScreens=0,41420b54-4a05-4b56-a63c-d4555c91b111,5,desktop:/Applications,desktop:/Wallpapers,desktop:/hobbyist-dotfiles,desktop:/Pictures,desktop:/Music
 screenMapping=

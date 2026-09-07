@@ -174,7 +174,7 @@ Sort directories first=true
 Sort hidden files last=false
 Sort reversed=false
 Speedbar Width=169
-View Style=Simple
+View Style=DetailTree
 
 [KShortcutsDialog Settings]
 Dialog Size=600,480

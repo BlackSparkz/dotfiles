@@ -257,6 +257,7 @@ activate task manager entry 8=none,Meta+8,Activate Task Manager Entry 8
 activate task manager entry 9=none,Meta+9,Activate Task Manager Entry 9
 activate widget 1=none,none,Activate Panel Widget
 activate widget 2=none,none,Activate Application Launcher Widget
+activate widget 39=none,none,Activate Pager Widget
 clear history=none,none,Clear Notification History
 clear-history=Meta+Del,none,Clear Clipboard History
 clipboard_action=none,Meta+Ctrl+X,Automatic Action Popup Menu
