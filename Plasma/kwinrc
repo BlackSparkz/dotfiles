@@ -31,10 +31,6 @@ LineWidth=4
 [Effect-overview]
 GridBorderActivate=1
 
-[Effect-scale]
-InScale=0.6
-OutScale=0.6
-
 [Effect-slide]
 HorizontalGap=40
 VerticalGap=40
