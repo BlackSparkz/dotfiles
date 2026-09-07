@@ -2,7 +2,7 @@
 ---- WINDOWS AND WORKSPACES ----
 --------------------------------
 
-hl.workspace_rule({ workspace = "2", layout = "scrolling" })
+hl.workspace_rule({ workspace = "1", layout = "scrolling" })
 hl.workspace_rule({ workspace = "3", layout = "dwindle" })
 
 hl.window_rule({
