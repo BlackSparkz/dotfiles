@@ -39,6 +39,7 @@ ncdu
 neovim
 networkmanager
 nwg-look
+os-prober
 pipewire-alsa
 pipewire-pulse
 pixman
